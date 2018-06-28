@@ -5,8 +5,8 @@ promptworld="World: (O) Overworld, (C) Caves"
 promptenter="Press Enter to continue."
 promptinvalid="Invalid option: "
 title="DST EasyConfig "
-overworld="DST EasyConfig Overworld"
-caves="DST EasyConfig Caves"
+overworld="$title Overworld"
+caves="$title Caves"
 directoryserver=/home/steam/steamapps/DST/bin
 directoryconfig=~/.klei/DoNotStarveTogether_EasyConfig
 
@@ -29,64 +29,93 @@ do
     fi
     option=${option,,}
     
-    if [[ $option = "konsole" || $option = "k" || $option -eq 1 ]]
+    if [[ $option -eq 0 ]]
+    then
+        if [[ $option = "k" || $option = "konsole" ]]
+        then
+            option=1
+        elif [[ $option = "s" || $option = "show" ]]
+        then
+            option=2
+        elif [[ $option = "t" || $option = "start" ]]
+        then
+            option=3
+        elif [[ $option = "p" || $option = "stop" ]]
+        then
+            option=4
+        elif [[ $option = "r" || $option = "restart" ]]
+        then
+            option=5
+        elif [[ $option = "u" || $option = "status" ]]
+        then
+            option=6
+        elif [[ $option = "c" || $option = "clear" ]]
+        then
+            option=7
+        elif [[ $option = "x" || $option = "exit" ]]
+        then
+            option=8
+        fi
+    fi
+    
+    if [[ $option -eq 1 ]]
     then
         nohup konsole --new-tab -p tabtitle="Overworld" -e sudo screen -dr "$overworld" &>/dev/null &
         nohup konsole --new-tab -p tabtitle="Caves" -e sudo screen -dr "$caves" &>/dev/null &
         read -p "$promptenter"
         
-    elif [[ $option = "show" || $option = "s" || $option -eq 2 ]]
+    elif [[ $option -eq 2 ]]
     then
         if [[ $mode -gt 0 ]]
         then
             echo "$promptworld"
-            read option
+            read shard
         else
-            option=$1
+            shard=$1
             shift
         fi
-        option=${option,,}
+        shard=${shard,,}
         
-        if [[ $option = "overworld" || $option = "o" || $option -eq 1 ]]
+        if [[ $shard = "master" || $shard = "m" || $shard = "overworld" || $shard = "o" || $shard -eq 1 ]]
         then
-            option=$overworld
-        elif [[ $option = "caves" || $option = "c" || $option -eq 2 ]]
+            $shard=$overworld
+        elif [[ $shard = "caves" || $shard = "c" || $shard -eq 2 ]]
         then
-            option=$caves
+            $shard=$caves
         else
-            option=""
+            $shard=""
         fi
         
-        if [[ "$option" != "" ]]
+        if [[ "$shard" != "" ]]
         then
-            screen -dr "$option"
+            screen -dr "$shard"
         fi
         
-    elif [[ $option = "start" || $option = "t" || $option -eq 3 ]]
+    elif [[ $option -eq 3 ]]
     then
         cd $directoryserver
-        nice -n -10 screen -dmS "$overworld" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1
-        nice -n -10 screen -dmS "$caves" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_914469371
+        nice -n -10 screen -dmS "$overworld" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1 -shard Master
+        nice -n -10 screen -dmS "$caves" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1 -shard Caves
         
-    elif [[ $option = "stop" || $option = "p" || $option -eq 4 ]]
+    elif [[ $option -eq 4 ]]
     then
         screen -XS "$overworld" quit
         screen -XS "$caves" quit
         
-    elif [[ $option = "restart" || $option = "r" || $option -eq 5 ]]
+    elif [[ $option -eq 5 ]]
     then
         cd $directoryconfig
         ./runscreen.sh p t
         
-    elif [[ $option = "status" || $option = "u" || $option -eq 6 ]]
+    elif [[ $option -eq 6 ]]
     then
         screen -ls "$title"
     
-    elif [[ $option = "clear" || $option = "c" || $option -eq 7 ]]
+    elif [[ $option -eq 7 ]]
     then
         clear
         
-    elif [[ $option = "exit" || $option = "x" || $option -eq 8 ]]
+    elif [[ $option -eq 8 ]]
     then
         shift $#
         mode=0

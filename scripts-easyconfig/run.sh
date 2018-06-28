@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prompt="Choose: (S) Screen, (K) Konsole, (U) Update, (C) Clear, (X) Exit"
+prompt="Choose: (K) Konsole, (S) Screen, (U) Update, (C) Clear, (X) Exit"
 promptenter="Press Enter to close."
 promptinvalid="Invalid option: "
 
@@ -23,27 +23,47 @@ do
     fi
     option=${option,,}
     
-    if [[ $option = "screen" || $option = "s" || $option -eq 1 ]]
+    if [[ $option -eq 0 ]]
     then
-        ./runscreen.sh $@
-        shift $#
-        mode=0
-        
-    elif [[ $option = "konsole" || $option = "k" || $option -eq 2 ]]
+        if [[ $option = "k" || $option = "konsole" ]]
+        then
+            option=1
+        elif [[ $option = "s" || $option = "screen" ]]
+        then
+            option=2
+        elif [[ $option = "u" || $option = "update" ]]
+        then
+            option=3
+        elif [[ $option = "c" || $option = "clear" ]]
+        then
+            option=4
+        elif [[ $option = "x" || $option = "exit" ]]
+        then
+            option=5
+        fi
+    fi
+    
+    if [[ $option -eq 1 ]]
     then
         ./runkonsole.sh $@
         shift $#
         mode=0
         
-    elif [[ $option = "update" || $option = "u" || $option -eq 3 ]]
+    elif [[ $option -eq 2 ]]
+    then
+        ./runscreen.sh $@
+        shift $#
+        mode=0
+        
+    elif [[ $option -eq 3 ]]
     then
         ./update.sh
         
-    elif [[ $option = "clear" || $option = "c" || $option -eq 4 ]]
+    elif [[ $option -eq 4 ]]
     then
         clear
         
-    elif [[ $option = "exit" || $option = "x" || $option -eq 5 ]]
+    elif [[ $option -eq 5 ]]
     then
         shift $#
         mode=0
