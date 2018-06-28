@@ -63,7 +63,7 @@ function x_unlockrecipe(inst, prefab)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.builder ~= nil then
         SuUsed("x_unlockrecipe", true)
-        if type(prefab) = "string" then
+        if type(prefab) == "string" then
             player.components.builder:UnlockRecipe(prefab)
             player:PushEvent("techlevelchange")
         end
