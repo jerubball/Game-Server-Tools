@@ -1,10 +1,10 @@
 #!/bin/bash
 
-prompt="Enter Cluster Number, or Enter 0 or X to Exit"
-promptenter="Press Enter to continue."
 promptcluster="Enter Cluster Number: "
+promptshard="Enter Shard Name: "
+promptenter="Press Enter to continue."
 directoryprefix="Cluster_"
-promptdirectory="Directory does not exist: $directoryprefix"
+promptdirectory="Directory does not exist: "
 promptinvalid="Invalid option: "
 title="DST Server "
 directoryserver=/home/steam/steamapps/DST/bin
@@ -21,32 +21,53 @@ while [[ $# -gt 0 || $mode -gt 0 ]]
 do
     if [[ $mode -gt 0 ]]
     then
-        echo "$prompt"
-        read option
+        echo "$promptcluster"
+        read cluster
     else
-        option=$1
+        cluster=$1
         shift
     fi
-    option=${option,,}
-        
-    if [[ $option = "exit" || $option = "x" || $option -eq 0 ]]
+    cluster=${cluster,,}
+    
+    cd $directoryconfig
+    if [[ "$cluster" == "" ]]
     then
         shift $#
         mode=0
-    elif [[ "$option" != "" ]]
+        echo "$promptinvalid$cluster"
+        
+    elif [[ -d "$directoryprefix$cluster" ]]
     then
-        cd $directoryconfig
-        if [[ -d "$directoryprefix$option" ]]
+        if [[ $mode -gt 0 ]]
+        then
+            echo "$promptshard"
+            read shard
+        else
+            shard=$1
+            shift
+        fi
+        shard=${shard,,}
+        shard=${shard^}
+        
+        cd $directoryprefix$cluster
+        if [[ "$shard" == "" ]]
+        then
+            echo "$promptinvalid$shard"
+            
+        elif [[ -d "$shard" ]]
         then
             cd $directoryserver
-            nohup konsole --new-tab -p tabtitle="$title$option" -e nice -n -5 ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether -cluster $directoryprefix$option &>/dev/null &
+            
+            nohup konsole --new-tab -p tabtitle="$title$cluster:$shard" -e nice -n -5 ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether -cluster $directoryprefix$cluster -shard $shard &>/dev/null &
             read -p "$promptenter"
         else
-            echo "$promptdirectory$option"
+            echo "$promptdirectory$shard"
         fi
+        shard=""
     else
-        echo "$promptinvalid$option"
+        echo "$promptdirectory$directoryprefix$cluster"
     fi
+    cluster=""
 done
 
 # for i in $(seq $count)

@@ -3,8 +3,9 @@
 prompt="Choose: (K) Konsole, (S) Show, (T) Start, (P) Stop, (R) Restart, (U) Status, (C) Clear, (X) Exit"
 promptenter="Press Enter to continue."
 promptcluster="Enter Cluster Number: "
+promptshard="Enter Shard Name: "
 directoryprefix="Cluster_"
-promptdirectory="Directory does not exist: $directoryprefix"
+promptdirectory="Directory does not exist: "
 promptinvalid="Invalid option: "
 title="DST Server "
 directoryserver=/home/steam/steamapps/DST/bin
@@ -29,169 +30,159 @@ do
     fi
     option=${option,,}
     
-    if [[ $option = "konsole" || $option = "k" || $option -eq 1 ]]
+    if [[ $option -eq 0 ]]
+    then
+        if [[ $option = "k" || $option = "konsole" ]]
+        then
+            option=1
+        elif [[ $option = "s" || $option = "show" ]]
+        then
+            option=2
+        elif [[ $option = "t" || $option = "start" ]]
+        then
+            option=3
+        elif [[ $option = "p" || $option = "stop" ]]
+        then
+            option=4
+        elif [[ $option = "r" || $option = "restart" ]]
+        then
+            option=5
+        elif [[ $option = "u" || $option = "status" ]]
+        then
+            option=6
+        elif [[ $option = "c" || $option = "clear" ]]
+        then
+            option=7
+        elif [[ $option = "x" || $option = "exit" ]]
+        then
+            option=8
+        fi
+    fi
+    
+    if [[ $option -gt 0 && $option -lt 6 ]]
     then
         if [[ $mode -gt 0 ]]
         then
             echo "$promptcluster"
-            read option
+            read cluster
         else
-            option=$1
+            cluster=$1
             shift
         fi
-        option=${option,,}
+        cluster=${cluster,,}
         
-        if [[ "$option" != "" ]]
+        cd $directoryconfig
+        if [[ "$cluster" == "" ]]
         then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
+            echo "$promptinvalid$cluster"
+            
+        elif [[ -d "$directoryprefix$cluster" ]]
+        then
+            if [[ $mode -gt 0 ]]
             then
-                nohup konsole --new-tab -p tabtitle="$title$option" -e sudo screen -dr "$title$option" &>/dev/null &
-                read -p "$promptenter"
+                echo "$promptshard"
+                read shard
             else
-                echo "$promptdirectory$option"
+                shard=$1
+                shift
             fi
+            shard=${shard,,}
+            shard=${shard^}
+            
+            cd $directoryprefix$cluster
+            if [[ "$shard" == "" ]]
+            then
+                echo "$promptinvalid$shard"
+                
+            elif [[ -d "$shard" ]]
+            then
+                if [[ $option -eq 1 ]]
+                then
+                    nohup konsole --new-tab -p tabtitle="$title$cluster:$shard" -e sudo screen -dr "$title$cluster:$shard" &>/dev/null &
+                    read -p "$promptenter"
+                elif [[ $option -eq 2 ]]
+                then
+                    screen -dr "$title$cluster:$shard"
+                elif [[ $option -eq 3 ]]
+                then
+                    cd $directoryserver
+                    nice -n -5 screen -dmS "$title$cluster:$shard" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether -cluster $directoryprefix$cluster -shard $shard
+                elif [[ $option -eq 4 ]]
+                then
+                    screen -XS "$title$cluster:$shard" quit
+                elif [[ $option -eq 5 ]]
+                then
+                    cd $directoryconfig
+                    ./runscreen.sh p $cluster $shard t $cluster $shard
+                fi
+            else
+                echo $promptdirectory$shard
+            fi
+            shard=""
         else
-            echo "$promptinvalid$option"
+            echo "$promptdirectory$directoryprefix$cluster"
         fi
+        cluster=""
         
-    elif [[ $option = "show" || $option = "s" || $option -eq 2 ]]
+    elif [[ $option -eq 6 ]]
     then
         if [[ $mode -gt 0 ]]
         then
             echo "$promptcluster"
-            read option
+            read cluster
         else
-            option=$1
+            cluster=$1
             shift
         fi
-        option=${option,,}
+        cluster=${cluster,,}
         
-        if [[ "$option" != "" ]]
+        cd $directoryconfig
+        if [[ "$cluster" == "" ]]
         then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
-            then
-                screen -dr "$title$option"
-            else
-                echo "$promptdirectory$option"
-            fi
-        else
-            echo "$promptinvalid$option"
-        fi
-        
-    elif [[ $option = "start" || $option = "t" || $option -eq 3 ]]
-    then
-        if [[ $mode -gt 0 ]]
-        then
-            echo "$promptcluster"
-            read option
-        else
-            option=$1
-            shift
-        fi
-        option=${option,,}
-        
-        if [[ "$option" != "" ]]
-        then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
-            then
-                cd $directoryserver
-                nice -n -5 screen -dmS "$title$option" ./dontstarve_dedicated_server_nullrenderer -conf_dir DoNotStarveTogether -cluster $directoryprefix$option
-            else
-                echo "$promptdirectory$option"
-            fi
-        else
-            echo "$promptinvalid$option"
-        fi
-        
-    elif [[ $option = "stop" || $option = "p" || $option -eq 4 ]]
-    then
-        if [[ $mode -gt 0 ]]
-        then
-            echo "$promptcluster"
-            read option
-        else
-            option=$1
-            shift
-        fi
-        option=${option,,}
-        
-        if [[ "$option" != "" ]]
-        then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
-            then
-                screen -XS "$title$option" quit
-            else
-                echo "$promptdirectory$option"
-            fi
-        else
-            echo "$promptinvalid$option"
-        fi
-        
-    elif [[ $option = "restart" || $option = "r" || $option -eq 5 ]]
-    then
-        if [[ $mode -gt 0 ]]
-        then
-            echo "$promptcluster"
-            read option
-        else
-            option=$1
-            shift
-        fi
-        option=${option,,}
-        
-        if [[ "$option" != "" ]]
-        then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
-            then
-                ./runscreen.sh p $option t $option
-            else
-                echo "$promptdirectory$option"
-            fi
-        else
-            echo "$promptinvalid$option"
-        fi
-        
-    elif [[ $option = "status" || $option = "u" || $option -eq 6 ]]
-    then
-        if [[ $mode -gt 0 ]]
-        then
-            echo "$promptcluster"
-            read option
-        else
-            option=$1
-            shift
-        fi
-        option=${option,,}
-        
-        if [[ "$option" != "" ]]
-        then
-            cd $directoryconfig
-            if [[ -d "$directoryprefix$option" ]]
-            then
-                screen -ls "$title$option"
-            else
-                echo "$promptdirectory$option"
-            fi
-        else
             screen -ls "$title"
+            
+        elif [[ -d "$directoryprefix$cluster" ]]
+        then
+            if [[ $mode -gt 0 ]]
+            then
+                echo "$promptshard"
+                read shard
+            else
+                shard=$1
+                shift
+            fi
+            shard=${shard,,}
+            shard=${shard^}
+            
+            cd $directoryprefix$cluster
+            if [[ "$shard" == "" ]]
+            then
+                screen -ls "$title$cluster:"
+                
+            elif [[ -d "$shard" ]]
+            then
+                screen -ls "$title$cluster:$shard"
+            else
+                echo $promptdirectory$shard
+            fi
+            shard=""
+        else
+            echo "$promptdirectory$directoryprefix$cluster"
         fi
+        cluster=""
         
-    elif [[ $option = "clear" || $option = "c" || $option -eq 7 ]]
+    elif [[ $option -eq 7 ]]
     then
         clear
         
-    elif [[ $option = "exit" || $option = "x" || $option -eq 8 ]]
+    elif [[ $option -eq 8 ]]
     then
         shift $#
         mode=0
     else
         echo "$promptinvalid$option"
     fi
+    
 done
 
 #let "mode--"
