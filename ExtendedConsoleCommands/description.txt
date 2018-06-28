@@ -73,6 +73,11 @@ If [b]number[/b] is set to nonzero positive number, player is practically invinc
 Default value is 0.
 [b]number[/b] is 0 if omitted.
 
+[h1]x_setpenalty(player, percent)[/h1]
+Sets health penalty of player on scale of 0.0 (no penalty) to 1.0 (maximum penalty).
+[b]number[/b] is 0 if omitted.
+[b]Note[/b]: Maximum possible penalty is 0.75.
+
 [h1]x_setsanity(player, percent)[/h1]
 Sets sanity of player on scale of 0.0 (no sanity) to 1.0 (full sanity).
 [b]percent[/b] is 1 if omitted.
