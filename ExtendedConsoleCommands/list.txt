@@ -25,6 +25,7 @@ due to character limit of this page.
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_sethealthplayer-percent]x_sethealth(player, percent)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setmaxhealthplayer-number]x_setmaxhealth(player, number)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setminhealthplayer-number]x_setminhealth(player, number)[/url]
+[url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/blob/master/ExtendedConsoleCommands/README.md#x_setpenaltyplayer-percent]x_setpenalty(player, percent)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setsanityplayer-percent]x_setsanity(player, percent)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setmaxsanityplayer-number]x_setmaxsanity(player, number)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_sethungerplayer-percent]x_sethunger(player, percent)[/url]
