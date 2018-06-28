@@ -12,3 +12,5 @@ New commands start with x_
 This mod introduces new functions which can be used by server admins.
 
 Enhancements are made based on existing "consolecommands.lua" script.
+
+Find information of all commands [here](commands.md)
