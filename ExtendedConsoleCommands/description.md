@@ -7,6 +7,8 @@ New commands start with x_
 This mod introduces new functions which can be used by server admins.
 Enhancements are made based on existing "consolecommands.lua" script.
 
+Source code and detailed description can be found at https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands
+
 [h1][b]List of commands[/b][/h1]
 
 [h1]GetPlayer(player)[/h1]
@@ -27,6 +29,9 @@ Another example, [code]x_setinvincible("jerubball")[/code] will toggle invincibi
 Apply given command to all players.
 For example, [code]ApplyAllPlayers(x_give, "lucky_goldnugget")[/code] will give 1 Lucky Gold Nugget to all players.
 
+[h1]ApplyThePlayer(command, ...)[/h1]
+Apply given command to current player.
+
 [h1]x_freecrafting(player, mode)[/h1]
 Enables/Disables creative build mode for player.
 [b]mode[/b] can be either [code]true[/code] or [code]false[/code]
@@ -41,6 +46,10 @@ Sets invincibility of player.
 [b]mode[/b] can be either [code]true[/code] or [code]false[/code]
 If [b]mode[/b] is omitted, this will toggle creative build mode.
 
+[h1]x_setabsorption(player, percent)[/h1]
+Sets absorption/armor of player on scale of 0.0 (full damage) to 1.0 (no damage).
+[b]percent[/b] is 1 if omitted.
+
 [h1]x_kill(player)[/h1]
 Kills player.
 [b]Warning[/b]: As stated above, omitting [b]player[/b] will target the initiating player by default.
@@ -51,27 +60,34 @@ Omitting [b]player[/b] goes same for this as well.
 
 [h1]x_sethealth(player, percent)[/h1]
 Sets health of player on scale of 0.0 (min health) to 1.0 (max health).
+[b]percent[/b] is 1 if omitted.
 
 [h1]x_setmaxhealth(player, number)[/h1]
 Sets maximum possible health of player. This also sets health to that number as well.
 Default value varies for each character.
+[b]number[/b] is 100 if omitted.
 
 [h1]x_setminhealth(player, number)[/h1]
 Sets minimum possible health of player.
 If [b]number[/b] is set to nonzero positive number, player is practically invincible.
 Default value is 0.
+[b]number[/b] is 0 if omitted.
 
 [h1]x_setsanity(player, percent)[/h1]
-Sets sanity of player on scale of 0.0 to 1.0.
+Sets sanity of player on scale of 0.0 (no sanity) to 1.0 (full sanity).
+[b]percent[/b] is 1 if omitted.
 
 [h1]x_setmaxsanity(player, number)[/h1]
 Sets maximum possible sanity of player. This also sets sanity to that number as well.
+[b]number[/b] is 100 if omitted.
 
 [h1]x_sethunger(player, percent)[/h1]
-Sets hunger of player on scale of 0.0 to 1.0.
+Sets hunger of player on scale of 0.0 (hungry) to 1.0 (full).
+[b]percent[/b] is 1 if omitted.
 
 [h1]x_setmaxhunger(player, number)[/h1]
 Sets maximum possible hunger of player. This also sets hunger to that number as well.
+[b]number[/b] is 100 if omitted.
 
 [h1]x_pausehunger(player, mode)[/h1]
 Pauses/Resumes depletion of hunger for player.
@@ -80,16 +96,20 @@ If [b]mode[/b] is omitted, this will toggle depletion.
 
 [h1]x_setbeaverness(player, percent)[/h1]
 Sets beaverness of Woodie on scale of 0.0 (Werebeaver) or 1.0 (normal).
+[b]percent[/b] is 1 if omitted.
 
 [h1]x_setmoisture(player, percent)[/h1]
-Sets moisture/wetness of player on scale of 0.0 to 1.0.
+Sets moisture/wetness of player on scale of 0.0 (dry) to 1.0 (wet).
+[b]percent[/b] is 0 if omitted.
 
 [h1]x_setmoisturelevel(player, number)[/h1]
 Sets moisture/wetness level of player.
+[b]number[/b] is 0 if omitted.
 
 [h1]x_settemperature(player, number)[/h1]
 Sets temperature level of player.
 Player freezes at 0 and overheats at 70.
+[b]number[/b] is 25 if omitted.
 
 [h1]x_pausetemperature(player, mode)[/h1]
 Fixes/Unfixes change of temperature for player.
@@ -101,6 +121,16 @@ Buffs player.
 This sets hunger, sanity, and health to 500.
 This does [b]not[/b] make player invincible, and does [b]not[/b] remove any negative effect. (i.e. wetness, freezing, overheating)
 
+[h1]x_godmode(player, mode)[/h1]
+Carries same action as [code]c_godmode(player)[/code] with override option on invincibility.
+[b]mode[/b] can be either [code]true[/code] or [code]false[/code]
+If [b]mode[/b] is omitted, this will toggle temperature change.
+
+[h1]x_supergodmode(player, mode)[/h1]
+Carries same action as [code]c_supergodmode(player)[/code] with override option on invincibility.
+[b]mode[/b] can be either [code]true[/code] or [code]false[/code]
+If [b]mode[/b] is omitted, this will toggle temperature change.
+
 [h1]x_hypergodmode(player)[/h1]
 Resurrects player; sets hunger, sanity, and health to 1500; reset moisture to 0; set temperature to 30; and make player invincible.
 [b]Note[/b]: Unlike [code]c_godmode(player)[/code] or [code]c_supermode(player)[/code] which toggles invincibility, this will always make player invincible.
@@ -108,8 +138,8 @@ Invincibility can be turned off with [code]c_godmode(player)[/code] or [code]x_s
 
 [h1]x_speedmult(player, number)[/h1]
 Sets speed multiplier of player.
-Default value is 1.
-Value higher than 5 may cause lag.
+[b]number[/b] is speed multiplier. 1 if omitted.
+[b]Note[/b]: Value higher than 5 may cause movement lag.
 
 [h1]x_give(player, prefab, count, dontselect)[/h1]
 Gives item to player. This command behaves similar to [code]c_give(prefab, count, dontselect)[/code] command.
@@ -126,6 +156,12 @@ This command may not work as intended.
 Teleports [b]target_player[/b] to [b]destination_player[/b].
 This command behaves similar to [code]c_move(inst, dest)[/code] command.
 This command may not work as intended.
+
+[h1]x_revealmap(player, size, interval)[/h1]
+Reveals map for player.
+[b]size[/b] is number indicating size to reveal from center of map. 1600 if omitted.
+[b]interval[/b] is number indicating gap between each points to reveal. 35 if omitted.
+[b]Note[/b]: This may cause lag.
 
 [h1]x_nextcycle(count)[/h1]
 Advances to next day.

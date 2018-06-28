@@ -13,6 +13,10 @@ function ApplyAllPlayers(func, ...)
     end
 end
 
+function ApplyThePlayer(func, ...)
+    func(ThePlayer or GetPlayer(), unpack(arg))
+end
+
 function ApplyInfo(obj, func, proc, delim)
     if type(func) ~= "function" then
         func = print
@@ -59,8 +63,10 @@ function x_unlockrecipe(inst, prefab)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.builder ~= nil then
         SuUsed("x_unlockrecipe", true)
-        player.components.builder:UnlockRecipe(prefab)
-        player:PushEvent("techlevelchange")
+        if type(prefab) = "string" then
+            player.components.builder:UnlockRecipe(prefab)
+            player:PushEvent("techlevelchange")
+        end
     end
 end
 
@@ -72,6 +78,17 @@ function x_setinvincible(inst, mode)
             mode = not player.components.health:IsInvincible()
         end
         player.components.health:SetInvincible(mode)
+    end
+end
+
+function x_setabsorption(inst, num)
+    local player = GetPlayer(inst)
+    if player ~= nil and player.components.health ~= nil and not player:HasTag("playerghost") then
+        SuUsed("x_setabsorption", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
+        player.components.health:SetAbsorptionAmount(num)
     end
 end
 
@@ -102,6 +119,9 @@ function x_sethealth(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.health ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_sethealth", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
         player.components.health:SetPercent(num)
     end
 end
@@ -110,6 +130,9 @@ function x_setmaxhealth(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.health ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setmaxhealth", true)
+        if type(num) ~= "number" then
+            num = 100
+        end
         player.components.health:SetMaxHealth(num)
         player.components.health:SetPercent(1)
     end
@@ -119,6 +142,9 @@ function x_setminhealth(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.health ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setminhealth", true)
+        if type(num) ~= "number" then
+            num = 0
+        end
         player.components.health:SetMinHealth(num)
     end
 end
@@ -127,6 +153,9 @@ function x_setsanity(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.sanity ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setsanity", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
         player.components.sanity:SetPercent(num)
     end
 end
@@ -135,6 +164,9 @@ function x_setmaxsanity(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.sanity ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setmaxsanity", true)
+        if type(num) ~= "number" then
+            num = 100
+        end
         player.components.sanity:SetMax(num)
         player.components.sanity:SetPercent(1)
     end
@@ -144,6 +176,9 @@ function x_sethunger(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.hunger ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_sethunger", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
         player.components.hunger:SetPercent(num)
     end
 end
@@ -152,6 +187,9 @@ function x_setmaxhunger(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.hunger ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setmaxhunger", true)
+        if type(num) ~= "number" then
+            num = 100
+        end
         player.components.hunger:SetMax(num)
         player.components.hunger:SetPercent(1)
     end
@@ -172,6 +210,9 @@ function x_setbeaverness(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.beaverness ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setbeaverness", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
         player.components.beaverness:SetPercent(num)
     end
 end
@@ -180,6 +221,9 @@ function x_setmoisture(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.moisture ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setmoisture", true)
+        if type(num) ~= "number" then
+            num = 0
+        end
         player.components.moisture:SetPercent(num)
     end
 end
@@ -188,6 +232,9 @@ function x_setmoisturelevel(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.moisture ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_setmoisturelevel", true)
+        if type(num) ~= "number" then
+            num = 0
+        end
         player.components.moisture:SetMoistureLevel(num)
     end
 end
@@ -196,6 +243,9 @@ function x_settemperature(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.temperature ~= nil and not player:HasTag("playerghost") then
         SuUsed("x_settemperature", true)
+        if type(num) ~= "number" then
+            num = 25
+        end
         player.components.temperature:SetTemperature(num)
     end
 end
@@ -228,6 +278,49 @@ function x_setbuff(inst)
         if player.components.hunger ~= nil then
             player.components.hunger:SetMax(num)
             player.components.hunger:SetPercent(1)
+        end
+    end
+end
+
+function x_godmode(inst, mode)
+    local player = GetPlayer(inst)
+    if player ~= nil then
+        SuUsed("x_godmode", true)
+        if player:HasTag("playerghost") then
+            player:PushEvent("respawnfromghost")
+            print("Reviving "..player.name.." from ghost.")
+            return
+        elseif player:HasTag("corpse") then
+            player:PushEvent("respawnfromcorpse")
+            print("Reviving "..player.name.." from corpse.")
+            return
+        elseif player.components.health ~= nil then
+            if type(mode) ~= "boolean" then
+                mode = not player.components.health:IsInvincible()
+            end
+            player.components.health:SetInvincible(mode)
+        end
+    end
+end
+
+function x_supergodmode(inst, mode)
+    local player = GetPlayer(inst)
+    if player ~= nil then
+        SuUsed("x_supergodmode", true)
+        if player:HasTag("playerghost") then
+            player:PushEvent("respawnfromghost")
+            print("Reviving "..player.name.." from ghost.")
+            return
+        elseif player.components.health ~= nil then
+            if type(mode) ~= "boolean" then
+                mode = not player.components.health:IsInvincible()
+            end
+            player.components.health:SetInvincible(mode)
+            c_sethealth(1)
+            c_setsanity(1)
+            c_sethunger(1)
+            c_settemperature(25)
+            c_setmoisture(0)
         end
     end
 end
@@ -270,6 +363,9 @@ function x_speedmult(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.locomotor ~= nil then
         SuUsed("x_speedmult", true)
+        if type(num) ~= "number" then
+            num = 1
+        end
         player.components.locomotor:SetExternalSpeedMultiplier(player, "c_speedmult", num)
     end
 end
@@ -327,6 +423,21 @@ function x_move(inst, dest)
             return dest
         else
             inst.Transform:SetPosition(ConsoleWorldPosition():Get())
+        end
+    end
+end
+
+function x_revealmap(inst, num, int)
+    local player = GetPlayer(inst)
+    if type(num) ~= "number" then
+        num = 1600
+    end
+    if type(int) ~= "number" then
+        int = 35
+    end
+    for x = -num, num, int do
+        for y = -num, num, int do
+            player.player_classified.MapExplorer:RevealArea(x, 0, y)
         end
     end
 end
