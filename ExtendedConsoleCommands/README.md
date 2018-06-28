@@ -95,6 +95,13 @@ Default value is 0.
 
 **number** is 0 if omitted.
 
+## x_setpenalty(player, percent)
+Sets health penalty of player on scale of 0.0 (no penalty) to 1.0 (maximum penalty).
+
+**number** is 0 if omitted.
+
+**Note**: Maximum possible penalty is 0.75.
+
 ## x_setsanity(player, percent)
 Sets sanity of player on scale of 0.0 (no sanity) to 1.0 (full sanity).
 
