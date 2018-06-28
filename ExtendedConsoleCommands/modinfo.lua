@@ -6,7 +6,7 @@ New commands start with x_
 
 Source code and detailed description can be found at https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands]]
 author = "jerubball"
-version = "1.1.15"
+version = "1.1.16"
 
 icon_atlas = "modicon.xml"
 icon = "modicon.tex"

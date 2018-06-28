@@ -149,6 +149,18 @@ function x_setminhealth(inst, num)
     end
 end
 
+function x_setpenalty(inst, num)
+    local player = GetPlayer(inst)
+    if player ~= nil and player.components.health ~= nil and not player:HasTag("playerghost") then
+        SuUsed("x_setpenalty", true)
+        if type(num) ~= "number" then
+            num = 0
+        end
+        player.components.health:SetPenalty(num)
+        player.components.health:SetPercent(1)
+    end
+end
+
 function x_setsanity(inst, num)
     local player = GetPlayer(inst)
     if player ~= nil and player.components.sanity ~= nil and not player:HasTag("playerghost") then
