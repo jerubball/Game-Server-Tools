@@ -271,4 +271,4 @@ Number from 1 (autumn) to 4 (summer) can be used as well.
 ## x_setrain(mode)
 Starts/Stops rain.
 
-**mode** can be either `true` or `false`. false if omitted.
+**mode** can be either `true` or `false`.
