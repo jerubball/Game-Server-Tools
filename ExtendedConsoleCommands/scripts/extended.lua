@@ -400,6 +400,22 @@ function x_give(inst, prefab, count, dontselect)
     end
 end
 
+function x_removeslot(inst, num)
+    local player = GetPlayer(inst)
+    if player ~= nil and player.components.inventory ~= nil then
+        SuUsed("x_removeslot", true)
+        player.components.inventory:RemoveItemBySlot(num)
+    end
+end
+
+function x_dropeverything(inst)
+    local player = GetPlayer(inst)
+    if player ~= nil and player.components.inventory ~= nil then
+        SuUsed("x_dropeverything", true)
+        player.components.inventory:DropEverything()
+    end
+end
+
 -- move inst or current player to dest
 function x_goto(dest, inst)
     dest = GetPlayer(dest)
@@ -441,15 +457,18 @@ end
 
 function x_revealmap(inst, num, int)
     local player = GetPlayer(inst)
-    if type(num) ~= "number" then
-        num = 1600
-    end
-    if type(int) ~= "number" then
-        int = 35
-    end
-    for x = -num, num, int do
-        for y = -num, num, int do
-            player.player_classified.MapExplorer:RevealArea(x, 0, y)
+    if player ~= nil then
+        SuUsed("x_revealmap", true)
+        if type(num) ~= "number" then
+            num = 1600
+        end
+        if type(int) ~= "number" then
+            int = 35
+        end
+        for x = -num, num, int do
+            for y = -num, num, int do
+                player.player_classified.MapExplorer:RevealArea(x, 0, y)
+            end
         end
     end
 end
@@ -490,6 +509,11 @@ function x_setseason(season)
         end
     end
     TheWorld:PushEvent("ms_setseason", season)
+end
+
+function x_setrain(mode)
+    SuUsed("x_setrain", true)
+    TheWorld:PushEvent("ms_forceprecipitation", mode)
 end
 
 
