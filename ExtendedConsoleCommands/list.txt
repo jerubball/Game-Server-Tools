@@ -42,6 +42,8 @@ due to character limit of this page.
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_hypergodmodeplayer]x_hypergodmode(player)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_speedmultplayer-number]x_speedmult(player, number)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_giveplayer-prefab-count-dontselect]x_give(player, prefab, count, dontselect)[/url]
+[url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/blob/master/ExtendedConsoleCommands/README.md#x_removeslotplayer-slot]x_removeslot(player, slot)[/url]
+[url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/blob/master/ExtendedConsoleCommands/README.md#x_dropeverythingplayer-slot]x_dropeverything(player, slot)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_gotodestination_player-target_player]x_goto(destination_player, target_player)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_movetarget_player-destination_player]x_move(target_player, destination_player)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_revealmapplayer-size-interval]x_revealmap(player, size, interval)[/url]
@@ -49,3 +51,4 @@ due to character limit of this page.
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_nextphasecount]x_nextphase(count)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setphasephase]x_setphase(phase)[/url]
 [url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/tree/master/ExtendedConsoleCommands#x_setseasonseason]x_setseason(season)[/url]
+[url=https://github.com/jerubball/Dont-Starve-Together-Server-Tools/blob/master/ExtendedConsoleCommands/README.md#x_setrainmode]x_setrain(mode)[/url]
