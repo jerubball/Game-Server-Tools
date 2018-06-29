@@ -20,9 +20,9 @@ This command has same behavior as `ListingOrConsolePlayer(input)` in "consolecom
 
 In this command and in the following commands, **player** can be either of three.
 
-* Actual player object obtained by `ThePlayer` or `AllPlayers[1]`
+* Actual player object obtained by `ThePlayer` or `AllPlayers[1]`.
 * Numerical ID of player. This can be obtained by `c_listplayers()` or `c_listallplayers()` or pressing "Tab" key on keyboard.
-* Player name surrounded with quotation mark. For instance, `"jerubball"`
+* Player name surrounded with quotation mark. For instance, `"jerubball"`.
 
 If **player** is omitted, the command will automatically target the player who submitted the command. This is true for the following commands as well.
 
@@ -43,7 +43,7 @@ Apply given command to current player.
 ## x_freecrafting(player, mode)
 Enables/Disables creative build mode for player.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle creative build mode.
 
@@ -55,7 +55,7 @@ Unlocks item recipe for player.
 ## x_setinvincible(player, mode)
 Sets invincibility of player.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle creative build mode.
 
@@ -125,7 +125,7 @@ Sets maximum possible hunger of player. This also sets hunger to that number as 
 ## x_pausehunger(player, mode)
 Pauses/Resumes depletion of hunger for player.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle depletion.
 
@@ -154,7 +154,7 @@ Player freezes at 0 and overheats at 70.
 ## x_pausetemperature(player, mode)
 Fixes/Unfixes change of temperature for player.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle temperature change.
 
@@ -168,14 +168,14 @@ This does **not** make player invincible, and does **not** remove any negative e
 ## x_godmode(player, mode)
 Carries same action as `c_godmode(player)` with override option on invincibility.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle temperature change.
 
 ## x_supergodmode(player, mode)
 Carries same action as `c_supergodmode(player)` with override option on invincibility.
 
-**mode** can be either `true` or `false`
+**mode** can be either `true` or `false`.
 
 If **mode** is omitted, this will toggle temperature change.
 
@@ -201,6 +201,14 @@ Gives item to player. This command behaves similar to `c_give(prefab, count, don
 **count** is number of items. 1 if omitted.
 
 **dontselect** states whether spawned items should be selected or not. Can be omitted.
+
+## x_removeslot(player, slot)
+Removes item in given slot of player.
+
+**slot** is number between 1 and 15, indicating position of inventory slot from left (1) to right (15), excluding added slots from backpack.
+
+## x_dropeverything(player, slot)
+Drops all items of player. This will drop all items in the same way items are dropped when player dies.
 
 ## x_goto(destination_player, target_player)
 Teleports **target_player** to **destination_player**.
@@ -260,3 +268,7 @@ Sets current season.
 
 Number from 1 (autumn) to 4 (summer) can be used as well.
 
+## x_setrain(mode)
+Starts/Stops rain.
+
+**mode** can be either `true` or `false`. false if omitted.
