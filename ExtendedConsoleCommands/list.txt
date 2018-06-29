@@ -11,6 +11,14 @@ Source code and detailed description can be found at
 https://git.io/f4bxO
 due to character limit of this page.
 
+[b]NOTE[/b]: In following commands, [b]player[/b] can be either of three.
+[list]
+[*]Actual player object obtained by [code]ThePlayer[/code] or [code]AllPlayers[1][/code].
+[*]Numerical ID of player. This can be obtained by [code]c_listplayers()[/code] or [code]c_listallplayers()[/code] or pressing "Tab" key on keyboard.
+[*]Player name surrounded with quotation mark. For instance, [code]"jerubball"[/code].
+[/list]
+If [b]player[/b] is omitted, the command will automatically target the player who submitted the command.
+
 [h1][b]List of commands[/b][/h1]
 
 [url=https://git.io/f4bxO#getplayerplayer]GetPlayer(player)[/url]
