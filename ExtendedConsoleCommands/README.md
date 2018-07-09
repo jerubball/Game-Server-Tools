@@ -22,7 +22,7 @@ Enhancements are made based on existing "consolecommands.lua" script.
 
 ## GetPlayer(player)
 This command has same behavior as `ListingOrConsolePlayer(input)` in "consolecommands.lua", which is only defined locally. This command is accessible anywhere.
----
+
 In this command and in the following commands, **player** can be either of three.
 
 * Actual player object obtained by `ThePlayer` or `AllPlayers[1]`.
