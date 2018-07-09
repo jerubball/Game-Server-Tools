@@ -14,6 +14,8 @@ This mod introduces new functions which can be used by server admins.
 
 Enhancements are made based on existing "consolecommands.lua" script.
 
+---
+
 # List of Commands
 
 ---
