@@ -47,13 +47,11 @@ do
     then
         ./runkonsole.sh $@
         shift $#
-        mode=0
         
     elif [[ $option -eq 2 ]]
     then
         ./runscreen.sh $@
         shift $#
-        mode=0
         
     elif [[ $option -eq 3 ]]
     then
