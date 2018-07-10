@@ -8,5 +8,5 @@ cp --force ./dedicated_server_mods_setup.backup.lua ./dedicated_server_mods_setu
 
 cd /home/steam/steamapps/DST/bin
 
-sudo ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1
-sudo ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_914469371
+sudo ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1 -shard Master
+#sudo ./dontstarve_dedicated_server_nullrenderer -only_update_server_mods -conf_dir DoNotStarveTogether_EasyConfig -cluster Cluster_1 -shard Caves
