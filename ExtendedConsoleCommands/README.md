@@ -347,6 +347,8 @@ Sets current season.
 
 Number from 1 (autumn) to 4 (summer) can be used as well.
 
+---
+
 ## x_setrain(mode)
 Starts/Stops rain.
 
