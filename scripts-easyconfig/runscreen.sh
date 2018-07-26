@@ -1,12 +1,12 @@
 #!/bin/bash
 
-prompt="Choose: (K) Konsole, (S) Show, (T) Start, (P) Stop, (R) Restart, (U) Status, (C) Clear, (X) Exit"
+prompt="[Screen] Choose: (K) Konsole, (S) Show, (T) Start, (P) Stop, (R) Restart, (U) Status, (C) Clear, (X) Exit"
 promptworld="World: (O) Overworld, (C) Caves"
 promptenter="Press Enter to continue."
 promptinvalid="Invalid option: "
-title="DST EasyConfig "
-overworld="$title Overworld"
-caves="$title Caves"
+title="DST EasyConfig"
+overworld="$title:Overworld"
+caves="$title:Caves"
 directoryserver=/home/steam/steamapps/DST/bin
 directoryconfig=~/.klei/DoNotStarveTogether_EasyConfig
 
@@ -78,12 +78,12 @@ do
         
         if [[ $shard = "master" || $shard = "m" || $shard = "overworld" || $shard = "o" || $shard -eq 1 ]]
         then
-            $shard=$overworld
+            shard=$overworld
         elif [[ $shard = "caves" || $shard = "c" || $shard -eq 2 ]]
         then
-            $shard=$caves
+            shard=$caves
         else
-            $shard=""
+            shard=""
         fi
         
         if [[ "$shard" != "" ]]

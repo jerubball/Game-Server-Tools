@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prompt="Choose: (K) Konsole, (S) Screen, (U) Update, (C) Clear, (X) Exit"
+prompt="[Launcher] Choose: (K) Konsole, (S) Screen, (U) Update, (A) Announce, (C) Clear, (X) Exit"
 promptenter="Press Enter to close."
 promptinvalid="Invalid option: "
 
@@ -34,12 +34,15 @@ do
         elif [[ $option = "u" || $option = "update" ]]
         then
             option=3
-        elif [[ $option = "c" || $option = "clear" ]]
+        elif [[ $option = "a" || $option = "announce" ]]
         then
             option=4
-        elif [[ $option = "x" || $option = "exit" ]]
+        elif [[ $option = "c" || $option = "clear" ]]
         then
             option=5
+        elif [[ $option = "x" || $option = "exit" ]]
+        then
+            option=6
         fi
     fi
     
@@ -59,9 +62,14 @@ do
         
     elif [[ $option -eq 4 ]]
     then
-        clear
+        ./announce.sh $1
+        shift 1
         
     elif [[ $option -eq 5 ]]
+    then
+        clear
+        
+    elif [[ $option -eq 6 ]]
     then
         shift $#
         mode=0
