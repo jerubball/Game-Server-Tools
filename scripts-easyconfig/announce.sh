@@ -1,10 +1,9 @@
 #!/bin/bash
-# Original Script by noodlebox
 # https://github.com/noodlebox/stream-announcer
 
 set -e
 
-prompt="[Announce] Choose: (T) Start, (P) Stop, (R) Restart, (U) Status, (O) Outdated, (X) Exit"
+prompt="[Announce] Choose: (T) Start, (P) Stop, (R) Restart, (U) Status, (V) Version, (X) Exit"
 promptenter="Press Enter to continue."
 promptinvalid="Invalid option: "
 #color = (r << 16) + (g << 8) + b
@@ -13,15 +12,14 @@ promptinvalid="Invalid option: "
 #url="https://discordapp.com/api/webhooks/$id/$token"
 #url=""
 servername="Don't Starve Together Dedicated Server"
-msgstart="$servername started."
-msgstop="$servername stopped."
-msgrestart="$servername is restarting."
-msgrunning="$servername is currently running."
-msgnotrunning="$servername is currently not running."
-msgoutdated="$servername is outdated. Update is on the way."
-msgprepend=""
-msgpostpend=$'\n`Server time: '
-msgappend=$'`'
+msgstart=" started."
+msgstop=" stopped."
+msgrestart=" is restarting."
+msgrunning=" is currently running,"
+msgnotrunning=" is currently closed,"
+msguptodate=" and is up-to-date."
+msgoutdated=" and is outdated. Update is on the way."
+msgappend=$'\n**`Server time: '
 username='Server Status'
 
 webhook_post() {
@@ -33,7 +31,7 @@ webhook_encode() {
 }
 
 announce_message() {
-	webhook_encode "$msgprepend$1$msgpostpend$(date)$msgappend" "$username" <<<'[]' | webhook_post "$url"
+	webhook_encode "$1$msgappend$(date)\`**" "$username" <<<'[]' | webhook_post "$url"
 }
 
 if [[ $# -gt 0 ]]
@@ -69,7 +67,7 @@ do
         elif [[ $option = "u" || $option = "status" ]]
         then
             option=4
-        elif [[ $option = "o" || $option = "outdated" ]]
+        elif [[ $option = "v" || $option = "version" ]]
         then
             option=5
         elif [[ $option = "x" || $option = "exit" ]]
@@ -80,29 +78,45 @@ do
     
     if [[ $option -eq 1 ]]
     then
-        announce_message "$msgstart"
+        announce_message "$servername$msgstart"
         
     elif [[ $option -eq 2 ]]
     then
-        announce_message "$msgstop"
+        announce_message "$servername$msgstop"
     
     elif [[ $option -eq 3 ]]
     then
-        announce_message "$msgrestart"
+        announce_message "$servername$msgrestart"
         
     elif [[ $option -eq 4 ]]
     then
-        list=$(pgrep dontstarve)
+        list=$(pgrep dontstarve || echo "")
         if [[ $list == "" ]]
         then
-            announce_message "$msgnotrunning"
+            statusrun="$msgnotrunning"
         else
-            announce_message "$msgrunning"
+            statusrun="$msgrunning"
         fi
+        
+        current=$(cat /home/steam/steamapps/DST/changenumber || echo "")
+        update=$(/home/steam/steamcmd +@ShutdownOnFailedCommand 1 +@NoPromptForPassword 1 +login anonymous +app_info_update 1 +app_info_print 343050 +quit | grep "AppID : 343050,")
+        if [[ $current == $update ]]
+        then
+            statusupdate="$msguptodate"
+        else
+            statusupdate="$msgoutdated"
+        fi
+        
+        announce_message "$servername$statusrun$statusupdate"
         
     elif [[ $option -eq 5 ]]
     then
-        announce_message "$msgoutdated"
+        version=$(cat /home/steam/steamapps/DST/version.txt || echo "")
+        current=$(cat /home/steam/steamapps/DST/changenumber || echo "")
+        string="version : $version, $current"
+        string=${string//: /: \`}
+        string=${string//, /\`, $'\n\t'}
+        announce_message "$servername has $string\`"
         
     elif [[ $option -eq 6 ]]
     then
