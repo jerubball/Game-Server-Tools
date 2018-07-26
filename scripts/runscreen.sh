@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prompt="Choose: (K) Konsole, (S) Show, (T) Start, (P) Stop, (R) Restart, (U) Status, (C) Clear, (X) Exit"
+prompt="[Screen] Choose: (K) Konsole, (S) Show, (T) Start, (P) Stop, (R) Restart, (U) Status, (C) Clear, (X) Exit"
 promptenter="Press Enter to continue."
 promptcluster="Enter Cluster Number: "
 promptshard="Enter Shard Name: "

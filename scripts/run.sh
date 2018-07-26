@@ -1,6 +1,6 @@
 #!/bin/bash
 
-prompt="Choose: (K) Konsole, (S) Screen, (U) Update, (C) Clear, (X) Exit"
+prompt="[Launcher] Choose: (K) Konsole, (S) Screen, (U) Update, (C) Clear, (X) Exit"
 promptenter="Press Enter to close."
 promptinvalid="Invalid option: "
 
