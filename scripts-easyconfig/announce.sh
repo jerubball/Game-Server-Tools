@@ -4,13 +4,13 @@
 
 set -e
 
-prompt="[Announce] Choose: (T) Start, (P) Stop, (R) Restart, (U) Status, (X) Exit"
+prompt="[Announce] Choose: (T) Start, (P) Stop, (R) Restart, (U) Status, (O) Outdated, (X) Exit"
 promptenter="Press Enter to continue."
 promptinvalid="Invalid option: "
 #color = (r << 16) + (g << 8) + b
 #id='WEBHOOK_ID'
 #token='WEBHOOK_TOKEN'
-url="https://discordapp.com/api/webhooks/$id/$token"
+#url="https://discordapp.com/api/webhooks/$id/$token"
 #url=""
 servername="Don't Starve Together Dedicated Server"
 msgstart="$servername started."
@@ -18,7 +18,10 @@ msgstop="$servername stopped."
 msgrestart="$servername is restarting."
 msgrunning="$servername is currently running."
 msgnotrunning="$servername is currently not running."
-msgappend=$'\n  Server time: '
+msgoutdated="$servername is outdated. Update is on the way."
+msgprepend=""
+msgpostpend=$'\n`Server time: '
+msgappend=$'`'
 username='Server Status'
 
 webhook_post() {
@@ -30,7 +33,7 @@ webhook_encode() {
 }
 
 announce_message() {
-	webhook_encode "$1$msgappend$(date)" "$username" <<<'[]' | webhook_post "$url"
+	webhook_encode "$msgprepend$1$msgpostpend$(date)$msgappend" "$username" <<<'[]' | webhook_post "$url"
 }
 
 if [[ $# -gt 0 ]]
@@ -66,9 +69,12 @@ do
         elif [[ $option = "u" || $option = "status" ]]
         then
             option=4
-        elif [[ $option = "x" || $option = "exit" ]]
+        elif [[ $option = "o" || $option = "outdated" ]]
         then
             option=5
+        elif [[ $option = "x" || $option = "exit" ]]
+        then
+            option=6
         fi
     fi
     
@@ -93,8 +99,12 @@ do
         else
             announce_message "$msgrunning"
         fi
-    
+        
     elif [[ $option -eq 5 ]]
+    then
+        announce_message "$msgoutdated"
+        
+    elif [[ $option -eq 6 ]]
     then
         shift $#
         mode=0
