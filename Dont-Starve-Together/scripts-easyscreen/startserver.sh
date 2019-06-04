@@ -3,8 +3,8 @@
 ~/him-get.sh -n -k easyscreen.sh
 clear
 chmod +x easyscreen.sh
-cd ..
-./bin/easyscreen.sh silent "DST-main-overworld" "~/.steam/SteamApps/common/Dont-Starve-Together-Dedicated-Server-main/bin/dontstarve_dedicated_server_nullrenderer" -cluster Main -shard Overworld
-./bin/easyscreen.sh silent "DST-main-caves" "~/.steam/SteamApps/common/Dont-Starve-Together-Dedicated-Server-main/bin/dontstarve_dedicated_server_nullrenderer" -cluster Main -shard Caves
+cd ../../Dont-Starve-Together-Dedicated-Server-main/bin
+../../bin/main/easyscreen.sh silent "DST-main-overworld" "./dontstarve_dedicated_server_nullrenderer" -cluster Main -shard Overworld
+../../bin/main/easyscreen.sh silent "DST-main-caves" "./dontstarve_dedicated_server_nullrenderer" -cluster Main -shard Caves
 
 read -p "Press Enter to Close"

@@ -34,8 +34,8 @@ else
     message="Don't Starve Together beta server **not** running!"
 fi
 
-version=$(cat ~/.steam/SteamApps/common/Dont-Starve-Together-Dedicated-Server-beta/version.txt || echo "")
-current=$(cat ~/.steam/SteamApps/common/Dont-Starve-Together-Dedicated-Server-beta/changenumber || echo "")
+version=$(cat ~/.klei/Dont-Starve-Together-Dedicated-Server-beta/version.txt || echo "")
+current=$(cat ~/.klei/Dont-Starve-Together-Dedicated-Server-beta/changenumber || echo "")
 update=$(/home/steam/steamcmd +@ShutdownOnFailedCommand 1 +@NoPromptForPassword 1 +login anonymous +app_info_update 1 +app_info_print 343050 +quit | grep "AppID : 343050,")
 if [[ $current == $update ]]
 then
