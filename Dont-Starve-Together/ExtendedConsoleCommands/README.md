@@ -1,6 +1,6 @@
 # [Extended Console Commands](https://steamcommunity.com/sharedfiles/filedetails/?id=1411687865) Mod
 Mod for Don't Starve Together.
-Link to master branch of this page: https://git.io/f4bxO
+Link to master branch of this page: https://git.io/fju4X
 
 ## In-game description
 Provides multiplayer console commands for DST.
