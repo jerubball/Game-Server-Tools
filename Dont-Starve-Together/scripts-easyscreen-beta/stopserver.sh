@@ -4,7 +4,7 @@
 clear
 chmod +x easyscreen.sh
 cd ..
-./bin/easyscreen.sh stop "DST-beta-overworld"
-./bin/easyscreen.sh stop "DST-beta-caves"
+./beta/easyscreen.sh stop "DST-beta-overworld"
+./beta/easyscreen.sh stop "DST-beta-caves"
 
 read -p "Press Enter to Close"

@@ -4,6 +4,6 @@
 clear
 chmod +x easyscreen.sh
 cd ..
-./bin/easyscreen.sh show "DST-main-caves"
+./main/easyscreen.sh show "DST-main-caves"
 
 read -p "Press Enter to Close"

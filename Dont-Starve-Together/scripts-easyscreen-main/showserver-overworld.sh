@@ -4,6 +4,6 @@
 clear
 chmod +x easyscreen.sh
 cd ..
-./bin/easyscreen.sh show "DST-main-overworld"
+./main/easyscreen.sh show "DST-main-overworld"
 
 read -p "Press Enter to Close"
