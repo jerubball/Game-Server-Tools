@@ -1,0 +1,50 @@
+
+EasyConfig Master
+    server port: 11011
+    shard port:  11511
+    steam port:  12011
+    steam auth:  12511
+
+EasyConfig Caves
+    server port: 11012
+    shard port:  11511
+    steam port:  12012
+    steam auth:  12512
+
+
+Cluster 1 Master
+    server port: 11001
+    shard port:  11501
+    steam port:  12001
+    steam auth:  12501
+
+Cluster 1 Caves (Reserved)
+    server port: 11002
+    shard port:  11501
+    steam port:  12002
+    steam auth:  12502
+
+Cluster 2 Master
+    server port: 11003
+    shard port:  11503
+    steam port:  12003
+    steam auth:  12503
+
+Cluster 2 Caves
+    server port: 11004
+    shard port:  11503
+    steam port:  12004
+    steam auth:  12504
+
+Cluster 3 Master
+    server port: 11005
+    shard port:  11505
+    steam port:  12005
+    steam auth:  12505
+
+Cluster 3 Caves
+    server port: 11006
+    shard port:  11505
+    steam port:  12006
+    steam auth:  12506
+
