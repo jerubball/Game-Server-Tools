@@ -11,4 +11,4 @@ cd ~/.klei/Dont-Starve-Together-Dedicated-Server-main/mods
 cp --force ./dedicated_server_mods_setup.backup.lua ./dedicated_server_mods_setup.lua
 
 cd ~/.klei/Dont-Starve-Together-Dedicated-Server-main/bin
-./dontstarve_dedicated_server_nullrenderer -only_update_server_mods
+./dontstarve_dedicated_server_nullrenderer -only_update_server_mods -cluster Main -shard Overworld
