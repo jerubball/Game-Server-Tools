@@ -1,0 +1,27 @@
+
+Script binary folder for ngrok and minecraft server.
+
+Easyscreen utility powered by him-get.
+
+
+Simply double-click on script file to execute.
+
+4 types of operations are listed.
+
+    Start:  starts program with screen session.
+    Stop:   force terminates program.
+    Show:   display output of program using screen session.
+    Status: display running status (PID) of screen session.
+
+Note:
+    Only one running instance is allowed.
+        (second execution of start script will do nothing.)
+    Only one display instance is allowed.
+        (second execution of show script will detatch first one.)
+
+    Please do NOT press [Ctrl] + [C] or [Ctrl] + [Z] to close session,
+        unless that is what you want to do (i.e. terminate session.)
+    In order to safely leave screen session without terminating it,
+        press [Ctrl] + [A] , [D] to detatch screen window.
+
+For more information, see screen utility's manual page.
