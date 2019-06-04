@@ -1,0 +1,15 @@
+authtoken: 
+web_addr: "192.168.163.219:4040"
+tunnels:
+  minecraft:
+    proto: tcp
+    addr: 192.168.163.219:25565
+  forge:
+    proto: tcp
+    addr: 192.168.163.219:25566
+  tekkit:
+    proto: tcp
+    addr: 192.168.163.219:25567
+  ssh:
+    proto: tcp
+    addr: 22

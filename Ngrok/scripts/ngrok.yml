@@ -1,0 +1,58 @@
+authtoken: 
+web_addr: 192.168.163.215:4040
+tunnels:
+  monitor:
+    proto: http
+    addr: 4040
+  http:
+    proto: http
+    addr: 80
+  https:
+    proto: tls
+    addr: 443
+  ssh:
+    proto: tcp
+    addr: 22
+  mysql:
+    proto: tcp
+    addr: 3306
+  http14:
+    proto: http
+    addr: 192.168.163.214:80
+  https14:
+    proto: tls
+    addr: 192.168.163.214:443
+  ssh14:
+    proto: tcp
+    addr: 192.168.163.214:22
+  mysql14:
+    proto: tcp
+    addr: 192.168.163.214:3306
+  http15:
+    proto: http
+    addr: 192.168.163.215:80
+  https15:
+    proto: tls
+    addr: 192.168.163.215:443
+  ssh15:
+    proto: tcp
+    addr: 192.168.163.215:22
+  mysql15:
+    proto: tcp
+    addr: 192.168.163.215:3306
+  minecraft19:
+    proto: tcp
+    addr: 192.168.163.219:25565
+  http23:
+    proto: http
+    addr: 192.168.163.223:80
+  https23:
+    proto: tls
+    addr: 192.168.163.223:443
+  ssh23:
+    proto: tcp
+    addr: 192.168.163.223:22
+  mysql23:
+    proto: tcp
+    addr: 192.168.163.223:3306
+
