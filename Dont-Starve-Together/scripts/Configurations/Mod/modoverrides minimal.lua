@@ -1,8 +1,10 @@
 return {
+  -- Extended Console Commands
   ["workshop-1411687865"]={
     configuration_options={
     },
     enabled=true },
+  -- Global Positions
   ["workshop-378160973"]={
     configuration_options={
       ENABLEPINGS=true,
@@ -14,9 +16,10 @@ return {
       SHOWPLAYERSOPTIONS=3 
     },
     enabled=true },
+  -- Wormhole Marks
   ["workshop-362175979"]={
     configuration_options={
       ["Draw over FoW"]="enabled"
     },
-    enabled=true}
+    enabled=true }
 }

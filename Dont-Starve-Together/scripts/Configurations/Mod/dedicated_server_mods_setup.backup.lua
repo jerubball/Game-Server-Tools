@@ -15,7 +15,7 @@
 --ServerModSetup("")
 
 ------------------------------
--- Client Mods (4)
+-- Client Mods (10)
 
 --# Combined Status
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=376333686
@@ -49,6 +49,14 @@ ServerModSetup("1290774144")
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=881455419
 ServerModSetup("881455419")
 
+--# Item Info
+--  https://steamcommunity.com/sharedfiles/filedetails/?id=345692228
+--ServerModSetup("345692228")
+
+--# Minimap HUD
+--  https://steamcommunity.com/sharedfiles/filedetails/?id=345692228
+ServerModSetup("345692228")
+
 
 ------------------------------
 -- Server Mods (6)
@@ -77,8 +85,9 @@ ServerModSetup("1197699346")
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=466732225
 ServerModSetup("466732225")
 
+
 ------------------------------
--- Server Mods - All Clients Require Mod (10)
+-- Server Mods - All Clients Require Mod (13)
 
 --# Global Positions
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=378160973
@@ -96,13 +105,21 @@ ServerModSetup("1322590454")
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=362175979
 ServerModSetup("362175979")
 
---# Food Values
+--# Food Values - Item tooltips
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=458940297
 ServerModSetup("458940297")
+
+--# Display Food Values
+--  https://steamcommunity.com/sharedfiles/filedetails/?id=347079953
+--ServerModSetup("347079953")
 
 --# Health Info
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=375859599
 ServerModSetup("375859599")
+
+--# Simple Health Bar DST
+--  https://steamcommunity.com/sharedfiles/filedetails/?id=1207269058
+ServerModSetup("1207269058")
 
 --# The Gorge Stuff
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=1416665690
@@ -123,4 +140,5 @@ ServerModSetup("1296876246")
 --# Change Characters
 --  https://steamcommunity.com/sharedfiles/filedetails/?id=788825160
 ServerModSetup("788825160")
+
 
