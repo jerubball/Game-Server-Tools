@@ -10,6 +10,9 @@ tunnels:
   tekkit:
     proto: tcp
     addr: 192.168.163.219:25567
+  other:
+    proto: tcp
+    addr: 192.168.163.219:25568
   ssh:
     proto: tcp
     addr: 22
