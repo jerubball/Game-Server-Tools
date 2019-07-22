@@ -1,6 +1,6 @@
 #!/bin/bash
 
-url="https://discordapp.com/api/webhooks/526137136869539853/JX_2Xga83yEZn4eafVnep1ozRzC9DNuDp2NV4n0clGuc2u0IBHgL_rdunzccDJepXwP0"
+url=""
 username='Server Status'
 msgappend=$'\n**`Server time: '
 newline=$'\n'
