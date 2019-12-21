@@ -27,6 +27,7 @@ do
         -- )
             shift
             break
+        ;;
         * )
             echo "unrecognized option"
             exit 1
