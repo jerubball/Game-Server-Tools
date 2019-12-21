@@ -10,6 +10,10 @@ tunnels:
   https:
     proto: tls
     addr: 443
+  althttp: http
+    addr: 8080
+  althttps: tls
+    addr: 8080
   ssh:
     proto: tcp
     addr: 22
