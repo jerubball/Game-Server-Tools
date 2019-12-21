@@ -11,7 +11,7 @@ while [[ $# > 0 ]]
 do
     # option processing
     case $1 in
-        -h | --help | -? )
+        -h | --help | -\? )
             echo "[--restart] [--silent] [--nofallback]"
             exit
         ;;
@@ -27,6 +27,10 @@ do
         -- )
             shift
             break
+        * )
+            echo "unrecognized option"
+            exit 1
+        ;;
     esac
     shift
 done
