@@ -3,7 +3,7 @@ team add Black
 team modify Black color black
 
 team add Navy
-team modify  color dark_blue
+team modify Navy color dark_blue
 
 team add Grass
 team modify Grass color dark_green
