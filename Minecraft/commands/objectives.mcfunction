@@ -11,7 +11,7 @@ scoreboard objectives add PlayerKills playerKillCount
 
 scoreboard objectives setdisplay belowName Health
 scoreboard objectives setdisplay list Level
-scoreboard objectives setdisplay sidebar Death
+scoreboard objectives setdisplay sidebar Deaths
 
 scoreboard players set @a Deaths 0
 scoreboard players set @a TotalKills 0
