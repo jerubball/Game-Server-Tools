@@ -1,5 +1,5 @@
 
-/give @p[distance=..3,gamemode=creative] trident{display:{Name:"{\"text\":\"Trident\"}"}}
+/give @p[gamemode=creative,distance=..3] trident{display:{Name:"{\"text\":\"Trident\"}"}}
 /give @p[gamemode=creative,distance=..3] trident{display:{Name:"{\"text\":\"Trident A\"}"},Enchantments:[{id:"loyalty",lvl:3},{id:"channeling",lvl:1},{id:"impaling",lvl:5},{id:"unbreaking",lvl:3},{id:"mending",lvl:1}]}
 /give @p[gamemode=creative,distance=..3] trident{display:{Name:"{\"text\":\"Trident B\"}"},Enchantments:[{id:"riptide",lvl:3},{id:"impaling",lvl:5},{id:"unbreaking",lvl:3},{id:"mending",lvl:1}]}
 /give @p[gamemode=creative,distance=..3] trident{display:{Name:"{\"text\":\"Trident X\"}"},Enchantments:[{id:"loyalty",lvl:10},{id:"channeling",lvl:1},{id:"impaling",lvl:10},{id:"unbreaking",lvl:10},{id:"mending",lvl:1}]}
