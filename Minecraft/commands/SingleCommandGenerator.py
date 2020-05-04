@@ -14,18 +14,15 @@ if __name__ == '__main__':
         if len(cmd) > 0:
             num = len(cmd)
 
-            command = 'summon falling_block ~ ~1 ~ \
-{Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' \
+            command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' \
                     + str(num+1) + ']"},Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"chain_command_block",Properties:{facing:"down"}},TileEntityData:{Command:"fill ~ ~-1 ~ ~ ~' \
                     + str(num) + ' ~ air"}'
 
             for i in range(num-1,0,-1):
-                command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\""\
-,Passengers:[{id:falling_block,Time:1,BlockState:{Name:"chain_command_block",Properties:{facing:"down"}},TileEntityData:{Command:"' \
+                command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"chain_command_block",Properties:{facing:"down"}},TileEntityData:{Command:"' \
                            + cmd[i] + '"}'
 
-            command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\""\
-,Passengers:[{id:falling_block,Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"' \
+            command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"' \
                            + cmd[0] + '"}' + '}]}]' * num + '}]}]}'
 
             if len(command) > 32500:
