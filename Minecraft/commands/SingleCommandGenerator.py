@@ -1,32 +1,134 @@
 
 import sys,re
 
+
+
 if __name__ == '__main__':
     filename = input('Enter filename: ')
 
     with open(filename) as file:
         cmd = []
+        meta = {}
+        keep = {'keep', 'remove', 'optional'}
+        mode = {'impulse', 'chain', 'repeat'}
+        auto = {'auto', 'manual'}
+        cond = {'conditional', 'unconditional'}
         for line in file:
             line = line.strip()
+            # command
             if len(line) > 0 and line[0] != '#':
                 cmd.append(re.sub(r'(?<!\\)"','\\"',line.replace('\\', '\\\\')))
+            # metadata
+            elif len(line) > 2 and line[0:2] == '#@':
+                line = line[2:].strip()
+                # global data
+                if 'keep' not in meta and line in keep:
+                    meta['keep'] = line
+                elif line[0:7] == 'default':
+                    line = line[7:].strip()
+                    if 'mode' not in meta and line in mode:
+                        meta['mode'] = line
+                    elif 'auto' not in meta and line in auto:
+                        meta['auto'] = line
+                    elif 'cond' not in meta and line in cond:
+                        meta['cond'] = line
+                else:
+                    # block specific data
+                    if len(cmd) not in meta:
+                        meta[len(cmd)] = {}
+                    if 'mode' not in meta[len(cmd)] and line in mode:
+                        meta[len(cmd)]['mode'] = line
+                    elif 'auto' not in meta[len(cmd)] and line in auto:
+                        meta[len(cmd)]['auto'] = line
+                    elif 'cond' not in meta[len(cmd)] and line in cond:
+                        meta[len(cmd)]['cond'] = line
 
-        if len(cmd) > 0:
-            num = len(cmd)
+        # skip if no command
+        num = len(cmd)
+        if num > 0:
+            if num > 250:
+                print('Input command is more than limit of 250 commands', file=sys.stderr)
 
-            command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' \
-                    + str(num+1) + ']"},Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"chain_command_block",Properties:{facing:"down"}},TileEntityData:{Command:"fill ~ ~-1 ~ ~ ~' \
-                    + str(num) + ' ~ air"}'
+            # determine automatic behavior of keep
+            if 'keep' not in meta:
+                if 'mode' in meta and meta['mode'] != 'chain':
+                    meta['keep'] = 'optional'
+                else:
+                    for i in range(num):
+                        if i in meta and 'mode' in meta[i] and meta[i]['mode'] != 'chain':
+                            meta['keep'] = 'optional'
+                            break
+                    if 'keep' not in meta:
+                            meta['keep'] = 'remove'
+
+            spacer = ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:'
+            nsp = num if meta['keep'] == 'keep' else num + 1
+
+            # generate command segment
+            def apply(cmd, data=None):
+                if data is None:
+                    data = {}
+                if 'mode' not in data:
+                    if 'mode' in meta:
+                        data['mode'] = meta['mode']
+                    else:
+                        data['mode'] = 'chain'
+                if 'auto' not in data:
+                    if 'auto' in meta:
+                        data['auto'] = meta['auto']
+                    else:
+                        data['auto'] = 'auto'
+                if 'cond' not in data:
+                    if 'cond' in meta:
+                        data['cond'] = meta['cond']
+                    else:
+                        data['cond'] = 'unconditional'
+                com = spacer + '{Name:"'
+                if data['mode'] == 'chain':
+                    com += 'chain_'
+                elif data['mode'] == 'repeat':
+                    com += 'repeating_'
+                com += 'command_block",Properties:{facing:"down"'
+                if data['cond'] == 'conditional':
+                    com += ',conditional:1'
+                com += '}},TileEntityData:{'
+                if data['auto'] == 'auto' and data['mode'] != 'chain':
+                    com += 'auto:1,'
+                elif data['auto'] == 'manual' and data['mode'] == 'chain':
+                    com += 'auto:0,'
+                com += 'Command:"' + cmd + '"}'
+                return com
+
+            # base command to kill spacer
+            command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' + str(nsp) + ']"}'
+
+            if meta['keep'] != 'keep':
+                command += spacer + '{Name:"'
+                if meta['keep'] == 'remove':
+                    command += 'chain_'
+                command += 'command_block",Properties:{facing:"down"}},TileEntityData:{Command:"fill ~ ~-1 ~ ~ ~' + str(num) + ' ~ air"}'
 
             for i in range(num-1,0,-1):
-                command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"chain_command_block",Properties:{facing:"down"}},TileEntityData:{Command:"' \
-                           + cmd[i] + '"}'
+                if i in meta:
+                    command += apply(cmd[i], meta[i])
+                else:
+                    command += apply(cmd[i])
 
-            command += ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"' \
-                           + cmd[0] + '"}' + '}]}]' * num + '}]}]}'
+            if 0 in meta:
+                if 'mode' in meta[0] and meta[0]['mode'] == 'chain':
+                    print('Chain mode will be fixed to impulse mode in first block', file=stderr)
+                    meta[0]['mode'] = 'impulse'
+                if 'cond' in meta[0] and meta[0]['mode'] == 'conditional':
+                    print('Conditional will be fiexd to unconditional in first block', file=stderr)
+                    meta[0]['cond'] = 'unconditional'
+                command += apply(cmd[0], meta[0])
+            else:
+                command += apply(cmd[0],{'mode':'impulse'})
+
+            command += '}]}]' * nsp + '}'
 
             if len(command) > 32500:
-                print('Command is longer than limit of 32500 letters', file=sys.stderr)
+                print('Output command is longer than limit of 32500 characters', file=sys.stderr)
 
             print(command)
 
