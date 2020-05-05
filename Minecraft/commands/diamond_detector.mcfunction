@@ -3,6 +3,7 @@
 scoreboard objectives add detectdiamond trigger
 
 #@ repeat
+scoreboard players enable @a[gamemode=creative] detectdiamond
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~-1 ~ ~ diamond_ore run tell @p Diamond ore detected within 1 block.
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~1 ~ ~ diamond_ore run tell @p Diamond ore detected within 1 block.
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~ ~-1 diamond_ore run tell @p Diamond ore detected within 1 block.
