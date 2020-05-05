@@ -1,10 +1,12 @@
+#@ optional
+
+gamerule commandBlockOutput false
 
 time set noon
 weather set clear
 difficulty easy
 
 gamerule announceAdvancements true
-gamerule commandBlockOutput false
 gamerule disableElytraMovementCheck true
 gamerule disableRaids false
 gamerule doDaylightCycle false
