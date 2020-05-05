@@ -1,7 +1,6 @@
 
-import sys,re
-
-
+import sys
+#import re
 
 if __name__ == '__main__':
     filename = input('Enter filename: ')
@@ -17,7 +16,8 @@ if __name__ == '__main__':
             line = line.strip()
             # command
             if len(line) > 0 and line[0] != '#':
-                cmd.append(re.sub(r'(?<!\\)"','\\"',line.replace('\\', '\\\\')))
+                #cmd.append(re.sub(r'(?<!\\)"','\\"',line.replace('\\', '\\\\')))
+                cmd.append(line.replace('\\', '\\\\').replace('"', '\\"'))
             # metadata
             elif len(line) > 2 and line[0:2] == '#@':
                 line = line[2:].strip()
@@ -47,7 +47,7 @@ if __name__ == '__main__':
         num = len(cmd)
         if num > 0:
             if num > 250:
-                print('Input command is more than limit of 250 commands', file=sys.stderr)
+                print('Input command of ' + str(num) + ' is more than limit of 250 commands', file=sys.stderr)
 
             # determine automatic behavior of keep
             if 'keep' not in meta:
@@ -128,7 +128,7 @@ if __name__ == '__main__':
             command += '}]}]' * nsp + '}'
 
             if len(command) > 32500:
-                print('Output command is longer than limit of 32500 characters', file=sys.stderr)
+                print('Output command of ' + str(len(command)) + ' is longer than limit of 32500 characters', file=sys.stderr)
 
             print(command)
 
