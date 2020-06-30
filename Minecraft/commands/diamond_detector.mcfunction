@@ -1,478 +1,489 @@
 #@ keep
 
-scoreboard objectives add detectdiamond trigger
+scoreboard objectives add orescan trigger
 scoreboard objectives add Timer dummy
-scoreboard players set detectdiamond Timer 0
+scoreboard players set oretimer Timer 0
+scoreboard objectives add oretell dummy
 
 #@ repeat
-scoreboard players enable @a[gamemode=creative] detectdiamond
-scoreboard players add detectdiamond Timer 1
-execute if score detectdiamond Timer matches 100.. run scoreboard players set detectdiamond Timer 0
+scoreboard players add oretimer Timer 1
+execute if score oretimer Timer matches 20.. run scoreboard players set oretimer Timer 0
+scoreboard players enable @a[gamemode=creative] orescan
+execute at @a[scores={orescan=1..}] unless score @p oretell = @p oretell run scoreboard players set @p oretell 101
+execute at @a[scores={oretell=1}] run tell @p Diamond ore detected within 1 block.
+execute at @a[scores={oretell=2}] run tell @p Diamond ore detected within 2 blocks.
+execute at @a[scores={oretell=3}] run tell @p Diamond ore detected within 3 blocks.
+execute at @a[scores={oretell=4}] run tell @p Diamond ore detected within 4 blocks.
+execute at @a[scores={oretell=5}] run tell @p Diamond ore detected within 5 blocks.
+execute at @a[scores={oretell=6}] run tell @p Diamond ore detected within 6 blocks.
+execute at @a[scores={oretell=1..100}] run scoreboard players reset @p oretell
 
+#@ repeat
+execute store success block ~ ~ ~ success byte 1 if score oretimer Timer matches 0
 #@ repeat
 #@ conditional
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~-1 ~1 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~1 ~1 diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~1 ~1 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~2 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~1 ~ ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~ ~1 diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~ ~-1 diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~-1 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~-1 ~ ~ diamond_ore run tell @p Diamond ore detected within 1 block.
-execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 1 block.
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~-1 ~1 ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~1 ~1 diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~1 ~1 ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~2 ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~1 ~ ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~ ~1 diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~ ~-1 diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~-1 ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~-1 ~ ~ diamond_ore run scoreboard players set @p oretell 1
+execute at @a[scores={orescan=1..,oretell=2..},gamemode=!spectator] if block ~ ~1 ~-1 diamond_ore run scoreboard players set @p oretell 1
 
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~ ~2 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~1 ~2 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~3 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~ ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~-2 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~2 ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-2 ~1 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~2 ~1 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~2 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~ ~-2 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~ ~1 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-1 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~-2 ~ ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~1 ~2 ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~ ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 2 blocks.
-execute at @a[scores={detectdiamond=2..},gamemode=!spectator] if block ~2 ~ ~ diamond_ore run tell @p Diamond ore detected within 2 blocks.
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~ ~2 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~1 ~2 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~3 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~ ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~-1 ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~ ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~-2 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~1 ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~2 ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-2 ~1 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~2 ~1 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~2 ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~1 ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~2 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~ ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~-1 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~ ~-2 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~ ~1 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-1 ~-1 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~-2 ~ ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~1 ~2 ~ diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~ ~1 ~-2 diamond_ore run scoreboard players set @p oretell 2
+execute at @a[scores={orescan=2..,oretell=3..},gamemode=!spectator] if block ~2 ~ ~ diamond_ore run scoreboard players set @p oretell 2
 
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-3 ~ ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~1 ~3 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~3 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~3 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~2 ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~ ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~-3 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~ ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~ ~-3 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~ ~3 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~ ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~3 ~1 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~3 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-3 ~1 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~2 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~2 ~2 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-2 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~3 ~ ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~-1 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~ ~4 ~ diamond_ore run tell @p Diamond ore detected within 3 blocks.
-execute at @a[scores={detectdiamond=3..},gamemode=!spectator] if block ~1 ~ ~2 diamond_ore run tell @p Diamond ore detected within 3 blocks.
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-3 ~ ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~1 ~3 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~3 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~3 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~3 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~2 ~2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~ ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~-3 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~ ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~ ~-3 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~ ~3 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~2 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~ ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~ ~2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~3 ~1 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~ ~-1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~ ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~-2 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~3 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~1 ~2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-3 ~1 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~2 ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~2 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~-1 ~2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~1 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~1 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~2 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~-1 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~ ~-2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~1 ~2 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~2 ~2 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-2 ~-1 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~3 ~ ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~-1 ~-2 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~-2 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~1 ~-3 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~ ~4 ~ diamond_ore run scoreboard players set @p oretell 3
+execute at @a[scores={orescan=3..,oretell=4..},gamemode=!spectator] if block ~1 ~ ~2 diamond_ore run scoreboard players set @p oretell 3
 
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~ ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~3 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-1 ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~5 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~4 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~2 ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~3 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-2 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-3 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~ ~-4 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~2 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~ ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~4 ~1 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-4 ~ ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~4 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~4 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~1 ~-4 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~ ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-4 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~4 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~1 ~4 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~3 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~4 ~ ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~2 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~ ~4 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~3 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~ ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~ ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-3 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~2 ~-3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-1 ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~ ~-2 ~2 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~1 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~2 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-1 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-2 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-3 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~-4 ~1 ~ diamond_ore run tell @p Diamond ore detected within 4 blocks.
-execute at @a[scores={detectdiamond=4..},gamemode=!spectator] if block ~3 ~ ~1 diamond_ore run tell @p Diamond ore detected within 4 blocks.
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~ ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~-1 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~ ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~3 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~3 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-1 ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~-3 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~5 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~4 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~2 ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~3 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-2 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-3 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~ ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~ ~-4 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~2 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~1 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~2 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~ ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~ ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~4 ~1 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-4 ~ ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~1 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~4 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~1 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~1 ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~2 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~2 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~4 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~-2 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~1 ~-4 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~ ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~ ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-4 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~3 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~4 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~1 ~4 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~3 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~4 ~ ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~2 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~ ~4 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~3 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~ ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~ ~-2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~ ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-3 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~2 ~-3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~1 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-1 ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~ ~-2 ~2 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~-3 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~1 ~1 ~3 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~2 ~2 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-1 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-2 ~-2 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~ ~-1 diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-3 ~-1 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~-4 ~1 ~ diamond_ore run scoreboard players set @p oretell 4
+execute at @a[scores={orescan=4..,oretell=5..},gamemode=!spectator] if block ~3 ~ ~1 diamond_ore run scoreboard players set @p oretell 4
 
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~ ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-3 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~3 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-3 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~1 ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-2 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-2 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-1 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~5 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~3 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-1 ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~4 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-3 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~ ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~2 ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-4 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~3 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~ ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~ ~-5 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~ ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~4 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~2 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~2 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~4 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~5 ~ ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~4 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~1 ~-5 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~3 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~ ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~1 ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-2 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-4 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-4 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-1 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~5 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-1 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~3 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-2 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~4 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-5 ~ ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~1 ~5 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~2 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~3 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~ ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~2 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~4 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~1 ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~ ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~4 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~ ~5 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~5 ~1 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-4 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~2 ~-3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-1 ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-4 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~6 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~ ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~3 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-3 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~4 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~ ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~2 ~-4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-1 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-2 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~5 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~2 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-2 ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~3 ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~ ~-5 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-2 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~-3 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~-3 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-5 ~1 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~3 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~4 ~2 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~ ~2 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-3 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~-1 ~5 ~ diamond_ore run tell @p Diamond ore detected within 5 blocks.
-execute at @a[scores={detectdiamond=5..},gamemode=!spectator] if block ~1 ~1 ~4 diamond_ore run tell @p Diamond ore detected within 5 blocks.
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~ ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~-1 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~ ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~-2 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-3 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~3 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-3 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~1 ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-2 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~3 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-2 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-1 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~5 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~3 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-1 ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~4 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~ ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-3 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~1 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~ ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~2 ~4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-4 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~3 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~ ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~ ~-5 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~2 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~ ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~4 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~2 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~1 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~2 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~4 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~1 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~-1 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~1 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~5 ~ ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~ ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~2 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~-3 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~4 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~1 ~-5 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~1 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~3 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~ ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~1 ~4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-2 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-4 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-4 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-1 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~5 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-1 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~3 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-2 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~4 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-5 ~ ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~1 ~5 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~2 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~3 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~ ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~2 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~3 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~4 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~1 ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~ ~4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~4 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~ ~5 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~ ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~5 ~1 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-4 ~ ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~2 ~-3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-1 ~4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-4 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~2 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~6 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~ ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~3 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-3 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~4 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~ ~4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~2 ~-4 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-1 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-2 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~1 ~3 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~5 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~2 ~2 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-2 ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~3 ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~-3 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~ ~-5 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-2 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~-3 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~-3 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~ ~-2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-5 ~1 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~3 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~4 ~2 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~ ~2 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~-2 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-3 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~-1 ~5 ~ diamond_ore run scoreboard players set @p oretell 5
+execute at @a[scores={orescan=5..,oretell=6..},gamemode=!spectator] if block ~1 ~1 ~4 diamond_ore run scoreboard players set @p oretell 5
 
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~1 ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~ ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~6 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-1 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~6 ~ ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-3 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-3 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~ ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-2 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~4 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~1 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~3 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-1 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~ ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~2 ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-4 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-6 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-4 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~3 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-1 ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~6 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~ ~-6 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~4 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-1 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~2 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~2 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-1 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~7 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-3 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~4 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~5 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-4 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~3 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-2 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~1 ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~5 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-6 ~1 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~3 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-3 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~ ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-2 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~3 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~4 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~ ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~1 ~6 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~1 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~3 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~2 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~1 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~ ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~-1 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~4 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~4 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~6 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~6 ~1 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~ ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-2 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-4 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~1 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-3 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-4 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-4 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~ ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~6 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~2 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-1 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-2 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~3 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~5 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~2 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-3 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-3 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~3 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~-1 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~-1 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~5 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~-1 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~-2 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~2 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~1 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-5 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~2 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-1 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-2 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~ ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-2 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-3 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~5 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~3 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-5 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~ ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-4 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~ ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-3 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~3 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~5 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~2 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~ ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~-2 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~4 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~1 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~4 ~ ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-2 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~1 ~-6 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~3 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~ ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~1 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~4 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~4 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~2 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~3 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-4 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-1 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~1 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~1 ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~-2 ~3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~4 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-4 ~2 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~-3 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~ ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~5 ~-1 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~4 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~2 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~-1 ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~ ~6 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~2 ~-4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-1 ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~2 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~2 ~-5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~2 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~2 ~1 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~ ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~4 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-3 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~-2 ~2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~-5 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~3 ~4 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-6 ~ ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~3 ~-2 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~ ~-5 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-5 ~1 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~1 ~1 ~5 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-3 ~-2 ~1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-1 ~5 ~-1 diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~-2 ~5 ~ diamond_ore run tell @p Diamond ore detected within 6 blocks.
-execute at @a[scores={detectdiamond=6..},gamemode=!spectator] if block ~3 ~ ~-3 diamond_ore run tell @p Diamond ore detected within 6 blocks.
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~1 ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~-2 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~1 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~ ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~ ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~3 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~6 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-1 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~6 ~ ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-3 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-3 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~ ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-2 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~4 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~1 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~3 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-1 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~ ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~2 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~2 ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-4 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-6 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-4 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~3 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-1 ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~6 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~ ~-6 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~4 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-1 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~2 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~2 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-1 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~ ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~-1 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~7 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-3 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~4 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~5 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-4 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~3 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-2 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~1 ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~5 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-6 ~1 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~3 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-3 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~ ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-2 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~3 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~4 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~ ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~1 ~6 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~1 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~3 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~2 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~1 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~ ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~-1 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~1 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~4 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~4 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~ ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~6 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~6 ~1 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~ ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-2 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-4 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~1 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-3 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-4 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-4 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~ ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~6 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~2 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-1 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-2 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~3 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~5 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~2 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-3 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~2 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-3 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~3 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~-1 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~-1 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~5 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~-1 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~-2 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~2 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~-3 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~1 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-5 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~2 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-1 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-2 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~ ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-2 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-3 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~5 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~3 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-5 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~1 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~ ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-4 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~ ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-3 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~3 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~5 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~2 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~ ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~-2 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~4 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~1 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~4 ~ ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-2 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~1 ~-6 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~3 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~ ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~1 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~4 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~4 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~2 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~3 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-4 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-1 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~1 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~1 ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~-2 ~3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~4 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-4 ~2 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~-3 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~ ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~5 ~-1 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~4 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~2 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~-1 ~-3 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~ ~6 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~2 ~-4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-1 ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~2 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~2 ~-5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~2 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~2 ~1 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~ ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~4 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-3 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~-2 ~2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~-5 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~3 ~4 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-6 ~ ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~3 ~-2 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~ ~-5 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-5 ~1 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~1 ~1 ~5 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-3 ~-2 ~1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-1 ~5 ~-1 diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~-2 ~5 ~ diamond_ore run scoreboard players set @p oretell 6
+execute at @a[scores={orescan=6..,oretell=7..},gamemode=!spectator] if block ~3 ~ ~-3 diamond_ore run scoreboard players set @p oretell 6
