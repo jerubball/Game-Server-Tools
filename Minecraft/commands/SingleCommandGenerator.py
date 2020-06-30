@@ -61,7 +61,8 @@ if __name__ == '__main__':
                     if 'keep' not in meta:
                             meta['keep'] = 'remove'
 
-            spacer = ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:'
+            #spacer = ',Passengers:[{id:armor_stand,Invisible:1,CustomName:"\\"CMDSPACER\\"",Passengers:[{id:falling_block,Time:1,BlockState:'
+            spacer = ',Passengers:[{id:armor_stand,Invisible:1,Tags:["CMDSPACER"],Passengers:[{id:falling_block,Time:1,BlockState:'
             nsp = num if meta['keep'] == 'keep' else num + 1
 
             # generate command segment
@@ -90,7 +91,7 @@ if __name__ == '__main__':
                     com += 'repeating_'
                 com += 'command_block",Properties:{facing:"down"'
                 if data['cond'] == 'conditional':
-                    com += ',conditional:1'
+                    com += ',conditional:"true"'
                 com += '}},TileEntityData:{'
                 if data['auto'] == 'auto' and data['mode'] != 'chain':
                     com += 'auto:1,'
@@ -100,7 +101,8 @@ if __name__ == '__main__':
                 return com
 
             # base command to kill spacer
-            command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' + str(nsp) + ']"}'
+            #command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,nbt={Invisible:1b,CustomName:\\"{\\\\\\"text\\\\\\":\\\\\\"CMDSPACER\\\\\\"}\\"},sort=nearest,limit=' + str(nsp) + ']"}'
+            command = 'summon falling_block ~ ~1 ~ {Time:1,BlockState:{Name:"command_block",Properties:{facing:"down"}},TileEntityData:{auto:1,Command:"kill @e[type=armor_stand,tag=CMDSPACER,sort=nearest,limit=' + str(nsp) + ']"}'
 
             if meta['keep'] != 'keep':
                 command += spacer + '{Name:"'
