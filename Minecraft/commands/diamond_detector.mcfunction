@@ -1,10 +1,16 @@
 #@ keep
 
 scoreboard objectives add detectdiamond trigger
+scoreboard objectives add Timer dummy
+scoreboard players set detectdiamond Timer 0
 
 #@ repeat
 scoreboard players enable @a[gamemode=creative] detectdiamond
+scoreboard players add detectdiamond Timer 1
+execute if score detectdiamond Timer matches 100.. run scoreboard players set detectdiamond Timer 0
 
+#@ repeat
+#@ conditional
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~-1 ~1 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~ ~1 ~1 diamond_ore run tell @p Diamond ore detected within 1 block.
 execute at @a[scores={detectdiamond=1..},gamemode=!spectator] if block ~1 ~1 ~ diamond_ore run tell @p Diamond ore detected within 1 block.
