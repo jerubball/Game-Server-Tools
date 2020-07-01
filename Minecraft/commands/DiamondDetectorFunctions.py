@@ -12,7 +12,7 @@ if __name__ == '__main__':
     for block in selection:
         for level in size:
             score = value[block] * multiplier + level
-            print('execute at @a[scores={oretell=' + str(score) + '}] run tell @p ' + name[block] + ' detected within ' + str(score) + (' block.' if level == 1 else ' blocks.'))
+            print('execute at @a[scores={oretell=' + str(score) + '}] run tell @p ' + name[block] + ' detected within ' + str(level) + (' block.' if level == 1 else ' blocks.'))
         print()
     print()
 
