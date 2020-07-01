@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
             str0 = str(score) + '..' + str(limit)
             str1 = 'execute at @a[scores={orescan=' + str(score) + '..' + str(limit) + ',oretell=' + str(score+1) + '..},gamemode=!spectator] if block'
-            str3 = ' ' + block + ' run scoreboard scoreboard players set @p oretell ' + str(score)
+            str3 = ' ' + block + ' run scoreboard players set @p oretell ' + str(score)
 
             for item in ans:
                 str2 = ''
