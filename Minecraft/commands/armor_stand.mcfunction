@@ -1,3 +1,4 @@
+
 /give @p minecraft:player_head{SkullOwner:"jerubball"}
 /give @p minecraft:leather_chestplate{display:{color:6571327}}
 /give @p minecraft:leather_leggings{display:{color:8679517}}
