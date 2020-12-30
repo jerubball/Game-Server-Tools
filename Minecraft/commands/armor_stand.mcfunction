@@ -8,6 +8,6 @@ execute at @e[type=armor_stand,distance=0..20] run data merge entity @e[limit=1,
 
 data merge entity @e[type=armor_stand,distance=0..20,limit=1,sort=nearest] {HandItems:[{id:"minecraft:air",Count:1b},{}]}
 
-summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:1b,CustomNameVisible:1b,CustomName:"{\"text\":\"jerubball\"}"}
+summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:1b,CustomNameVisible:1b,CustomName:"{\"text\":\"jerubball\",\"underlined\":true}"}
 
 data merge entity @e[type=item_frame,distance=0..20,limit=1,sort=nearest] {Invulnerable:1b,Fixed:1b}
