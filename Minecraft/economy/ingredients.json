@@ -1,0 +1,8644 @@
+{
+  "minecraft:acacia_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:acacia_planks": 5
+      }
+    }
+  ],
+  "minecraft:acacia_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:acacia_planks": 1
+      }
+    }
+  ],
+  "minecraft:acacia_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:acacia_planks": 6
+      }
+    }
+  ],
+  "minecraft:acacia_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:acacia_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:acacia_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:acacia_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:acacia_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:acacia_log": 1
+      }
+    }
+  ],
+  "minecraft:acacia_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:acacia_log||minecraft:acacia_wood||minecraft:stripped_acacia_log||minecraft:stripped_acacia_wood": 1
+      }
+    }
+  ],
+  "minecraft:acacia_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:acacia_planks": 2
+      }
+    }
+  ],
+  "minecraft:acacia_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:acacia_log": 1
+      }
+    }
+  ],
+  "minecraft:acacia_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:acacia_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:acacia_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:acacia_planks": 3
+      }
+    }
+  ],
+  "minecraft:acacia_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:acacia_planks": 6
+      }
+    }
+  ],
+  "minecraft:acacia_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:acacia_planks": 6
+      }
+    }
+  ],
+  "minecraft:acacia_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:acacia_log": 4
+      }
+    }
+  ],
+  "minecraft:activator_rail": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:iron_ingot": 6,
+        "minecraft:redstone_torch": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:andesite": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:cobblestone": 1,
+        "minecraft:diorite": 1
+      }
+    }
+  ],
+  "minecraft:andesite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:andesite": 3
+      }
+    }
+  ],
+  "minecraft:andesite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:andesite": 6
+      }
+    }
+  ],
+  "minecraft:andesite_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:andesite": 6
+      }
+    }
+  ],
+  "minecraft:anvil": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_block": 3,
+        "minecraft:iron_ingot": 4
+      }
+    }
+  ],
+  "minecraft:armor_stand": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:smooth_stone_slab": 1,
+        "minecraft:stick": 6
+      }
+    }
+  ],
+  "minecraft:arrow": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:feather": 1,
+        "minecraft:flint": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:awkward_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_splash_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1
+      }
+    }
+  ],
+  "minecraft:awkward_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:nether_wart": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:awkward_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "minecraft:awkward_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:awkward_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:baked_potato": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:potato": 1
+      }
+    }
+  ],
+  "minecraft:barrel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 6,
+        "minecraft:oak_slab||minecraft:spruce_slab||minecraft:birch_slab||minecraft:jungle_slab||minecraft:acacia_slab||minecraft:dark_oak_slab||minecraft:crimson_slab||minecraft:warped_slab": 2
+      }
+    }
+  ],
+  "minecraft:beacon": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:glass": 5,
+        "minecraft:nether_star": 1,
+        "minecraft:obsidian": 3
+      }
+    }
+  ],
+  "minecraft:bee_nest": [
+    {
+      "count": 1,
+      "factor": 1.05,
+      "ingredient": {
+        "minecraft:beehive": 1
+      }
+    }
+  ],
+  "minecraft:beehive": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:honeycomb": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:beetroot_soup": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:beetroot": 6,
+        "minecraft:bowl": 1
+      }
+    }
+  ],
+  "minecraft:birch_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:birch_planks": 5
+      }
+    }
+  ],
+  "minecraft:birch_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:birch_planks": 1
+      }
+    }
+  ],
+  "minecraft:birch_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:birch_planks": 6
+      }
+    }
+  ],
+  "minecraft:birch_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:birch_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:birch_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:birch_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:birch_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:birch_log": 1
+      }
+    }
+  ],
+  "minecraft:birch_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:birch_log||minecraft:birch_wood||minecraft:stripped_birch_log||minecraft:stripped_birch_wood": 1
+      }
+    }
+  ],
+  "minecraft:birch_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:birch_planks": 2
+      }
+    }
+  ],
+  "minecraft:birch_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:birch_log": 1
+      }
+    }
+  ],
+  "minecraft:birch_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:birch_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:birch_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:birch_planks": 3
+      }
+    }
+  ],
+  "minecraft:birch_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:birch_planks": 6
+      }
+    }
+  ],
+  "minecraft:birch_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:birch_planks": 6
+      }
+    }
+  ],
+  "minecraft:birch_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:birch_log": 4
+      }
+    }
+  ],
+  "minecraft:black_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:black_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:black_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:black_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:black_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:black_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:black_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:black_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:ink_sac": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:wither_rose": 1
+      }
+    }
+  ],
+  "minecraft:black_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_terracotta": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:black_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:black_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:glass": 8
+      }
+    }
+  ],
+  "minecraft:black_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:black_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:glass_pane": 8
+      }
+    }
+  ],
+  "minecraft:black_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:black_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:blackstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:blackstone": 3
+      }
+    }
+  ],
+  "minecraft:blackstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:blackstone": 6
+      }
+    }
+  ],
+  "minecraft:blackstone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:blackstone": 6
+      }
+    }
+  ],
+  "minecraft:blast_furnace": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:furnace": 1,
+        "minecraft:iron_ingot": 5,
+        "minecraft:smooth_stone": 3
+      }
+    }
+  ],
+  "minecraft:blaze_powder": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_rod": 1
+      }
+    }
+  ],
+  "minecraft:blue_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:blue_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:blue_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:blue_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:blue_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:blue_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:blue_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:blue_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lapis_lazuli": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cornflower": 1
+      }
+    }
+  ],
+  "minecraft:blue_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_terracotta": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:blue_ice": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:packed_ice": 9
+      }
+    }
+  ],
+  "minecraft:blue_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:blue_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:glass": 8
+      }
+    }
+  ],
+  "minecraft:blue_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:blue_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:glass_pane": 8
+      }
+    }
+  ],
+  "minecraft:blue_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:blue_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:bone_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bone_meal": 9
+      }
+    }
+  ],
+  "minecraft:bone_meal": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:bone": 1
+      }
+    },
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:bone_block": 1
+      }
+    }
+  ],
+  "minecraft:book": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 1,
+        "minecraft:paper": 3
+      }
+    }
+  ],
+  "minecraft:bookshelf": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:book": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:bow": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 3,
+        "minecraft:string": 3
+      }
+    }
+  ],
+  "minecraft:bowl": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    }
+  ],
+  "minecraft:brain_coral_block": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:brain_coral": 1
+      }
+    }
+  ],
+  "minecraft:brain_coral_fan": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:brain_coral": 1
+      }
+    }
+  ],
+  "minecraft:bread": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:wheat": 3
+      }
+    }
+  ],
+  "minecraft:brewing_stand": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blaze_rod": 1,
+        "minecraft:cobblestone||minecraft:blackstone": 3
+      }
+    }
+  ],
+  "minecraft:brick": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:clay_ball": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:bricks": 3
+      }
+    }
+  ],
+  "minecraft:brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:bricks": 6
+      }
+    }
+  ],
+  "minecraft:brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:bricks": 6
+      }
+    }
+  ],
+  "minecraft:bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brick": 4
+      }
+    }
+  ],
+  "minecraft:brown_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:brown_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:brown_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:brown_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:brown_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:brown_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:brown_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:brown_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cocoa_beans": 1
+      }
+    }
+  ],
+  "minecraft:brown_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_terracotta": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:brown_mushroom_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_mushroom": 10
+      }
+    }
+  ],
+  "minecraft:brown_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:brown_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:glass": 8
+      }
+    }
+  ],
+  "minecraft:brown_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:brown_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:glass_pane": 8
+      }
+    }
+  ],
+  "minecraft:brown_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:brown_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:bubble_coral_block": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:bubble_coral": 1
+      }
+    }
+  ],
+  "minecraft:bubble_coral_fan": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:bubble_coral": 1
+      }
+    }
+  ],
+  "minecraft:bucket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 3
+      }
+    }
+  ],
+  "minecraft:cake": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:egg": 1,
+        "minecraft:milk_bucket": 3,
+        "minecraft:sugar": 2,
+        "minecraft:wheat": 3
+      }
+    }
+  ],
+  "minecraft:campfire": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal||minecraft:charcoal": 1,
+        "minecraft:dark_oak_log||minecraft:dark_oak_wood||minecraft:stripped_dark_oak_log||minecraft:stripped_dark_oak_wood||minecraft:oak_log||minecraft:oak_wood||minecraft:stripped_oak_log||minecraft:stripped_oak_wood||minecraft:acacia_log||minecraft:acacia_wood||minecraft:stripped_acacia_log||minecraft:stripped_acacia_wood||minecraft:birch_log||minecraft:birch_wood||minecraft:stripped_birch_log||minecraft:stripped_birch_wood||minecraft:jungle_log||minecraft:jungle_wood||minecraft:stripped_jungle_log||minecraft:stripped_jungle_wood||minecraft:spruce_log||minecraft:spruce_wood||minecraft:stripped_spruce_log||minecraft:stripped_spruce_wood||minecraft:crimson_stem||minecraft:stripped_crimson_stem||minecraft:crimson_hyphae||minecraft:stripped_crimson_hyphae||minecraft:warped_stem||minecraft:stripped_warped_stem||minecraft:warped_hyphae||minecraft:stripped_warped_hyphae": 3,
+        "minecraft:stick": 3
+      }
+    }
+  ],
+  "minecraft:carrot_on_a_stick": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:carrot": 1,
+        "minecraft:fishing_rod": 1
+      }
+    }
+  ],
+  "minecraft:cartography_table": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 4,
+        "minecraft:paper": 2
+      }
+    }
+  ],
+  "minecraft:cauldron": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 7
+      }
+    }
+  ],
+  "minecraft:chain": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:iron_nugget": 2
+      }
+    }
+  ],
+  "minecraft:chainmail_boots": [
+    {
+      "count": 1,
+      "factor": 1.05,
+      "ingredient": {
+        "minecraft:golden_boots": 1
+      }
+    }
+  ],
+  "minecraft:chainmail_chestplate": [
+    {
+      "count": 1,
+      "factor": 1.05,
+      "ingredient": {
+        "minecraft:golden_chestplate": 1
+      }
+    }
+  ],
+  "minecraft:chainmail_helmet": [
+    {
+      "count": 1,
+      "factor": 1.05,
+      "ingredient": {
+        "minecraft:golden_leggings": 1
+      }
+    }
+  ],
+  "minecraft:chainmail_leggings": [
+    {
+      "count": 1,
+      "factor": 1.05,
+      "ingredient": {
+        "minecraft:golden_leggings": 1
+      }
+    }
+  ],
+  "minecraft:charcoal": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:dark_oak_log||minecraft:dark_oak_wood||minecraft:stripped_dark_oak_log||minecraft:stripped_dark_oak_wood||minecraft:oak_log||minecraft:oak_wood||minecraft:stripped_oak_log||minecraft:stripped_oak_wood||minecraft:acacia_log||minecraft:acacia_wood||minecraft:stripped_acacia_log||minecraft:stripped_acacia_wood||minecraft:birch_log||minecraft:birch_wood||minecraft:stripped_birch_log||minecraft:stripped_birch_wood||minecraft:jungle_log||minecraft:jungle_wood||minecraft:stripped_jungle_log||minecraft:stripped_jungle_wood||minecraft:spruce_log||minecraft:spruce_wood||minecraft:stripped_spruce_log||minecraft:stripped_spruce_wood": 1
+      }
+    }
+  ],
+  "minecraft:chest": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 8
+      }
+    }
+  ],
+  "minecraft:chest_minecart": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chest": 1,
+        "minecraft:minecart": 1
+      }
+    }
+  ],
+  "minecraft:chipped_anvil": [
+    {
+      "count": 1,
+      "factor": 0.67,
+      "ingredient": {
+        "minecraft:anvil": 1
+      }
+    }
+  ],
+  "minecraft:chiseled_nether_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:nether_brick_slab": 2
+      }
+    }
+  ],
+  "minecraft:chiseled_polished_blackstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:polished_blackstone_slab": 2
+      }
+    }
+  ],
+  "minecraft:chiseled_quartz_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:quartz_slab": 2
+      }
+    }
+  ],
+  "minecraft:chiseled_red_sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_sandstone_slab": 2
+      }
+    }
+  ],
+  "minecraft:chiseled_sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:sandstone_slab": 2
+      }
+    }
+  ],
+  "minecraft:chiseled_stone_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stone_brick_slab": 2
+      }
+    }
+  ],
+  "minecraft:chorus_flower": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chorus_fruit": 9
+      }
+    }
+  ],
+  "minecraft:clay": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:clay_ball": 4
+      }
+    }
+  ],
+  "minecraft:clock": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 4,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:coal": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:coal_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:coal_ore": 1
+      }
+    }
+  ],
+  "minecraft:coal_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 9
+      }
+    }
+  ],
+  "minecraft:coal_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": 2.2
+      }
+    }
+  ],
+  "minecraft:coarse_dirt": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:dirt": 2,
+        "minecraft:gravel": 2
+      }
+    }
+  ],
+  "minecraft:cobblestone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:cobblestone": 3
+      }
+    }
+  ],
+  "minecraft:cobblestone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:cobblestone": 6
+      }
+    }
+  ],
+  "minecraft:cobblestone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:cobblestone": 6
+      }
+    }
+  ],
+  "minecraft:cobweb": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:string": 9
+      }
+    }
+  ],
+  "minecraft:cod_bucket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bucket": 1,
+        "minecraft:cod": 1
+      }
+    }
+  ],
+  "minecraft:comparator": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:quartz": 1,
+        "minecraft:redstone_torch": 3,
+        "minecraft:stone": 3
+      }
+    }
+  ],
+  "minecraft:compass": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 4,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:composter": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_slab||minecraft:spruce_slab||minecraft:birch_slab||minecraft:jungle_slab||minecraft:acacia_slab||minecraft:dark_oak_slab||minecraft:crimson_slab||minecraft:warped_slab": 7
+      }
+    }
+  ],
+  "minecraft:conduit": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:heart_of_the_sea": 1,
+        "minecraft:nautilus_shell": 8
+      }
+    }
+  ],
+  "minecraft:cooked_beef": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:beef": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:cooked_chicken": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chicken": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:cooked_cod": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:cod": 1
+      }
+    }
+  ],
+  "minecraft:cooked_mutton": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:mutton": 1
+      }
+    }
+  ],
+  "minecraft:cooked_porkchop": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:porkchop": 1
+      }
+    }
+  ],
+  "minecraft:cooked_rabbit": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:rabbit": 1
+      }
+    }
+  ],
+  "minecraft:cooked_salmon": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:salmon": 1
+      }
+    }
+  ],
+  "minecraft:cookie": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cocoa_beans": 1,
+        "minecraft:wheat": 2
+      }
+    }
+  ],
+  "minecraft:cracked_nether_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:nether_bricks": 1
+      }
+    }
+  ],
+  "minecraft:cracked_polished_blackstone_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:polished_blackstone_bricks": 1
+      }
+    }
+  ],
+  "minecraft:cracked_stone_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:stone_bricks": 1
+      }
+    }
+  ],
+  "minecraft:crafting_table": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 4
+      }
+    }
+  ],
+  "minecraft:creeper_banner_pattern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:creeper_head": 1,
+        "minecraft:paper": 1
+      }
+    }
+  ],
+  "minecraft:crimson_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:crimson_planks": 1
+      }
+    }
+  ],
+  "minecraft:crimson_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:crimson_planks": 6
+      }
+    }
+  ],
+  "minecraft:crimson_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:crimson_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:crimson_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:crimson_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:crimson_hyphae": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:crimson_stem": 4
+      }
+    }
+  ],
+  "minecraft:crimson_nylium": [
+    {
+      "count": 1,
+      "factor": 5.0,
+      "ingredient": {
+        "minecraft:netherrack": 1
+      }
+    }
+  ],
+  "minecraft:crimson_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:crimson_stem||minecraft:stripped_crimson_stem||minecraft:crimson_hyphae||minecraft:stripped_crimson_hyphae": 1
+      }
+    }
+  ],
+  "minecraft:crimson_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:crimson_planks": 2
+      }
+    }
+  ],
+  "minecraft:crimson_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:crimson_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:crimson_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:crimson_planks": 3
+      }
+    }
+  ],
+  "minecraft:crimson_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:crimson_planks": 6
+      }
+    }
+  ],
+  "minecraft:crimson_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:crimson_planks": 6
+      }
+    }
+  ],
+  "minecraft:crossbow": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:stick": 3,
+        "minecraft:string": 2,
+        "minecraft:tripwire_hook": 1
+      }
+    }
+  ],
+  "minecraft:cut_red_sandstone": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:red_sandstone": 4
+      }
+    }
+  ],
+  "minecraft:cut_red_sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:cut_red_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:cut_sandstone": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:sandstone": 4
+      }
+    }
+  ],
+  "minecraft:cut_sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:cut_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:cyan_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cyan_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:cyan_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cyan_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:cyan_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:cyan_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:cyan_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:cyan_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:cyan_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:cyan_dye": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:green_dye": 1
+      }
+    }
+  ],
+  "minecraft:cyan_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:cyan_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:cyan_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:cyan_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:glass": 8
+      }
+    }
+  ],
+  "minecraft:cyan_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:cyan_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:glass_pane": 8
+      }
+    }
+  ],
+  "minecraft:cyan_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:cyan_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cyan_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:damaged_anvil": [
+    {
+      "count": 1,
+      "factor": 0.34,
+      "ingredient": {
+        "minecraft:anvil": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 5
+      }
+    }
+  ],
+  "minecraft:dark_oak_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:dark_oak_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:dark_oak_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:dark_oak_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:dark_oak_log": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:dark_oak_log||minecraft:dark_oak_wood||minecraft:stripped_dark_oak_log||minecraft:stripped_dark_oak_wood": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 2
+      }
+    }
+  ],
+  "minecraft:dark_oak_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:dark_oak_log": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:dark_oak_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 3
+      }
+    }
+  ],
+  "minecraft:dark_oak_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:dark_oak_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:dark_oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:dark_oak_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:dark_oak_log": 4
+      }
+    }
+  ],
+  "minecraft:dark_prismarine": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:prismarine_shard": 8
+      }
+    }
+  ],
+  "minecraft:dark_prismarine_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:dark_prismarine": 3
+      }
+    }
+  ],
+  "minecraft:dark_prismarine_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:dark_prismarine": 6
+      }
+    }
+  ],
+  "minecraft:daylight_detector": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:glass": 3,
+        "minecraft:oak_slab||minecraft:spruce_slab||minecraft:birch_slab||minecraft:jungle_slab||minecraft:acacia_slab||minecraft:dark_oak_slab||minecraft:crimson_slab||minecraft:warped_slab": 3,
+        "minecraft:quartz": 3
+      }
+    }
+  ],
+  "minecraft:dead_brain_coral": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:brain_coral": 1
+      }
+    }
+  ],
+  "minecraft:dead_brain_coral_block": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:brain_coral_block": 1
+      }
+    }
+  ],
+  "minecraft:dead_brain_coral_fan": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:brain_coral_fan": 1
+      }
+    }
+  ],
+  "minecraft:dead_bubble_coral": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:bubble_coral": 1
+      }
+    }
+  ],
+  "minecraft:dead_bubble_coral_block": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:bubble_coral_block": 1
+      }
+    }
+  ],
+  "minecraft:dead_bubble_coral_fan": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:bubble_coral_fan": 1
+      }
+    }
+  ],
+  "minecraft:dead_fire_coral": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:fire_coral": 1
+      }
+    }
+  ],
+  "minecraft:dead_fire_coral_block": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:fire_coral_block": 1
+      }
+    }
+  ],
+  "minecraft:dead_fire_coral_fan": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:fire_coral_fan": 1
+      }
+    }
+  ],
+  "minecraft:dead_horn_coral": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:horn_coral": 1
+      }
+    }
+  ],
+  "minecraft:dead_horn_coral_block": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:horn_coral_block": 1
+      }
+    }
+  ],
+  "minecraft:dead_horn_coral_fan": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:horn_coral_fan": 1
+      }
+    }
+  ],
+  "minecraft:dead_tube_coral": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:tube_coral": 1
+      }
+    }
+  ],
+  "minecraft:dead_tube_coral_block": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:tube_coral_block": 1
+      }
+    }
+  ],
+  "minecraft:dead_tube_coral_fan": [
+    {
+      "count": 1,
+      "factor": 0.75,
+      "ingredient": {
+        "minecraft:tube_coral_fan": 1
+      }
+    }
+  ],
+  "minecraft:detector_rail": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:iron_ingot": 6,
+        "minecraft:redstone": 1,
+        "minecraft:stone_pressure_plate": 1
+      }
+    }
+  ],
+  "minecraft:diamond": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:diamond_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:diamond_ore": 1
+      }
+    }
+  ],
+  "minecraft:diamond_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:diamond_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 9
+      }
+    }
+  ],
+  "minecraft:diamond_boots": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 4
+      }
+    }
+  ],
+  "minecraft:diamond_chestplate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 8
+      }
+    }
+  ],
+  "minecraft:diamond_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 5
+      }
+    }
+  ],
+  "minecraft:diamond_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 2,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:diamond_leggings": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 7
+      }
+    }
+  ],
+  "minecraft:diamond_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:diamond": 2.2
+      }
+    }
+  ],
+  "minecraft:diamond_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:diamond_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:diamond_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 2,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:diorite": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:cobblestone": 2,
+        "minecraft:quartz": 2
+      }
+    }
+  ],
+  "minecraft:diorite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:diorite": 3
+      }
+    }
+  ],
+  "minecraft:diorite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:diorite": 6
+      }
+    }
+  ],
+  "minecraft:diorite_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:diorite": 6
+      }
+    }
+  ],
+  "minecraft:dispenser": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bow": 1,
+        "minecraft:cobblestone": 7,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:dragon_head": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:elytra": 1
+      }
+    }
+  ],
+  "minecraft:dried_kelp": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:dried_kelp_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:kelp": 1
+      }
+    }
+  ],
+  "minecraft:dried_kelp_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dried_kelp": 9
+      }
+    }
+  ],
+  "minecraft:dropper": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone": 7,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:emerald": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:emerald_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:emerald_ore": 1
+      }
+    }
+  ],
+  "minecraft:emerald_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:emerald": 9
+      }
+    }
+  ],
+  "minecraft:emerald_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:emerald": 2.2
+      }
+    }
+  ],
+  "minecraft:empty_map": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:compass": 1,
+        "minecraft:paper": 8
+      }
+    }
+  ],
+  "minecraft:enchanting_table": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:book": 1,
+        "minecraft:diamond": 2,
+        "minecraft:obsidian": 4
+      }
+    }
+  ],
+  "minecraft:end_crystal": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:ender_eye": 1,
+        "minecraft:ghast_tear": 1,
+        "minecraft:glass": 7
+      }
+    }
+  ],
+  "minecraft:end_rod": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:blaze_rod": 1,
+        "minecraft:popped_chorus_fruit": 1
+      }
+    }
+  ],
+  "minecraft:end_stone_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:end_stone_bricks": 3
+      }
+    }
+  ],
+  "minecraft:end_stone_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:end_stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:end_stone_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:end_stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:end_stone_bricks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:end_stone": 4
+      }
+    }
+  ],
+  "minecraft:ender_chest": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:ender_eye": 1,
+        "minecraft:obsidian": 8
+      }
+    }
+  ],
+  "minecraft:ender_eye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blaze_powder": 1,
+        "minecraft:ender_pearl": 1
+      }
+    }
+  ],
+  "minecraft:fermented_spider_eye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_mushroom": 1,
+        "minecraft:spider_eye": 1,
+        "minecraft:sugar": 1
+      }
+    }
+  ],
+  "minecraft:filled_map": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:empty_map": 1
+      }
+    }
+  ],
+  "minecraft:fire_charge": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:blaze_powder": 1,
+        "minecraft:coal||minecraft:charcoal": 1,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "minecraft:fire_coral_block": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:fire_coral": 1
+      }
+    }
+  ],
+  "minecraft:fire_coral_fan": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:fire_coral": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:fire_resistance_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:fire_resistance_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:magma_cream": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fire_resistance_potion": 2,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:fire_resistance_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:firework_rocket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gunpowder": 1,
+        "minecraft:paper": 1
+      }
+    }
+  ],
+  "minecraft:firework_star": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gunpowder": 1,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:fishing_rod": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 3,
+        "minecraft:string": 2
+      }
+    }
+  ],
+  "minecraft:fletching_table": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:flint": 2,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 4
+      }
+    }
+  ],
+  "minecraft:flint_and_steel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:flint": 1,
+        "minecraft:iron_ingot": 1
+      }
+    }
+  ],
+  "minecraft:flower_banner_pattern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oxeye_daisy": 1,
+        "minecraft:paper": 1
+      }
+    }
+  ],
+  "minecraft:flower_pot": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brick": 3
+      }
+    }
+  ],
+  "minecraft:furnace": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 8
+      }
+    }
+  ],
+  "minecraft:furnace_minecart": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:furnace": 1,
+        "minecraft:minecart": 1
+      }
+    }
+  ],
+  "minecraft:gilded_blackstone": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:gold_nugget": 3.5
+      }
+    }
+  ],
+  "minecraft:glass": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:sand||minecraft:red_sand": 1
+      }
+    }
+  ],
+  "minecraft:glass_bottle": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:glass": 3
+      }
+    }
+  ],
+  "minecraft:glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:glass": 6
+      }
+    }
+  ],
+  "minecraft:glistering_melon_slice": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_nugget": 8,
+        "minecraft:melon_slice": 1
+      }
+    }
+  ],
+  "minecraft:glowstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:glowstone_dust": 4
+      }
+    }
+  ],
+  "minecraft:gold_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 9
+      }
+    }
+  ],
+  "minecraft:gold_ingot": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:gold_ore||minecraft:nether_gold_ore": 1
+      }
+    },
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:gold_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_nugget": 9
+      }
+    }
+  ],
+  "minecraft:gold_nugget": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:gold_ingot": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:golden_pickaxe||minecraft:golden_shovel||minecraft:golden_axe||minecraft:golden_hoe||minecraft:golden_sword||minecraft:golden_helmet||minecraft:golden_chestplate||minecraft:golden_leggings||minecraft:golden_boots||minecraft:golden_horse_armor": 1
+      }
+    }
+  ],
+  "minecraft:gold_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:golden_apple": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:apple": 1,
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:golden_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:golden_boots": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 4
+      }
+    }
+  ],
+  "minecraft:golden_carrot": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:carrot": 1,
+        "minecraft:gold_nugget": 8
+      }
+    }
+  ],
+  "minecraft:golden_chestplate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:golden_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 5
+      }
+    }
+  ],
+  "minecraft:golden_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 2,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:golden_leggings": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 7
+      }
+    }
+  ],
+  "minecraft:golden_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:golden_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:golden_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 2,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:granite": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diorite": 1,
+        "minecraft:quartz": 1
+      }
+    }
+  ],
+  "minecraft:granite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:granite": 3
+      }
+    }
+  ],
+  "minecraft:granite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:granite": 6
+      }
+    }
+  ],
+  "minecraft:granite_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:granite": 6
+      }
+    }
+  ],
+  "minecraft:grass_block": [
+    {
+      "count": 1,
+      "factor": 5.0,
+      "ingredient": {
+        "minecraft:dirt": 1
+      }
+    }
+  ],
+  "minecraft:grass_path": [
+    {
+      "count": 1,
+      "factor": 1.5,
+      "ingredient": {
+        "minecraft:coarse_dirt": 1
+      }
+    }
+  ],
+  "minecraft:gray_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gray_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:gray_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gray_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gray_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:gray_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:gray_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gray_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:gray_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:gray_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:gray_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:gray_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:gray_dye": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:gray_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:gray_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:gray_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:gray_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:gray_dye": 1
+      }
+    }
+  ],
+  "minecraft:gray_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:gray_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:gray_dye": 1
+      }
+    }
+  ],
+  "minecraft:gray_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gray_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:gray_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gray_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:green_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:green_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:green_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:green_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:green_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:green_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:green_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:green_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:green_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:green_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:green_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:green_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:green_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cactus": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:green_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:green_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:green_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:green_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:green_dye": 1
+      }
+    }
+  ],
+  "minecraft:green_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:green_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:green_dye": 1
+      }
+    }
+  ],
+  "minecraft:green_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:green_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:green_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:green_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:grindstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 2,
+        "minecraft:stick": 2,
+        "minecraft:stone_slab": 1
+      }
+    }
+  ],
+  "minecraft:harming_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:harming_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:harming_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:hay_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:wheat": 9
+      }
+    }
+  ],
+  "minecraft:healing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:healing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:healing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glistering_melon_slice": 1
+      }
+    }
+  ],
+  "minecraft:healing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:healing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:healing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:heavy_weighted_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 2
+      }
+    }
+  ],
+  "minecraft:honey_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:honey_bottle": 4
+      }
+    }
+  ],
+  "minecraft:honey_bottle": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:glass_bottle": 4,
+        "minecraft:honey_block": 1
+      }
+    }
+  ],
+  "minecraft:honeycomb_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:honeycomb": 4
+      }
+    }
+  ],
+  "minecraft:hopper": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chest": 1,
+        "minecraft:iron_ingot": 5
+      }
+    }
+  ],
+  "minecraft:hopper_minecart": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:hopper": 1,
+        "minecraft:minecart": 1
+      }
+    }
+  ],
+  "minecraft:horn_coral_block": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:horn_coral": 1
+      }
+    }
+  ],
+  "minecraft:horn_coral_fan": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:horn_coral": 1
+      }
+    }
+  ],
+  "minecraft:invisibility_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:invisibility_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:invisibility_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:invisibility_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:iron_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:iron_bars": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:iron_ingot": 6
+      }
+    }
+  ],
+  "minecraft:iron_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 9
+      }
+    }
+  ],
+  "minecraft:iron_boots": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 4
+      }
+    }
+  ],
+  "minecraft:iron_chestplate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 8
+      }
+    }
+  ],
+  "minecraft:iron_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:iron_ingot": 6
+      }
+    }
+  ],
+  "minecraft:iron_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 5
+      }
+    }
+  ],
+  "minecraft:iron_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:iron_ingot": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:iron_ore": 1
+      }
+    },
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:iron_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_nugget": 9
+      }
+    }
+  ],
+  "minecraft:iron_leggings": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 7
+      }
+    }
+  ],
+  "minecraft:iron_nugget": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:iron_ingot": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:iron_pickaxe||minecraft:iron_shovel||minecraft:iron_axe||minecraft:iron_hoe||minecraft:iron_sword||minecraft:iron_helmet||minecraft:iron_chestplate||minecraft:iron_leggings||minecraft:iron_boots||minecraft:iron_horse_armor||minecraft:chainmail_helmet||minecraft:chainmail_chestplate||minecraft:chainmail_leggings||minecraft:chainmail_boots": 1
+      }
+    }
+  ],
+  "minecraft:iron_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:iron_ingot": 8
+      }
+    }
+  ],
+  "minecraft:iron_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:iron_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:iron_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:iron_trapdoor": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 4
+      }
+    }
+  ],
+  "minecraft:item_frame": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 1,
+        "minecraft:stick": 8
+      }
+    }
+  ],
+  "minecraft:jack_o_lantern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:carved_pumpkin": 1,
+        "minecraft:torch": 1
+      }
+    }
+  ],
+  "minecraft:jukebox": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond": 1,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 8
+      }
+    }
+  ],
+  "minecraft:jungle_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:jungle_planks": 5
+      }
+    }
+  ],
+  "minecraft:jungle_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:jungle_planks": 1
+      }
+    }
+  ],
+  "minecraft:jungle_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:jungle_planks": 6
+      }
+    }
+  ],
+  "minecraft:jungle_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:jungle_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:jungle_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:jungle_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:jungle_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:jungle_log": 1
+      }
+    }
+  ],
+  "minecraft:jungle_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:jungle_log||minecraft:jungle_wood||minecraft:stripped_jungle_log||minecraft:stripped_jungle_wood": 1
+      }
+    }
+  ],
+  "minecraft:jungle_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:jungle_planks": 2
+      }
+    }
+  ],
+  "minecraft:jungle_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:jungle_log": 1
+      }
+    }
+  ],
+  "minecraft:jungle_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:jungle_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:jungle_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:jungle_planks": 3
+      }
+    }
+  ],
+  "minecraft:jungle_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:jungle_planks": 6
+      }
+    }
+  ],
+  "minecraft:jungle_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:jungle_planks": 6
+      }
+    }
+  ],
+  "minecraft:jungle_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:jungle_log": 4
+      }
+    }
+  ],
+  "minecraft:ladder": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stick": 7
+      }
+    }
+  ],
+  "minecraft:lantern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_nugget": 8,
+        "minecraft:torch": 1
+      }
+    }
+  ],
+  "minecraft:lapis_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lapis_lazuli": 9
+      }
+    }
+  ],
+  "minecraft:lapis_lazuli": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:lapis_ore": 1
+      }
+    },
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:lapis_block": 1
+      }
+    }
+  ],
+  "minecraft:lapis_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:lapis_lazuli": 14.3
+      }
+    }
+  ],
+  "minecraft:lava_bucket": [
+    {
+      "count": 1,
+      "factor": 1.03,
+      "ingredient": {
+        "minecraft:bucket": 1
+      }
+    }
+  ],
+  "minecraft:lead": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:slime_ball": 1,
+        "minecraft:string": 4
+      }
+    }
+  ],
+  "minecraft:leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:rabbit_foot": 1
+      }
+    }
+  ],
+  "minecraft:leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:leather": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:rabbit_hide": 4
+      }
+    }
+  ],
+  "minecraft:leather_boots": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 4
+      }
+    }
+  ],
+  "minecraft:leather_chestplate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 8
+      }
+    }
+  ],
+  "minecraft:leather_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 5
+      }
+    }
+  ],
+  "minecraft:leather_horse_armor": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 7
+      }
+    }
+  ],
+  "minecraft:leather_leggings": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:leather": 7
+      }
+    }
+  ],
+  "minecraft:lectern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bookshelf": 1,
+        "minecraft:oak_slab||minecraft:spruce_slab||minecraft:birch_slab||minecraft:jungle_slab||minecraft:acacia_slab||minecraft:dark_oak_slab||minecraft:crimson_slab||minecraft:warped_slab": 4
+      }
+    }
+  ],
+  "minecraft:lever": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_blue_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_blue_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_blue_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:light_blue_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:light_blue_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:light_blue_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:light_blue_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:light_blue_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:light_blue_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blue_orchid": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:light_blue_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:light_blue_dye": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:light_blue_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:light_blue_dye": 1
+      }
+    }
+  ],
+  "minecraft:light_blue_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:light_blue_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:light_blue_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_blue_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_gray_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_gray_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_gray_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:light_gray_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:light_gray_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:light_gray_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:light_gray_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:light_gray_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:light_gray_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:azure_bluet": 1
+      }
+    },
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:black_dye": 1,
+        "minecraft:white_dye": 2
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:gray_dye": 1,
+        "minecraft:white_dye": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oxeye_daisy": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:white_tulip": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:light_gray_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:light_gray_dye": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:light_gray_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:light_gray_dye": 1
+      }
+    }
+  ],
+  "minecraft:light_gray_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:light_gray_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:light_gray_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:light_gray_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:light_weighted_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 2
+      }
+    }
+  ],
+  "minecraft:lime_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lime_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:lime_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lime_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lime_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:lime_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:lime_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:lime_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:lime_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:lime_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:lime_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:lime_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:lime_dye": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:green_dye": 1,
+        "minecraft:white_dye": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:sea_pickle": 1
+      }
+    }
+  ],
+  "minecraft:lime_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:lime_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:lime_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:lime_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:lime_dye": 1
+      }
+    }
+  ],
+  "minecraft:lime_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:lime_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:lime_dye": 1
+      }
+    }
+  ],
+  "minecraft:lime_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:lime_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:lime_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lime_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:lodestone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chiseled_stone_bricks": 8,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_fire_resistance_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fire_resistance_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_fire_resistance_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_fire_resistance_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_invisibility_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_invisibility_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_invisibility_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:invisibility_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_invisibility_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_invisibility_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_invisibility_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_invisibility_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:leaping_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_night_vision_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_night_vision_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_night_vision_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:night_vision_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_night_vision_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_night_vision_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_night_vision_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:poison_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_slow_falling_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_slow_falling_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_water_breathing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_water_breathing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_weakness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_weakness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_weakness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:loom": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 2,
+        "minecraft:string": 2
+      }
+    }
+  ],
+  "minecraft:magenta_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:magenta_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:magenta_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:magenta_wool": 3,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:magenta_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:magenta_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:magenta_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:magenta_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:magenta_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:magenta_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:magenta_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:magenta_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:magenta_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:allium": 1
+      }
+    },
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:pink_dye": 1,
+        "minecraft:red_dye": 1
+      }
+    },
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:red_dye": 2,
+        "minecraft:white_dye": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:lilac": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:pink_dye": 1,
+        "minecraft:purple_dye": 1
+      }
+    }
+  ],
+  "minecraft:magenta_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:magenta_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:magenta_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:magenta_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:magenta_dye": 1
+      }
+    }
+  ],
+  "minecraft:magenta_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:magenta_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:magenta_dye": 1
+      }
+    }
+  ],
+  "minecraft:magenta_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:magenta_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:magenta_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:magenta_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:magma_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:magma_cream": 4
+      }
+    }
+  ],
+  "minecraft:magma_cream": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:blaze_powder": 1,
+        "minecraft:slime_ball": 1
+      }
+    }
+  ],
+  "minecraft:map": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:compass": 1,
+        "minecraft:paper": 8
+      }
+    }
+  ],
+  "minecraft:melon": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:melon_slice": 9
+      }
+    }
+  ],
+  "minecraft:melon_seeds": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:melon_slice": 1
+      }
+    }
+  ],
+  "minecraft:milk_bucket": [
+    {
+      "count": 1,
+      "factor": 1.02,
+      "ingredient": {
+        "minecraft:bucket": 1
+      }
+    }
+  ],
+  "minecraft:minecart": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 5
+      }
+    }
+  ],
+  "minecraft:mojang_banner_pattern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:enchanted_golden_apple": 1,
+        "minecraft:paper": 1
+      }
+    }
+  ],
+  "minecraft:mossy_cobblestone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone": 1,
+        "minecraft:vine": 1
+      }
+    }
+  ],
+  "minecraft:mossy_cobblestone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:mossy_cobblestone": 3
+      }
+    }
+  ],
+  "minecraft:mossy_cobblestone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:mossy_cobblestone": 6
+      }
+    }
+  ],
+  "minecraft:mossy_cobblestone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:mossy_cobblestone": 6
+      }
+    }
+  ],
+  "minecraft:mossy_stone_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:mossy_stone_bricks": 3
+      }
+    }
+  ],
+  "minecraft:mossy_stone_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:mossy_stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:mossy_stone_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:mossy_stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:mossy_stone_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stone_bricks": 1,
+        "minecraft:vine": 1
+      }
+    }
+  ],
+  "minecraft:mundane_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:mundane_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:sugar": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:mundane_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:mundane_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:mushroom_stem": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_mushroom": 10
+      }
+    }
+  ],
+  "minecraft:mushroom_stew": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bowl": 1,
+        "minecraft:brown_mushroom": 1,
+        "minecraft:red_mushroom": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_11": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_blocks": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_cat": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_chirp": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_far": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_mall": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_mellohi": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_pigstep": [
+    {
+      "count": 1,
+      "factor": 1.5,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_stal": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_strad": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_wait": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:music_disc_ward": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:music_disc_13": 1
+      }
+    }
+  ],
+  "minecraft:mycelium": [
+    {
+      "count": 1,
+      "factor": 20.0,
+      "ingredient": {
+        "minecraft:dirt": 1
+      }
+    }
+  ],
+  "minecraft:nether_brick": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:netherrack": 1
+      }
+    }
+  ],
+  "minecraft:nether_brick_fence": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:nether_brick": 2,
+        "minecraft:nether_bricks": 4
+      }
+    }
+  ],
+  "minecraft:nether_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:nether_bricks": 3
+      }
+    }
+  ],
+  "minecraft:nether_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:nether_bricks": 6
+      }
+    }
+  ],
+  "minecraft:nether_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:nether_bricks": 6
+      }
+    }
+  ],
+  "minecraft:nether_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:nether_brick": 4
+      }
+    }
+  ],
+  "minecraft:nether_gold_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:nether_quartz_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:quartz": 2.2
+      }
+    }
+  ],
+  "minecraft:nether_wart_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:nether_wart": 9
+      }
+    }
+  ],
+  "minecraft:netherite_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_axe": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:netherite_ingot": 9
+      }
+    }
+  ],
+  "minecraft:netherite_boots": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_boots": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_chestplate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_chestplate": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_helmet": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_hoe": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_ingot": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gold_ingot": 4,
+        "minecraft:netherite_scrap": 4
+      }
+    },
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:netherite_block": 1
+      }
+    }
+  ],
+  "minecraft:netherite_leggings": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_leggings": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_pickaxe": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_scrap": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:ancient_debris": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:netherite_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_shovel": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:netherite_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:diamond_sword": 1,
+        "minecraft:netherite_ingot": 1
+      }
+    }
+  ],
+  "minecraft:night_vision_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:night_vision_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:night_vision_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:golden_carrot": 1
+      }
+    }
+  ],
+  "minecraft:night_vision_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:night_vision_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:night_vision_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:note_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 8,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:oak_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks": 5
+      }
+    }
+  ],
+  "minecraft:oak_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks": 1
+      }
+    }
+  ],
+  "minecraft:oak_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:oak_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:oak_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:oak_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:oak_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:oak_log": 1
+      }
+    }
+  ],
+  "minecraft:oak_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:oak_log||minecraft:oak_wood||minecraft:stripped_oak_log||minecraft:stripped_oak_wood": 1
+      }
+    }
+  ],
+  "minecraft:oak_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks": 2
+      }
+    }
+  ],
+  "minecraft:oak_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:oak_log": 1
+      }
+    }
+  ],
+  "minecraft:oak_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:oak_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:oak_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:oak_planks": 3
+      }
+    }
+  ],
+  "minecraft:oak_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:oak_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:oak_planks": 6
+      }
+    }
+  ],
+  "minecraft:oak_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:oak_log": 4
+      }
+    }
+  ],
+  "minecraft:observer": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone": 6,
+        "minecraft:quartz": 1,
+        "minecraft:redstone": 2
+      }
+    }
+  ],
+  "minecraft:obsidian": [
+    {
+      "count": 1,
+      "factor": 1.02,
+      "ingredient": {
+        "minecraft:lava_bucket": 1
+      }
+    }
+  ],
+  "minecraft:orange_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:orange_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:orange_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:orange_wool": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:orange_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:orange_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:orange_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:orange_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:orange_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:orange_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:orange_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:orange_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:orange_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:orange_tulip": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:orange_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:orange_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:orange_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:orange_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:orange_dye": 1
+      }
+    }
+  ],
+  "minecraft:orange_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:orange_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:orange_dye": 1
+      }
+    }
+  ],
+  "minecraft:orange_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:orange_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:orange_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:orange_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:packed_ice": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:ice": 9
+      }
+    }
+  ],
+  "minecraft:painting": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 8,
+        "minecraft:white_wool||minecraft:orange_wool||minecraft:magenta_wool||minecraft:light_blue_wool||minecraft:yellow_wool||minecraft:lime_wool||minecraft:pink_wool||minecraft:gray_wool||minecraft:light_gray_wool||minecraft:cyan_wool||minecraft:purple_wool||minecraft:blue_wool||minecraft:brown_wool||minecraft:green_wool||minecraft:red_wool||minecraft:black_wool": 1
+      }
+    }
+  ],
+  "minecraft:paper": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:sugar_cane": 3
+      }
+    }
+  ],
+  "minecraft:pink_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:pink_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:pink_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:pink_wool": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:pink_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:pink_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:pink_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:pink_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:pink_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:pink_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:pink_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:pink_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:pink_dye": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:peony": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:pink_tulip": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:pink_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:pink_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:pink_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:pink_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:pink_dye": 1
+      }
+    }
+  ],
+  "minecraft:pink_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:pink_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:pink_dye": 1
+      }
+    }
+  ],
+  "minecraft:pink_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:pink_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:pink_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:pink_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:piston": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone": 4,
+        "minecraft:iron_ingot": 1,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:player_head": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:creeper_head": 1
+      }
+    }
+  ],
+  "minecraft:podzol": [
+    {
+      "count": 1,
+      "factor": 10.0,
+      "ingredient": {
+        "minecraft:dirt": 1
+      }
+    }
+  ],
+  "minecraft:poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:spider_eye": 1
+      }
+    }
+  ],
+  "minecraft:poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:polished_andesite": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:andesite": 4
+      }
+    }
+  ],
+  "minecraft:polished_andesite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_andesite": 3
+      }
+    }
+  ],
+  "minecraft:polished_andesite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_andesite": 6
+      }
+    }
+  ],
+  "minecraft:polished_basalt": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:basalt": 4
+      }
+    }
+  ],
+  "minecraft:polished_blackstone": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:blackstone": 4
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_blackstone_bricks": 3
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_blackstone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_blackstone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_bricks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_blackstone": 4
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:polished_blackstone": 1
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:polished_blackstone": 2
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_blackstone": 3
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_blackstone": 6
+      }
+    }
+  ],
+  "minecraft:polished_blackstone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_blackstone": 6
+      }
+    }
+  ],
+  "minecraft:polished_diorite": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:diorite": 4
+      }
+    }
+  ],
+  "minecraft:polished_diorite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_diorite": 3
+      }
+    }
+  ],
+  "minecraft:polished_diorite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_diorite": 6
+      }
+    }
+  ],
+  "minecraft:polished_granite": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:granite": 4
+      }
+    }
+  ],
+  "minecraft:polished_granite_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:polished_granite": 3
+      }
+    }
+  ],
+  "minecraft:polished_granite_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:polished_granite": 6
+      }
+    }
+  ],
+  "minecraft:popped_chorus_fruit": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chorus_fruit": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:powered_rail": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:gold_ingot": 6,
+        "minecraft:redstone": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:prismarine": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:prismarine_shard": 4
+      }
+    }
+  ],
+  "minecraft:prismarine_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:prismarine_bricks": 3
+      }
+    }
+  ],
+  "minecraft:prismarine_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:prismarine_bricks": 6
+      }
+    }
+  ],
+  "minecraft:prismarine_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:prismarine_shard": 9
+      }
+    }
+  ],
+  "minecraft:prismarine_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:prismarine": 3
+      }
+    }
+  ],
+  "minecraft:prismarine_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:prismarine": 6
+      }
+    }
+  ],
+  "minecraft:prismarine_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:prismarine": 6
+      }
+    }
+  ],
+  "minecraft:pufferfish_bucket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bucket": 1,
+        "minecraft:pufferfish": 1
+      }
+    }
+  ],
+  "minecraft:pumpkin_pie": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:egg": 1,
+        "minecraft:pumpkin": 1,
+        "minecraft:sugar": 1
+      }
+    }
+  ],
+  "minecraft:pumpkin_seeds": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:pumpkin": 1
+      }
+    }
+  ],
+  "minecraft:purple_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:purple_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:purple_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:purple_wool": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:purple_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:purple_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:purple_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:purple_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:purple_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:purple_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:purple_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:purple_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:purple_dye": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blue_dye": 1,
+        "minecraft:red_dye": 1
+      }
+    }
+  ],
+  "minecraft:purple_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:purple_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:purple_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:purple_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:purple_dye": 1
+      }
+    }
+  ],
+  "minecraft:purple_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:purple_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:purple_dye": 1
+      }
+    }
+  ],
+  "minecraft:purple_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:purple_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:purple_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:purple_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:purpur_block": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:popped_chorus_fruit": 4
+      }
+    }
+  ],
+  "minecraft:purpur_pillar": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:purpur_slab": 2
+      }
+    }
+  ],
+  "minecraft:purpur_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:purpur_block||minecraft:purpur_pillar": 3
+      }
+    }
+  ],
+  "minecraft:purpur_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:purpur_block||minecraft:purpur_pillar": 6
+      }
+    }
+  ],
+  "minecraft:quartz": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:nether_quartz_ore": 1
+      }
+    }
+  ],
+  "minecraft:quartz_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:quartz": 4
+      }
+    }
+  ],
+  "minecraft:quartz_bricks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:quartz_block": 4
+      }
+    }
+  ],
+  "minecraft:quartz_pillar": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:quartz_block": 2
+      }
+    }
+  ],
+  "minecraft:quartz_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:chiseled_quartz_block||minecraft:quartz_block||minecraft:quartz_pillar": 3
+      }
+    }
+  ],
+  "minecraft:quartz_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:chiseled_quartz_block||minecraft:quartz_block||minecraft:quartz_pillar": 6
+      }
+    }
+  ],
+  "minecraft:rabbit_stew": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:baked_potato": 1,
+        "minecraft:bowl": 1,
+        "minecraft:brown_mushroom": 1,
+        "minecraft:carrot": 1,
+        "minecraft:cooked_rabbit": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:baked_potato": 1,
+        "minecraft:bowl": 1,
+        "minecraft:carrot": 1,
+        "minecraft:cooked_rabbit": 1,
+        "minecraft:red_mushroom": 1
+      }
+    }
+  ],
+  "minecraft:rail": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:iron_ingot": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:red_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_wool": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:red_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:red_wool": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:white_bed": 1
+      }
+    }
+  ],
+  "minecraft:red_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:red_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:white_carpet": 8
+      }
+    }
+  ],
+  "minecraft:red_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:red_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:red_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:red_dye": 1,
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:red_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:beetroot": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:poppy": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:rose_bush": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_tulip": 1
+      }
+    }
+  ],
+  "minecraft:red_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:red_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:red_mushroom_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_mushroom": 10
+      }
+    }
+  ],
+  "minecraft:red_nether_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:red_nether_bricks": 3
+      }
+    }
+  ],
+  "minecraft:red_nether_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:red_nether_bricks": 6
+      }
+    }
+  ],
+  "minecraft:red_nether_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:red_nether_bricks": 6
+      }
+    }
+  ],
+  "minecraft:red_nether_bricks": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:nether_brick": 2,
+        "minecraft:nether_wart": 2
+      }
+    }
+  ],
+  "minecraft:red_sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_sand": 4
+      }
+    }
+  ],
+  "minecraft:red_sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:red_sandstone||minecraft:chiseled_red_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:red_sandstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:red_sandstone||minecraft:chiseled_red_sandstone||minecraft:cut_red_sandstone": 6
+      }
+    }
+  ],
+  "minecraft:red_sandstone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:red_sandstone": 6
+      }
+    }
+  ],
+  "minecraft:red_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:red_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:red_dye": 1
+      }
+    }
+  ],
+  "minecraft:red_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:red_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:red_dye": 1
+      }
+    }
+  ],
+  "minecraft:red_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:terracotta": 8
+      }
+    }
+  ],
+  "minecraft:red_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:red_dye": 1,
+        "minecraft:white_wool": 1
+      }
+    }
+  ],
+  "minecraft:redstone": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:redstone_block": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:redstone_ore": 1
+      }
+    }
+  ],
+  "minecraft:redstone_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:redstone": 9
+      }
+    }
+  ],
+  "minecraft:redstone_lamp": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:glowstone": 1,
+        "minecraft:redstone": 4
+      }
+    }
+  ],
+  "minecraft:redstone_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:redstone": 6
+      }
+    }
+  ],
+  "minecraft:redstone_torch": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:redstone": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:ghast_tear": 1
+      }
+    }
+  ],
+  "minecraft:regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:repeater": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:redstone": 1,
+        "minecraft:redstone_torch": 2,
+        "minecraft:stone": 3
+      }
+    }
+  ],
+  "minecraft:respawn_anchor": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:crying_obsidian": 6,
+        "minecraft:glowstone": 3
+      }
+    }
+  ],
+  "minecraft:salmon_bucket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bucket": 1,
+        "minecraft:salmon": 1
+      }
+    }
+  ],
+  "minecraft:sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:sand": 4
+      }
+    }
+  ],
+  "minecraft:sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:sandstone||minecraft:chiseled_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:sandstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:sandstone||minecraft:chiseled_sandstone||minecraft:cut_sandstone": 6
+      }
+    }
+  ],
+  "minecraft:sandstone_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:sandstone": 6
+      }
+    }
+  ],
+  "minecraft:scaffolding": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:bamboo": 6,
+        "minecraft:string": 1
+      }
+    }
+  ],
+  "minecraft:sea_lantern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:prismarine_crystals": 5,
+        "minecraft:prismarine_shard": 4
+      }
+    }
+  ],
+  "minecraft:shears": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 2
+      }
+    }
+  ],
+  "minecraft:shield": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:shulker_box": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chest": 1,
+        "minecraft:shulker_shell": 2
+      }
+    }
+  ],
+  "minecraft:skeleton_skull": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:creeper_head": 1
+      }
+    }
+  ],
+  "minecraft:skull_banner_pattern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:paper": 1,
+        "minecraft:wither_skeleton_skull": 1
+      }
+    }
+  ],
+  "minecraft:slime_ball": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:slime_block": 1
+      }
+    }
+  ],
+  "minecraft:slime_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:slime_ball": 9
+      }
+    }
+  ],
+  "minecraft:slow_falling_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:slow_falling_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:slow_falling_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:phantom_membrane": 1
+      }
+    }
+  ],
+  "minecraft:slow_falling_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:slow_falling_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:slow_falling_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:smithing_table": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 2,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 4
+      }
+    }
+  ],
+  "minecraft:smoker": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_log||minecraft:dark_oak_wood||minecraft:stripped_dark_oak_log||minecraft:stripped_dark_oak_wood||minecraft:oak_log||minecraft:oak_wood||minecraft:stripped_oak_log||minecraft:stripped_oak_wood||minecraft:acacia_log||minecraft:acacia_wood||minecraft:stripped_acacia_log||minecraft:stripped_acacia_wood||minecraft:birch_log||minecraft:birch_wood||minecraft:stripped_birch_log||minecraft:stripped_birch_wood||minecraft:jungle_log||minecraft:jungle_wood||minecraft:stripped_jungle_log||minecraft:stripped_jungle_wood||minecraft:spruce_log||minecraft:spruce_wood||minecraft:stripped_spruce_log||minecraft:stripped_spruce_wood||minecraft:crimson_stem||minecraft:stripped_crimson_stem||minecraft:crimson_hyphae||minecraft:stripped_crimson_hyphae||minecraft:warped_stem||minecraft:stripped_warped_stem||minecraft:warped_hyphae||minecraft:stripped_warped_hyphae": 4,
+        "minecraft:furnace": 1
+      }
+    }
+  ],
+  "minecraft:smooth_quartz": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:quartz_block": 1
+      }
+    }
+  ],
+  "minecraft:smooth_quartz_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:smooth_quartz": 3
+      }
+    }
+  ],
+  "minecraft:smooth_quartz_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:smooth_quartz": 6
+      }
+    }
+  ],
+  "minecraft:smooth_red_sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:red_sandstone": 1
+      }
+    }
+  ],
+  "minecraft:smooth_red_sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:smooth_red_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:smooth_red_sandstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:smooth_red_sandstone": 6
+      }
+    }
+  ],
+  "minecraft:smooth_sandstone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:sandstone": 1
+      }
+    }
+  ],
+  "minecraft:smooth_sandstone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:smooth_sandstone": 3
+      }
+    }
+  ],
+  "minecraft:smooth_sandstone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:smooth_sandstone": 6
+      }
+    }
+  ],
+  "minecraft:smooth_stone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:stone": 1
+      }
+    }
+  ],
+  "minecraft:smooth_stone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:smooth_stone": 3
+      }
+    }
+  ],
+  "minecraft:snow": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:snow_block": 3
+      }
+    }
+  ],
+  "minecraft:snow_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:snowball": 4
+      }
+    }
+  ],
+  "minecraft:soul_campfire": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dark_oak_log||minecraft:dark_oak_wood||minecraft:stripped_dark_oak_log||minecraft:stripped_dark_oak_wood||minecraft:oak_log||minecraft:oak_wood||minecraft:stripped_oak_log||minecraft:stripped_oak_wood||minecraft:acacia_log||minecraft:acacia_wood||minecraft:stripped_acacia_log||minecraft:stripped_acacia_wood||minecraft:birch_log||minecraft:birch_wood||minecraft:stripped_birch_log||minecraft:stripped_birch_wood||minecraft:jungle_log||minecraft:jungle_wood||minecraft:stripped_jungle_log||minecraft:stripped_jungle_wood||minecraft:spruce_log||minecraft:spruce_wood||minecraft:stripped_spruce_log||minecraft:stripped_spruce_wood||minecraft:crimson_stem||minecraft:stripped_crimson_stem||minecraft:crimson_hyphae||minecraft:stripped_crimson_hyphae||minecraft:warped_stem||minecraft:stripped_warped_stem||minecraft:warped_hyphae||minecraft:stripped_warped_hyphae": 3,
+        "minecraft:soul_sand||minecraft:soul_soil": 1,
+        "minecraft:stick": 3
+      }
+    }
+  ],
+  "minecraft:soul_lantern": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_nugget": 8,
+        "minecraft:soul_torch": 1
+      }
+    }
+  ],
+  "minecraft:soul_soil": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:soul_sand": 1
+      }
+    }
+  ],
+  "minecraft:soul_torch": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:coal||minecraft:charcoal": 1,
+        "minecraft:soul_sand||minecraft:soul_soil": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:spectral_arrow": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:arrow": 1,
+        "minecraft:glowstone_dust": 4
+      }
+    }
+  ],
+  "minecraft:sponge": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:wet_sponge": 1
+      }
+    }
+  ],
+  "minecraft:spruce_boat": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:spruce_planks": 5
+      }
+    }
+  ],
+  "minecraft:spruce_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:spruce_planks": 1
+      }
+    }
+  ],
+  "minecraft:spruce_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:spruce_planks": 6
+      }
+    }
+  ],
+  "minecraft:spruce_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:spruce_planks": 4,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:spruce_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:spruce_planks": 2,
+        "minecraft:stick": 4
+      }
+    }
+  ],
+  "minecraft:spruce_leaves": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:spruce_log": 1
+      }
+    }
+  ],
+  "minecraft:spruce_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:spruce_log||minecraft:spruce_wood||minecraft:stripped_spruce_log||minecraft:stripped_spruce_wood": 1
+      }
+    }
+  ],
+  "minecraft:spruce_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:spruce_planks": 2
+      }
+    }
+  ],
+  "minecraft:spruce_sapling": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:spruce_log": 1
+      }
+    }
+  ],
+  "minecraft:spruce_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:spruce_planks": 6,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:spruce_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:spruce_planks": 3
+      }
+    }
+  ],
+  "minecraft:spruce_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:spruce_planks": 6
+      }
+    }
+  ],
+  "minecraft:spruce_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:spruce_planks": 6
+      }
+    }
+  ],
+  "minecraft:spruce_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:spruce_log": 4
+      }
+    }
+  ],
+  "minecraft:stick": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 2
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bamboo": 2
+      }
+    }
+  ],
+  "minecraft:sticky_piston": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:piston": 1,
+        "minecraft:slime_ball": 1
+      }
+    }
+  ],
+  "minecraft:stone": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:cobblestone": 1
+      }
+    }
+  ],
+  "minecraft:stone_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:stone_brick_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:stone_bricks": 3
+      }
+    }
+  ],
+  "minecraft:stone_brick_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:stone_brick_wall": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:stone_bricks": 6
+      }
+    }
+  ],
+  "minecraft:stone_bricks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:stone": 4
+      }
+    }
+  ],
+  "minecraft:stone_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stone": 1
+      }
+    }
+  ],
+  "minecraft:stone_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 2,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:stone_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:stone_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stone": 2
+      }
+    }
+  ],
+  "minecraft:stone_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:stone_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:stone": 3
+      }
+    }
+  ],
+  "minecraft:stone_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:stone": 6
+      }
+    }
+  ],
+  "minecraft:stone_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:cobblestone||minecraft:blackstone": 2,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:stonecutter": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:stone": 3
+      }
+    }
+  ],
+  "minecraft:strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 1
+      }
+    }
+  ],
+  "minecraft:strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:stripped_acacia_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:acacia_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_acacia_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_acacia_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_birch_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:birch_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_birch_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_birch_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_crimson_hyphae": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_crimson_stem": 4
+      }
+    }
+  ],
+  "minecraft:stripped_crimson_stem": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:crimson_stem": 1
+      }
+    }
+  ],
+  "minecraft:stripped_dark_oak_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:dark_oak_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_dark_oak_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_dark_oak_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_jungle_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:jungle_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_jungle_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_jungle_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_oak_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:oak_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_oak_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_oak_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_spruce_log": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:spruce_log": 1
+      }
+    }
+  ],
+  "minecraft:stripped_spruce_wood": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_spruce_log": 4
+      }
+    }
+  ],
+  "minecraft:stripped_warped_hyphae": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stripped_warped_stem": 4
+      }
+    }
+  ],
+  "minecraft:stripped_warped_stem": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:warped_stem": 1
+      }
+    }
+  ],
+  "minecraft:strong_harming_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_harming_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_harming_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_healing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_healing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_healing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:sugar": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:honey_bottle": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:sugar_cane": 1
+      }
+    }
+  ],
+  "minecraft:suspicious_stew": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bowl": 1,
+        "minecraft:brown_mushroom": 1,
+        "minecraft:dandelion": 1,
+        "minecraft:red_mushroom": 1
+      }
+    }
+  ],
+  "minecraft:swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:sugar": 1
+      }
+    }
+  ],
+  "minecraft:swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:target": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:hay_block": 1,
+        "minecraft:redstone": 4
+      }
+    }
+  ],
+  "minecraft:terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:clay": 1,
+        "minecraft:coal": 0.125
+      }
+    }
+  ],
+  "minecraft:thick_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:thick_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:thick_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:thick_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:tnt": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:gunpowder": 5,
+        "minecraft:sand||minecraft:red_sand": 4
+      }
+    }
+  ],
+  "minecraft:tnt_minecart": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:minecart": 1,
+        "minecraft:tnt": 1
+      }
+    }
+  ],
+  "minecraft:torch": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:coal||minecraft:charcoal": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:trapped_chest": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:chest": 1,
+        "minecraft:tripwire_hook": 1
+      }
+    }
+  ],
+  "minecraft:tripwire_hook": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:iron_ingot": 1,
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 1,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:tropical_fish_bucket": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bucket": 1,
+        "minecraft:tropical_fish": 1
+      }
+    }
+  ],
+  "minecraft:tube_coral_block": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:tube_coral": 1
+      }
+    }
+  ],
+  "minecraft:tube_coral_fan": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:tube_coral": 1
+      }
+    }
+  ],
+  "minecraft:turtle_helmet": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:scute": 5
+      }
+    }
+  ],
+  "minecraft:turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:turtle_helmet": 1
+      }
+    }
+  ],
+  "minecraft:turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:warped_button": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:warped_planks": 1
+      }
+    }
+  ],
+  "minecraft:warped_door": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:warped_fence": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stick": 2,
+        "minecraft:warped_planks": 4
+      }
+    }
+  ],
+  "minecraft:warped_fence_gate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 4,
+        "minecraft:warped_planks": 2
+      }
+    }
+  ],
+  "minecraft:warped_fungus_on_a_stick": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:fishing_rod": 1,
+        "minecraft:warped_fungus": 1
+      }
+    }
+  ],
+  "minecraft:warped_hyphae": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:warped_stem": 4
+      }
+    }
+  ],
+  "minecraft:warped_nylium": [
+    {
+      "count": 1,
+      "factor": 5.0,
+      "ingredient": {
+        "minecraft:netherrack": 1
+      }
+    }
+  ],
+  "minecraft:warped_planks": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:warped_stem||minecraft:stripped_warped_stem||minecraft:warped_hyphae||minecraft:stripped_warped_hyphae": 1
+      }
+    }
+  ],
+  "minecraft:warped_pressure_plate": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:warped_planks": 2
+      }
+    }
+  ],
+  "minecraft:warped_sign": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:stick": 1,
+        "minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:warped_slab": [
+    {
+      "count": 6,
+      "ingredient": {
+        "minecraft:warped_planks": 3
+      }
+    }
+  ],
+  "minecraft:warped_stairs": [
+    {
+      "count": 4,
+      "ingredient": {
+        "minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:warped_trapdoor": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:warped_planks": 6
+      }
+    }
+  ],
+  "minecraft:warped_wart_block": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:nether_wart_block": 1
+      }
+    }
+  ],
+  "minecraft:water_breathing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:water_breathing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_breathing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:pufferfish": 1
+      }
+    }
+  ],
+  "minecraft:water_breathing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_breathing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:water_breathing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:water_bucket": [
+    {
+      "count": 1,
+      "factor": 1.01,
+      "ingredient": {
+        "minecraft:bucket": 1
+      }
+    }
+  ],
+  "minecraft:water_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:water_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:water_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:weakness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:weakness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:weakness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:wheat": [
+    {
+      "count": 9,
+      "ingredient": {
+        "minecraft:hay_block": 1
+      }
+    }
+  ],
+  "minecraft:white_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 1,
+        "minecraft:white_wool": 6
+      }
+    }
+  ],
+  "minecraft:white_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:white_wool": 3
+      }
+    }
+  ],
+  "minecraft:white_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:white_wool": 2
+      }
+    }
+  ],
+  "minecraft:white_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:white_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:white_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:white_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:bone_meal": 1
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:lily_of_the_valley": 1
+      }
+    }
+  ],
+  "minecraft:white_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:white_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:white_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:white_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:white_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:white_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:white_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:terracotta": 8,
+        "minecraft:white_dye": 1
+      }
+    }
+  ],
+  "minecraft:white_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:string": 4
+      }
+    }
+  ],
+  "minecraft:wooden_axe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:wooden_hoe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 2,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:wooden_pickaxe": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:wooden_shovel": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 1,
+        "minecraft:stick": 2
+      }
+    }
+  ],
+  "minecraft:wooden_sword": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 2,
+        "minecraft:stick": 1
+      }
+    }
+  ],
+  "minecraft:writable_book": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:book": 1,
+        "minecraft:feather": 1,
+        "minecraft:ink_sac": 1
+      }
+    }
+  ],
+  "minecraft:written_book": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:writable_book": 1
+      }
+    }
+  ],
+  "minecraft:yellow_banner": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:stick": 1,
+        "minecraft:yellow_wool": 6
+      }
+    }
+  ],
+  "minecraft:yellow_bed": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:oak_planks||minecraft:spruce_planks||minecraft:birch_planks||minecraft:jungle_planks||minecraft:acacia_planks||minecraft:dark_oak_planks||minecraft:crimson_planks||minecraft:warped_planks": 3,
+        "minecraft:yellow_wool": 3
+      }
+    },
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:white_bed": 1,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_carpet": [
+    {
+      "count": 3,
+      "ingredient": {
+        "minecraft:yellow_wool": 2
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:white_carpet": 8,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_concrete": [
+    {
+      "count": 1,
+      "factor": 1.1,
+      "ingredient": {
+        "minecraft:yellow_concrete_powder": 1
+      }
+    }
+  ],
+  "minecraft:yellow_concrete_powder": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:gravel": 4,
+        "minecraft:sand": 4,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_dye": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:dandelion": 1
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:sunflower": 1
+      }
+    }
+  ],
+  "minecraft:yellow_glazed_terracotta": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:coal": 0.125,
+        "minecraft:yellow_terracotta": 1
+      }
+    }
+  ],
+  "minecraft:yellow_shulker_box": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:shulker_box": 1
+      }
+    }
+  ],
+  "minecraft:yellow_stained_glass": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass": 8,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_stained_glass_pane": [
+    {
+      "count": 16,
+      "ingredient": {
+        "minecraft:yellow_stained_glass": 6
+      }
+    },
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:glass_pane": 8,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_terracotta": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:terracotta": 8,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:yellow_wool": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:white_wool": 1,
+        "minecraft:yellow_dye": 1
+      }
+    }
+  ],
+  "minecraft:zombie_head": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:creeper_head": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,2069 @@
+{
+  "minecraft:iron_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:iron_ingot": 8
+      }
+    }
+  ],
+  "minecraft:gold_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:nether_gold_ore": [
+    {
+      "count": 8,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": -1,
+        "minecraft:gold_ingot": 8
+      }
+    }
+  ],
+  "minecraft:lapis_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:lapis_lazuli": 14.3
+      }
+    }
+  ],
+  "minecraft:redstone_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:redstone": 6
+      }
+    }
+  ],
+  "minecraft:coal_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:coal": 2.2
+      }
+    }
+  ],
+  "minecraft:diamond_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:diamond": 2.2
+      }
+    }
+  ],
+  "minecraft:emerald_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:emerald": 2.2
+      }
+    }
+  ],
+  "minecraft:nether_quartz_ore": [
+    {
+      "count": 1,
+      "factor": 1.0,
+      "ingredient": {
+        "minecraft:quartz": 2.2
+      }
+    }
+  ],
+  "minecraft:dragon_head": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:elytra": 1}}
+  ],
+  "minecraft:zombie_head": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:creeper_head": 1}}
+  ],
+  "minecraft:player_head": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:creeper_head": 1}}
+  ],
+  "minecraft:skeleton_skull": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:creeper_head": 1}}
+  ],
+  "minecraft:black_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:blue_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:brown_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:cyan_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:gray_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:green_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:light_blue_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:light_gray_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:lime_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:magenta_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:orange_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:pink_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:purple_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:red_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:white_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:yellow_shulker_box": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:shulker_box": 1}}
+  ],
+  "minecraft:black_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:black_concrete_powder": 1}}
+  ],
+  "minecraft:blue_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:blue_concrete_powder": 1}}
+  ],
+  "minecraft:brown_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:brown_concrete_powder": 1}}
+  ],
+  "minecraft:cyan_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:cyan_concrete_powder": 1}}
+  ],
+  "minecraft:gray_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:gray_concrete_powder": 1}}
+  ],
+  "minecraft:green_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:green_concrete_powder": 1}}
+  ],
+  "minecraft:light_blue_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:light_blue_concrete_powder": 1}}
+  ],
+  "minecraft:light_gray_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:light_gray_concrete_powder": 1}}
+  ],
+  "minecraft:lime_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:lime_concrete_powder": 1}}
+  ],
+  "minecraft:magenta_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:magenta_concrete_powder": 1}}
+  ],
+  "minecraft:orange_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:orange_concrete_powder": 1}}
+  ],
+  "minecraft:pink_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:pink_concrete_powder": 1}}
+  ],
+  "minecraft:purple_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:purple_concrete_powder": 1}}
+  ],
+  "minecraft:red_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:red_concrete_powder": 1}}
+  ],
+  "minecraft:white_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:white_concrete_powder": 1}}
+  ],
+  "minecraft:yellow_concrete": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:yellow_concrete_powder": 1}}
+  ],
+  "minecraft:stripped_acacia_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:acacia_log": 1}}
+  ],
+  "minecraft:acacia_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:acacia_log": 1}}
+  ],
+  "minecraft:acacia_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:acacia_log": 1}}
+  ],
+  "minecraft:stripped_birch_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:birch_log": 1}}
+  ],
+  "minecraft:birch_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:birch_log": 1}}
+  ],
+  "minecraft:birch_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:birch_log": 1}}
+  ],
+  "minecraft:stripped_dark_oak_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:dark_oak_log": 1}}
+  ],
+  "minecraft:dark_oak_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:dark_oak_log": 1}}
+  ],
+  "minecraft:dark_oak_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:dark_oak_log": 1}}
+  ],
+  "minecraft:stripped_jungle_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:jungle_log": 1}}
+  ],
+  "minecraft:jungle_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:jungle_log": 1}}
+  ],
+  "minecraft:jungle_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:jungle_log": 1}}
+  ],
+  "minecraft:stripped_oak_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:oak_log": 1}}
+  ],
+  "minecraft:oak_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:oak_log": 1}}
+  ],
+  "minecraft:oak_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:oak_log": 1}}
+  ],
+  "minecraft:stripped_spruce_log": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:spruce_log": 1}}
+  ],
+  "minecraft:spruce_leaves": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:spruce_log": 1}}
+  ],
+  "minecraft:spruce_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:spruce_log": 1}}
+  ],
+  "minecraft:spruce_sapling": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:spruce_log": 1}}
+  ],
+  "minecraft:stripped_crimson_stem": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:crimson_stem": 1}}
+  ],
+  "minecraft:stripped_warped_stem": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:warped_stem": 1}}
+  ],
+  "minecraft:bee_nest": [
+    {"count": 1, "factor": 1.05, "ingredient": {"minecraft:beehive": 1}}
+  ],
+  "minecraft:chainmail_boots": [
+    {"count": 1, "factor": 1.05, "ingredient": {"minecraft:golden_boots": 1}}
+  ],
+  "minecraft:chainmail_chestplate": [
+    {"count": 1, "factor": 1.05, "ingredient": {"minecraft:golden_chestplate": 1}}
+  ],
+  "minecraft:chainmail_helmet": [
+    {"count": 1, "factor": 1.05, "ingredient": {"minecraft:golden_leggings": 1}}
+  ],
+  "minecraft:chainmail_leggings": [
+    {"count": 1, "factor": 1.05, "ingredient": {"minecraft:golden_leggings": 1}}
+  ],
+  "minecraft:chipped_anvil": [
+    {"count": 1, "factor": 0.67, "ingredient": {"minecraft:anvil": 1}}
+  ],
+  "minecraft:damaged_anvil": [
+    {"count": 1, "factor": 0.34, "ingredient": {"minecraft:anvil": 1}}
+  ],
+  "minecraft:music_disc_cat": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_11": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_blocks": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_chirp": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_far": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_mall": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_mellohi": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_stal": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_strad": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_wait": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_ward": [
+    {"count": 1, "factor": 1.1, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:music_disc_pigstep": [
+    {"count": 1, "factor": 1.5, "ingredient": {"minecraft:music_disc_13": 1}}
+  ],
+  "minecraft:brown_mushroom_block": [
+    {"count": 1, "ingredient": {"minecraft:brown_mushroom": 10}}
+  ],
+  "minecraft:red_mushroom_block": [
+    {"count": 1, "ingredient": {"minecraft:red_mushroom": 10}}
+  ],
+  "minecraft:mushroom_stem": [
+    {"count": 1, "ingredient": {"minecraft:brown_mushroom": 10}}
+  ],
+  "minecraft:chorus_flower": [
+    {"count": 1, "ingredient": {"minecraft:chorus_fruit": 9}}
+  ],
+  "minecraft:cobweb": [
+    {"count": 1, "ingredient": {"minecraft:string": 9}}
+  ],
+  "minecraft:crimson_nylium": [
+    {"count": 1, "factor": 5.0, "ingredient": {"minecraft:netherrack": 1}}
+  ],
+  "minecraft:warped_nylium": [
+    {"count": 1, "factor": 5.0, "ingredient": {"minecraft:netherrack": 1}}
+  ],
+  "minecraft:gilded_blackstone": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:gold_nugget": 3.5}}
+  ],
+  "minecraft:grass_path": [
+    {"count": 1, "factor": 1.5, "ingredient": {"minecraft:coarse_dirt": 1}}
+  ],
+  "minecraft:grass_block": [
+    {"count": 1, "factor": 5.0, "ingredient": {"minecraft:dirt": 1}}
+  ],
+  "minecraft:mycelium": [
+    {"count": 1, "factor": 20.0, "ingredient": {"minecraft:dirt": 1}}
+  ],
+  "minecraft:podzol": [
+    {"count": 1, "factor": 10.0, "ingredient": {"minecraft:dirt": 1}}
+  ],
+  "minecraft:cod_bucket": [
+    {"count": 1, "ingredient": {"minecraft:bucket": 1, "minecraft:cod": 1}}
+  ],
+  "minecraft:pufferfish_bucket": [
+    {"count": 1, "ingredient": {"minecraft:bucket": 1, "minecraft:pufferfish": 1}}
+  ],
+  "minecraft:salmon_bucket": [
+    {"count": 1, "ingredient": {"minecraft:bucket": 1, "minecraft:salmon": 1}}
+  ],
+  "minecraft:tropical_fish_bucket": [
+    {"count": 1, "ingredient": {"minecraft:bucket": 1, "minecraft:tropical_fish": 1}}
+  ],
+  "minecraft:water_bucket": [
+    {"count": 1, "factor": 1.01, "ingredient": {"minecraft:bucket": 1}}
+  ],
+  "minecraft:milk_bucket": [
+    {"count": 1, "factor": 1.02, "ingredient": {"minecraft:bucket": 1}}
+  ],
+  "minecraft:lava_bucket": [
+    {"count": 1, "factor": 1.03, "ingredient": {"minecraft:bucket": 1}}
+  ],
+  "minecraft:obsidian": [
+    {"count": 1, "factor": 1.02, "ingredient": {"minecraft:lava_bucket": 1}}
+  ],
+  "minecraft:soul_soil": [
+    {"count": 1, "ingredient": {"minecraft:soul_sand": 1}}
+  ],
+  "minecraft:warped_wart_block": [
+    {"count": 1, "ingredient": {"minecraft:nether_wart_block": 1}}
+  ],
+  "minecraft:written_book": [
+    {"count": 1, "ingredient": {"minecraft:writable_book": 1}}
+  ],
+  "minecraft:empty_map": [
+    {"count": 1, "ingredient": {"minecraft:compass": 1, "minecraft:paper": 8}}
+  ],
+  "minecraft:filled_map": [
+    {"count": 1, "ingredient": {"minecraft:empty_map": 1}}
+  ],
+  "minecraft:firework_star": [
+    {"count": 1, "ingredient": {"minecraft:gunpowder": 1, "minecraft:white_dye": 1}}
+  ],
+  "minecraft:firework_rocket": [
+    {"count": 1, "ingredient": {"minecraft:gunpowder": 1, "minecraft:paper": 1}}
+  ],
+  "minecraft:suspicious_stew": [
+    {
+      "count": 1,
+      "ingredient": {
+        "minecraft:brown_mushroom": 1,
+        "minecraft:red_mushroom": 1,
+        "minecraft:bowl": 1,
+        "minecraft:dandelion": 1
+      }
+    }
+  ],
+  "minecraft:brain_coral_block": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:brain_coral": 1}}
+  ],
+  "minecraft:brain_coral_fan": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:brain_coral": 1}}
+  ],
+  "minecraft:bubble_coral_block": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:bubble_coral": 1}}
+  ],
+  "minecraft:bubble_coral_fan": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:bubble_coral": 1}}
+  ],
+  "minecraft:fire_coral_block": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:fire_coral": 1}}
+  ],
+  "minecraft:fire_coral_fan": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:fire_coral": 1}}
+  ],
+  "minecraft:horn_coral_block": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:horn_coral": 1}}
+  ],
+  "minecraft:horn_coral_fan": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:horn_coral": 1}}
+  ],
+  "minecraft:tube_coral_block": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:tube_coral": 1}}
+  ],
+  "minecraft:tube_coral_fan": [
+    {"count": 1, "factor": 1.0, "ingredient": {"minecraft:tube_coral": 1}}
+  ],
+  "minecraft:dead_brain_coral": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:brain_coral": 1}}
+  ],
+  "minecraft:dead_brain_coral_block": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:brain_coral_block": 1}}
+  ],
+  "minecraft:dead_brain_coral_fan": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:brain_coral_fan": 1}}
+  ],
+  "minecraft:dead_bubble_coral": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:bubble_coral": 1}}
+  ],
+  "minecraft:dead_bubble_coral_block": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:bubble_coral_block": 1}}
+  ],
+  "minecraft:dead_bubble_coral_fan": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:bubble_coral_fan": 1}}
+  ],
+  "minecraft:dead_fire_coral": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:fire_coral": 1}}
+  ],
+  "minecraft:dead_fire_coral_block": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:fire_coral_block": 1}}
+  ],
+  "minecraft:dead_fire_coral_fan": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:fire_coral_fan": 1}}
+  ],
+  "minecraft:dead_horn_coral": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:horn_coral": 1}}
+  ],
+  "minecraft:dead_horn_coral_block": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:horn_coral_block": 1}}
+  ],
+  "minecraft:dead_horn_coral_fan": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:horn_coral_fan": 1}}
+  ],
+  "minecraft:dead_tube_coral": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:tube_coral": 1}}
+  ],
+  "minecraft:dead_tube_coral_block": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:tube_coral_block": 1}}
+  ],
+  "minecraft:dead_tube_coral_fan": [
+    {"count": 1, "factor": 0.75, "ingredient": {"minecraft:tube_coral_fan": 1}}
+  ],
+  "minecraft:awkward_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_splash_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1
+      }
+    }
+  ],
+  "minecraft:awkward_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:nether_wart": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:awkward_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "minecraft:awkward_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:awkward_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:fire_resistance_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:fire_resistance_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:magma_cream": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fire_resistance_potion": 2,
+        "minecraft:gunpowder": 1
+      }
+    }
+  ],
+  "minecraft:fire_resistance_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:fire_resistance_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:harming_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:harming_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:harming_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:harming_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:healing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:healing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:healing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glistering_melon_slice": 1
+      }
+    }
+  ],
+  "minecraft:healing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:healing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:healing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:invisibility_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:invisibility_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:invisibility_potion": 2
+      }
+    }
+  ],
+  "minecraft:invisibility_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:invisibility_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:rabbit_foot": 1
+      }
+    }
+  ],
+  "minecraft:leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_fire_resistance_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fire_resistance_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_fire_resistance_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_fire_resistance_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_fire_resistance_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_invisibility_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_invisibility_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_invisibility_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:invisibility_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_invisibility_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_invisibility_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_invisibility_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_invisibility_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:leaping_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_night_vision_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_night_vision_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_night_vision_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:night_vision_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_night_vision_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_night_vision_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_night_vision_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:poison_potion": 2,
+        "minecraft:redstone": 1
+      }
+    }
+  ],
+  "minecraft:long_poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_slow_falling_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slow_falling_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_slow_falling_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_water_breathing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_water_breathing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_water_breathing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:long_weakness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:long_weakness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:redstone": 1,
+        "minecraft:weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:long_weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:long_weakness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:long_weakness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:mundane_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:mundane_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:sugar": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:mundane_potion": 2
+      }
+    }
+  ],
+  "minecraft:mundane_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:mundane_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:night_vision_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:night_vision_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:night_vision_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:golden_carrot": 1
+      }
+    }
+  ],
+  "minecraft:night_vision_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:night_vision_potion": 2
+      }
+    }
+  ],
+  "minecraft:night_vision_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:night_vision_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:spider_eye": 1
+      }
+    }
+  ],
+  "minecraft:poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:ghast_tear": 1
+      }
+    }
+  ],
+  "minecraft:regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:slow_falling_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:slow_falling_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:slow_falling_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:phantom_membrane": 1
+      }
+    }
+  ],
+  "minecraft:slow_falling_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:slow_falling_potion": 2
+      }
+    }
+  ],
+  "minecraft:slow_falling_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:slow_falling_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 1
+      }
+    }
+  ],
+  "minecraft:strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_harming_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_harming_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_harming_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_harming_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_harming_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_healing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_healing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_healing_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_healing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_healing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_leaping_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_leaping_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_leaping_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_leaping_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_leaping_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_poison_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_poison_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_poison_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_poison_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_poison_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_regeneration_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_regeneration_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_regeneration_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_regeneration_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_slowness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_slowness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_slowness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_slowness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_slowness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_strength_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_strength_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_strength_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_strength_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_strength_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:strong_turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:strong_turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:strong_turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:strong_turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:swiftness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:swiftness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:swiftness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:sugar": 1
+      }
+    }
+  ],
+  "minecraft:swiftness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:swiftness_potion": 2
+      }
+    }
+  ],
+  "minecraft:swiftness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:swiftness_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:thick_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:thick_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:glowstone_dust": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:thick_potion": 2
+      }
+    }
+  ],
+  "minecraft:thick_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:thick_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:turtle_master_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:turtle_master_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:turtle_master_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:turtle_helmet": 1
+      }
+    }
+  ],
+  "minecraft:turtle_master_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:turtle_master_potion": 2
+      }
+    }
+  ],
+  "minecraft:turtle_master_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:turtle_master_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:water_breathing_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:water_breathing_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_breathing_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:awkward_potion": 2,
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:pufferfish": 1
+      }
+    }
+  ],
+  "minecraft:water_breathing_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:water_breathing_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_breathing_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:water_breathing_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:water_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:water_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:water_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:water_lingering_potion": 1
+      }
+    }
+  ],
+  "minecraft:weakness_lingering_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:dragon_breath": 1,
+        "minecraft:weakness_splash_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:fermented_spider_eye": 1,
+        "minecraft:water_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_splash_potion": [
+    {
+      "count": 2,
+      "ingredient": {
+        "minecraft:blaze_powder": 0.1,
+        "minecraft:gunpowder": 1,
+        "minecraft:weakness_potion": 2
+      }
+    }
+  ],
+  "minecraft:weakness_tipped_arrow": [
+    {
+      "count": 8,
+      "ingredient": {
+        "minecraft:arrow": 8,
+        "minecraft:weakness_lingering_potion": 1
+      }
+    }
+  ]
+}
