@@ -16,13 +16,15 @@ scoreboard players operation seconds countdown = ticks countdown
 scoreboard players operation seconds countdown /= tickspersecond countdown
 execute if score ticks countdown matches -1 run bossbar set countdown players
 execute if score ticks countdown matches 0.. run bossbar set countdown players @a[distance=0..]
-execute if score max countdown < ticks countdown run scoreboard players operation max countdown = ticks countdown
-execute if score ticks countdown matches 0 run title @a[distance=0..] title "Time's up!"
-#execute if score ticks countdown matches 0.. run title @a actionbar [{"text":"Time remaining: "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
-execute if score ticks countdown matches 0.. run bossbar set countdown name [{"text":"Time remaining: "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
-execute if score ticks countdown = red countdown run title @a[distance=0..] subtitle "30 seconds remaining"
-execute if score ticks countdown = red countdown run title @a[distance=0..] title ""
 execute store result bossbar countdown value run scoreboard players get ticks countdown
+execute if score max countdown < ticks countdown run scoreboard players operation max countdown = ticks countdown
+execute store result bossbar max value run scoreboard players get max countdown
 execute if score ticks countdown = red countdown run bossbar set countdown color red
 execute if score ticks countdown < red countdown run bossbar set countdown color yellow
 execute if score ticks countdown < yellow countdown run bossbar set countdown color green
+
+#execute if score ticks countdown matches 0.. run title @a[distance=0..] actionbar [{"text":"Time remaining: "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
+execute if score ticks countdown matches 0.. run bossbar set countdown name [{"text":"Time remaining: "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
+execute if score ticks countdown matches 0 run title @a[distance=0..] title "Time's up!"
+execute if score ticks countdown = red countdown run title @a[distance=0..] subtitle "30 seconds remaining"
+execute if score ticks countdown = red countdown run title @a[distance=0..] title ""
