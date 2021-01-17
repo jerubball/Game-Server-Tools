@@ -31,7 +31,8 @@ execute if score ticks countdown <= yellow countdown if score ticks countdown > 
 execute if score ticks countdown > yellow countdown run bossbar set countdown color green
 
 #execute if score ticks countdown matches 0.. run title @a[distance=0..] actionbar [{"text":"Time remaining: "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
-execute if score ticks countdown matches 0.. run bossbar set countdown name [{"text":"Time remaining: "},{"score":{"name":"minutes","objective":"countdown"}},{"text":" minutes "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]execute if score ticks countdown matches 0 run title @a[distance=0..] title "Time's up!"
+execute if score ticks countdown matches 0.. run bossbar set countdown name [{"text":"Time remaining: "},{"score":{"name":"minutes","objective":"countdown"}},{"text":" minutes "},{"score":{"name":"seconds","objective":"countdown"}},{"text":" seconds"}]
+execute if score ticks countdown matches 0 run title @a[distance=0..] title "Time's up!"
 execute if score ticks countdown = red countdown run title @a[distance=0..] subtitle "30 seconds remaining"
 #execute if score ticks countdown = red countdown run title @a[distance=0..] title ""
 #@ conditional
