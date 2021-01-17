@@ -19,7 +19,7 @@ execute if score ticks countdown matches 0.. run bossbar set countdown players @
 execute store result bossbar countdown value run scoreboard players get ticks countdown
 execute if score ticks countdown matches -1 run scoreboard players set max countdown 1
 execute if score max countdown < ticks countdown run scoreboard players operation max countdown = ticks countdown
-execute store result bossbar max value run scoreboard players get max countdown
+execute store result bossbar countdown max value run scoreboard players get max countdown
 execute if score ticks countdown <= red countdown run bossbar set countdown color red
 execute if score ticks countdown > red countdown run bossbar set countdown color yellow
 execute if score ticks countdown > yellow countdown run bossbar set countdown color green
