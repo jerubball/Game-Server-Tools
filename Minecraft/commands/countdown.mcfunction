@@ -4,8 +4,11 @@ scoreboard objectives add countdown dummy
 bossbar add countdown "Timer"
 scoreboard players set ticks countdown 1
 scoreboard players set seconds countdown 1
+scoreboard players set minutes countdown 1
 scoreboard players set max countdown 1
 scoreboard players set tickspersecond countdown 20
+scoreboard players set ticksperminute countdown 1200
+#scoreboard players set secondsperminute countdown 60
 scoreboard players set red countdown 600
 scoreboard players set yellow countdown 1200
 scoreboard players add ticks countdown 10
