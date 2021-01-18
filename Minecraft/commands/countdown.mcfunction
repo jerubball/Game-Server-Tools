@@ -15,11 +15,11 @@ scoreboard players add ticks countdown 10
 
 #@ repeat
 execute if score ticks countdown matches 0.. run scoreboard players remove ticks countdown 1
-scoreboard players operation minutes countdown = ticks countdown
-scoreboard players operation minutes countdown /= ticksperminute countdown
-scoreboard players operation seconds countdown = ticks countdown
-scoreboard players operation seconds countdown %= ticksperminute countdown
-scoreboard players operation seconds countdown /= tickspersecond countdown
+execute if score ticks countdown matches 0.. run scoreboard players operation minutes countdown = ticks countdown
+execute if score ticks countdown matches 0.. run scoreboard players operation minutes countdown /= ticksperminute countdown
+execute if score ticks countdown matches 0.. run scoreboard players operation seconds countdown = ticks countdown
+execute if score ticks countdown matches 0.. run scoreboard players operation seconds countdown %= ticksperminute countdown
+execute if score ticks countdown matches 0.. run scoreboard players operation seconds countdown /= tickspersecond countdown
 execute if score ticks countdown matches -1 run bossbar set countdown players
 execute if score ticks countdown matches 0.. run bossbar set countdown players @a[distance=0..]
 execute store result bossbar countdown value run scoreboard players get ticks countdown
