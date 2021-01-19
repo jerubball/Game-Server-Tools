@@ -10,4 +10,6 @@ data merge entity @e[type=armor_stand,distance=0..20,limit=1,sort=nearest] {Hand
 
 summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:0b,NoBasePlate:1b,DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"jerubball\",\"underlined\":true}"}
 
+summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:0b,NoBasePlate:1b,DisabledSlots:16191,ArmorItems:[{},{},{},{id:"minecraft:glass",Count:1b}]}
+
 execute as @e[type=item_frame,distance=0..20] run data merge entity @s {Invulnerable:1b,Fixed:1b}
