@@ -1,0 +1,20 @@
+[Unit]
+Description=Discord Bot Python Daemon
+#After=sysinit.target
+After=network.target
+After=network-online.target
+After=nss-lookup.target
+
+[Service]
+Type=forking
+#PIDFile=/var/run/discordbot.pid
+ExecStart=/usr/bin/screen -dmS discordbot python3 -i ~/Documents/Discord/bot.py
+ExecStop=/usr/bin/screen -XS $MAINPID.discordbot quit
+#Restart=no
+Restart=always
+#RestartSec=5
+#TimeoutSec=infinity
+WorkingDirectory=~/Documents/Discord
+
+[Install]
+WantedBy=multi-user.target

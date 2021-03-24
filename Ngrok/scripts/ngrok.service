@@ -1,0 +1,17 @@
+[Unit]
+Description=Ngrok port-tunneling client
+After=sysinit.target
+After=network.target
+After=network-online.target
+After=nss-lookup.target
+
+[Service]
+Type=forking
+User=ieee
+ExecStart=/usr/bin/screen -dmS ngrok /home/ieee/.ngrok2/ngrok start ssh ssh14 ssh23 ssh19
+ExecStop=/usr/bin/screen -XS $MAINPID.ngrok quit
+Restart=always
+#TimeoutSec=infinity
+
+[Install]
+WantedBy=multi-user.target
