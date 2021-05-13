@@ -9,7 +9,7 @@ scoreboard objectives add maxhealth dummy
 #@ repeat
 execute at @a unless score @p[distance=0] life = @p[distance=0] life run scoreboard players set @p[distance=0] life 10
 execute unless entity @a[scores={deathtrigger=..-1}] at @r[scores={deathtrigger=1..}] run scoreboard players remove @p[distance=0] deathtrigger 1000
-@# conditional
+#@ conditional
 scoreboard players remove @p[scores={deathtrigger=..-1}] deathtrigger 1
 #@ conditional
 scoreboard players remove @p[scores={deathtrigger=..-1,life=1..}] life 1
