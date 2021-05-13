@@ -23,6 +23,7 @@ clear @p[scores={deathtrigger=..-1}] minecraft:enchanted_golden_apple 1
 #@ conditional
 scoreboard players add @p[scores={deathtrigger=..-1}] life 1
 execute at @p[scores={deathtrigger=..-1}] run scoreboard players add @p[distance=0] deathtrigger 1000
+title @a actionbar [{"text":"remaining life: "},{"score":{"name":"*","objective":"life"}}]
 
 # maxhealth
 
