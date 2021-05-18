@@ -75,7 +75,7 @@ def parse(infile, outfile=None):
                         meta['keep'] = 'optional'
                         break
                 if 'keep' not in meta:
-                        meta['keep'] = 'remove'
+                    meta['keep'] = 'remove'
 
         def convert(data):
             if type(data) is dict:
