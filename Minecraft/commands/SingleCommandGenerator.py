@@ -87,7 +87,7 @@ def parse(infile, outfile=None):
                 return data
 
         def apply(entry):
-        # generate command object
+            # generate command object
             if 'mode' not in entry:
                 if 'mode' in meta:
                     entry['mode'] = meta['mode']
@@ -141,8 +141,7 @@ def parse(infile, outfile=None):
                 wrapper['TileEntityData']['Command'] = '"summon falling_block ~' + position + escape(convert(data)) + '"'
                 data = wrapper
 
-            spacer = {'id': 'armor_stand', 'Invisible': '1', 'Tags': '["CMDSPACER"]', 'Passengers': [data]}
-            return spacer
+            return {'id': 'armor_stand', 'Invisible': '1', 'Tags': '["CMDSPACER"]', 'Passengers': [data]}
 
         nsp = num if meta['keep'] == 'keep' else num + 1
 
