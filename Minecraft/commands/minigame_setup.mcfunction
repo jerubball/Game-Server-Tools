@@ -1,5 +1,7 @@
 #@ keep
 
+#@ impulse
+#@ manual
 worldborder center ~ ~
 worldborder set 2001
 spreadplayers ~ ~ 500 1000 under 200 false @a[gamemode=adventure,distance=0..20]
@@ -12,6 +14,8 @@ give @a[gamemode=survival] stone_axe 1
 give @a[gamemode=survival] iron_pickaxe 1
 
 scoreboard players set ticks countdown 36000
+
+#@ repeat
 execute if score ticks countdown matches 18000 run worldborder add -1800 1800
 
 #@ impuse
