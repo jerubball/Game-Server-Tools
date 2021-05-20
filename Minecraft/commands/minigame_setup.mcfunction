@@ -18,6 +18,6 @@ scoreboard players set ticks countdown 36000
 #@ repeat
 execute if score ticks countdown matches 18000 run worldborder add -1800 1800
 
-#@ impuse
+#@ impulse
 #@ manual
 spreadplayers ~ ~ 500 1000 under 200 false @p[distance=0..20]
