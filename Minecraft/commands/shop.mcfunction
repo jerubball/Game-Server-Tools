@@ -2,6 +2,7 @@
 
 scoreboard objectives add Wallet dummy
 scoreboard objectives add Transaction dummy
+scoreboard objectives add Price dummy
 
 # automatic initialize
 
@@ -9,6 +10,7 @@ scoreboard objectives add Transaction dummy
 #@ manual
 execute at @a unless score @p[distance=0] Wallet = @p[distance=0] Wallet run scoreboard players set @p[distance=0] Wallet 0
 execute at @a unless score @p[distance=0] Transaction = @p[distance=0] Transaction run scoreboard players set @p[distance=0] Transaction 0
+title @a actionbar [{"text":"balance: ","color":"yellow"},{"text":"$","color":"red"},{"score":{"name":"*","objective":"Wallet"},"color":"red"}]
 
 # initialzie player
 
