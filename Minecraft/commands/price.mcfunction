@@ -161,6 +161,9 @@ scoreboard players set cooked_cod_sell_64 Price 1536
 scoreboard players set cooked_cod_buy Price 48
 scoreboard players set cooked_cod_buy_16 Price 768
 
+
+
+
 scoreboard players set cooked_mutton_sell Price 22
 scoreboard players set cooked_mutton_sell_64 Price 1408
 scoreboard players set cooked_mutton_buy Price 44
@@ -329,6 +332,9 @@ scoreboard players set gray_dye_sell_64 Price 1472
 scoreboard players set gray_dye_buy Price 46
 scoreboard players set gray_dye_buy_16 Price 736
 
+
+
+
 scoreboard players set green_dye_sell Price 27
 scoreboard players set green_dye_sell_64 Price 1728
 scoreboard players set green_dye_buy Price 54
@@ -496,6 +502,9 @@ scoreboard players set pufferfish_sell_64 Price 1920
 scoreboard players set pufferfish_buy Price 60
 scoreboard players set pufferfish_buy_16 Price 960
 
+
+
+
 scoreboard players set pumpkin_sell Price 70
 scoreboard players set pumpkin_sell_64 Price 4480
 scoreboard players set pumpkin_buy Price 140
@@ -658,6 +667,9 @@ scoreboard players set warped_stem_sell Price 150
 scoreboard players set warped_stem_sell_64 Price 9600
 scoreboard players set warped_stem_buy Price 300
 scoreboard players set warped_stem_buy_16 Price 4800
+
+
+
 
 scoreboard players set wheat_sell Price 15
 scoreboard players set wheat_sell_64 Price 960
