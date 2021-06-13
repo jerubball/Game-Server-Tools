@@ -136,6 +136,9 @@ scoreboard players set cobblestone_sell_64 Price 640
 scoreboard players set cobblestone_buy Price 20
 scoreboard players set cobblestone_buy_16 Price 320
 
+
+
+
 scoreboard players set cocoa_beans_sell Price 18
 scoreboard players set cocoa_beans_sell_64 Price 1152
 scoreboard players set cocoa_beans_buy Price 36
@@ -160,9 +163,6 @@ scoreboard players set cooked_cod_sell Price 24
 scoreboard players set cooked_cod_sell_64 Price 1536
 scoreboard players set cooked_cod_buy Price 48
 scoreboard players set cooked_cod_buy_16 Price 768
-
-
-
 
 scoreboard players set cooked_mutton_sell Price 22
 scoreboard players set cooked_mutton_sell_64 Price 1408
@@ -278,6 +278,9 @@ scoreboard players set end_stone_sell_64 Price 64000
 scoreboard players set end_stone_buy Price 2000
 scoreboard players set end_stone_buy_16 Price 32000
 
+
+
+
 scoreboard players set ender_pearl_sell Price 32
 scoreboard players set ender_pearl_sell_64 Price 2048
 scoreboard players set ender_pearl_buy Price 64
@@ -331,9 +334,6 @@ scoreboard players set gray_dye_sell Price 23
 scoreboard players set gray_dye_sell_64 Price 1472
 scoreboard players set gray_dye_buy Price 46
 scoreboard players set gray_dye_buy_16 Price 736
-
-
-
 
 scoreboard players set green_dye_sell Price 27
 scoreboard players set green_dye_sell_64 Price 1728
@@ -420,6 +420,9 @@ scoreboard players set magenta_dye_sell_64 Price 1600
 scoreboard players set magenta_dye_buy Price 50
 scoreboard players set magenta_dye_buy_16 Price 800
 
+
+
+
 scoreboard players set melon_slice_sell Price 8
 scoreboard players set melon_slice_sell_64 Price 512
 scoreboard players set melon_slice_buy Price 16
@@ -502,9 +505,6 @@ scoreboard players set pufferfish_sell_64 Price 1920
 scoreboard players set pufferfish_buy Price 60
 scoreboard players set pufferfish_buy_16 Price 960
 
-
-
-
 scoreboard players set pumpkin_sell Price 70
 scoreboard players set pumpkin_sell_64 Price 4480
 scoreboard players set pumpkin_buy Price 140
@@ -560,6 +560,9 @@ scoreboard players set rotten_flesh_buy_16 Price 704
 
 scoreboard players set saddle_sell Price 7500
 scoreboard players set saddle_buy Price 15000
+
+
+
 
 scoreboard players set salmon_sell Price 18
 scoreboard players set salmon_sell_64 Price 1152
@@ -667,9 +670,6 @@ scoreboard players set warped_stem_sell Price 150
 scoreboard players set warped_stem_sell_64 Price 9600
 scoreboard players set warped_stem_buy Price 300
 scoreboard players set warped_stem_buy_16 Price 4800
-
-
-
 
 scoreboard players set wheat_sell Price 15
 scoreboard players set wheat_sell_64 Price 960
