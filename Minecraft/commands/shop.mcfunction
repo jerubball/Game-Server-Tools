@@ -45,7 +45,6 @@ scoreboard players operation @p[scores={Transaction=3}] Wallet -= apple_buy_16 P
 give @p[scores={Transaction=3}] apple 16
 #@ conditional
 tellraw @p[scores={Transaction=3}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-#@ conditional
 scoreboard players set @p[scores={Transaction=3}] Transaction 0
 
 # sell item with price score
@@ -60,7 +59,6 @@ clear @p[scores={Transaction=4}] apple 64
 scoreboard players operation @p[scores={Transaction=4}] Wallet += apple_sell_64 Price
 #@ conditional
 tellraw @p[scores={Transaction=4}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-#@ conditional
 scoreboard players set @p[scores={Transaction=4}] Transaction 0
 
 # buy item
