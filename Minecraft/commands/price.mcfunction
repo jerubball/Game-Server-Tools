@@ -202,7 +202,8 @@ scoreboard players set netherrack_sell_64 Price 1600
 scoreboard players set oak_log_buy_16 Price 960
 scoreboard players set oak_log_sell_64 Price 1920
 
-
+scoreboard players set obsidian_buy_16 Price 305600
+scoreboard players set obsidian_sell_64 Price 611200
 scoreboard players set orange_dye_buy_16 Price 704
 scoreboard players set orange_dye_sell_64 Price 1408
 scoreboard players set phantom_membrane_buy Price 60
