@@ -499,6 +499,11 @@
     "sell": 64,
     "price": 3.0
   },
+  "obsidian": {
+    "buy": 16,
+    "sell": 64,
+    "price": 955.0
+  },
   "orange_dye": {
     "buy": 16,
     "sell": 64,
