@@ -1,0 +1,752 @@
+{
+  "acacia_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "ancient_debris": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1000000.0
+  },
+  "andesite": {
+    "buy": 16,
+    "sell": 64,
+    "price": 9.25
+  },
+  "apple": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "arrow": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.44
+  },
+  "bamboo": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.0
+  },
+  "basalt": {
+    "buy": 16,
+    "sell": 64,
+    "price": 9.0
+  },
+  "beetroot": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.75
+  },
+  "beetroot_seeds": {
+    "buy": 16,
+    "sell": 64,
+    "price": 0.75
+  },
+  "bell": {
+    "buy": 1,
+    "sell": 1,
+    "price": 500.0
+  },
+  "birch_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "black_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.0
+  },
+  "blackstone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 10.0
+  },
+  "blaze_rod": {
+    "buy": 1,
+    "sell": 1,
+    "price": 300.0
+  },
+  "blue_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "bone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "bread": {
+    "buy": 16,
+    "sell": 64,
+    "price": 5.0
+  },
+  "brown_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "brown_mushroom": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.0
+  },
+  "cactus": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.75
+  },
+  "carrot": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "chicken": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "chorus_fruit": {
+    "buy": 16,
+    "sell": 64,
+    "price": 50.0
+  },
+  "clay_ball": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "coal": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.5
+  },
+  "coal_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 32.0
+  },
+  "cobbled_deepslate": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "cobblestone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.0
+  },
+  "cocoa_beans": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.75
+  },
+  "cod": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "cooked_beef": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.19
+  },
+  "cooked_chicken": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.19
+  },
+  "cooked_cod": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.44
+  },
+  "cooked_mutton": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.19
+  },
+  "cooked_porkchop": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.19
+  },
+  "cooked_rabbit": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.19
+  },
+  "cooked_salmon": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.69
+  },
+  "copper_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 2045.25
+  },
+  "copper_ingot": {
+    "buy": 1,
+    "sell": 1,
+    "price": 225.0
+  },
+  "creeper_head": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  },
+  "crimson_fungus": {
+    "buy": 16,
+    "sell": 64,
+    "price": 10.0
+  },
+  "crimson_stem": {
+    "buy": 16,
+    "sell": 64,
+    "price": 15.0
+  },
+  "crying_obsidian": {
+    "buy": 16,
+    "sell": 64,
+    "price": 500.0
+  },
+  "cyan_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.97
+  },
+  "dark_oak_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "deepslate": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.91
+  },
+  "diamond": {
+    "buy": 1,
+    "sell": 1,
+    "price": 30000.0
+  },
+  "diamond_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 272700.0
+  },
+  "diamond_horse_armor": {
+    "buy": 1,
+    "sell": 1,
+    "price": 5000.0
+  },
+  "diorite": {
+    "buy": 16,
+    "sell": 64,
+    "price": 16.5
+  },
+  "dirt": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.0
+  },
+  "dragon_breath": {
+    "buy": 1,
+    "sell": 1,
+    "price": 10000.0
+  },
+  "dragon_egg": {
+    "buy": 1,
+    "sell": 1,
+    "price": 10000000.0
+  },
+  "egg": {
+    "buy": 16,
+    "sell": 16,
+    "price": 3.5
+  },
+  "elytra": {
+    "buy": 1,
+    "sell": 1,
+    "price": 5000000.0
+  },
+  "emerald": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1000.0
+  },
+  "emerald_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 9090.0
+  },
+  "enchanted_golden_apple": {
+    "buy": 1,
+    "sell": 1,
+    "price": 500000.0
+  },
+  "end_stone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 100.0
+  },
+  "ender_pearl": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.25
+  },
+  "experience_bottle": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1000.0
+  },
+  "feather": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "flint": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "ghast_tear": {
+    "buy": 1,
+    "sell": 1,
+    "price": 250.0
+  },
+  "glowstone_dust": {
+    "buy": 16,
+    "sell": 64,
+    "price": 12.5
+  },
+  "gold_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 10908.0
+  },
+  "gold_ingot": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1200.0
+  },
+  "golden_horse_armor": {
+    "buy": 1,
+    "sell": 1,
+    "price": 4000.0
+  },
+  "grass_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 5.0
+  },
+  "gravel": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "gray_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.31
+  },
+  "green_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.69
+  },
+  "gunpowder": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.75
+  },
+  "heart_of_the_sea": {
+    "buy": 1,
+    "sell": 1,
+    "price": 500000.0
+  },
+  "honey_bottle": {
+    "buy": 1,
+    "sell": 1,
+    "price": 9.0
+  },
+  "honeycomb": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "ice": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "ink_sac": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "iron_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 2727.0
+  },
+  "iron_horse_armor": {
+    "buy": 1,
+    "sell": 1,
+    "price": 3000.0
+  },
+  "iron_ingot": {
+    "buy": 1,
+    "sell": 1,
+    "price": 300.0
+  },
+  "jungle_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "lapis_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 272.7
+  },
+  "lapis_lazuli": {
+    "buy": 16,
+    "sell": 64,
+    "price": 30.0
+  },
+  "lead": {
+    "buy": 1,
+    "sell": 1,
+    "price": 6.37
+  },
+  "leather": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "light_blue_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "light_gray_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "lime_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.66
+  },
+  "magenta_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "melon_slice": {
+    "buy": 16,
+    "sell": 64,
+    "price": 0.75
+  },
+  "mutton": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "name_tag": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100.0
+  },
+  "nautilus_shell": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  },
+  "nether_star": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1000000.0
+  },
+  "nether_wart": {
+    "buy": 16,
+    "sell": 64,
+    "price": 5.0
+  },
+  "netherite_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 37134920.5
+  },
+  "netherite_ingot": {
+    "buy": 1,
+    "sell": 1,
+    "price": 4085249.78
+  },
+  "netherrack": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "oak_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "orange_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "phantom_membrane": {
+    "buy": 1,
+    "sell": 1,
+    "price": 3.0
+  },
+  "pink_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "porkchop": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "potato": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "prismarine_crystals": {
+    "buy": 16,
+    "sell": 64,
+    "price": 500.0
+  },
+  "prismarine_shard": {
+    "buy": 16,
+    "sell": 64,
+    "price": 300.0
+  },
+  "pufferfish": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "pumpkin": {
+    "buy": 16,
+    "sell": 64,
+    "price": 7.0
+  },
+  "purple_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.75
+  },
+  "quartz": {
+    "buy": 16,
+    "sell": 64,
+    "price": 15.0
+  },
+  "rabbit": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "rabbit_foot": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "red_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "red_mushroom": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.0
+  },
+  "red_sand": {
+    "buy": 16,
+    "sell": 64,
+    "price": 5.0
+  },
+  "redstone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 10.0
+  },
+  "redstone_block": {
+    "buy": 1,
+    "sell": 1,
+    "price": 90.9
+  },
+  "rotten_flesh": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "saddle": {
+    "buy": 1,
+    "sell": 1,
+    "price": 750.0
+  },
+  "salmon": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.75
+  },
+  "sand": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.25
+  },
+  "scute": {
+    "buy": 1,
+    "sell": 1,
+    "price": 8.0
+  },
+  "shroomlight": {
+    "buy": 1,
+    "sell": 1,
+    "price": 125.0
+  },
+  "shulker_shell": {
+    "buy": 1,
+    "sell": 1,
+    "price": 1000000.0
+  },
+  "skeleton_skull": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  },
+  "slime_ball": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.75
+  },
+  "smooth_stone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.88
+  },
+  "snowball": {
+    "buy": 16,
+    "sell": 16,
+    "price": 2.25
+  },
+  "soul_sand": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "spider_eye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.5
+  },
+  "sponge": {
+    "buy": 1,
+    "sell": 1,
+    "price": 404.44
+  },
+  "spruce_log": {
+    "buy": 16,
+    "sell": 64,
+    "price": 3.0
+  },
+  "stone": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.94
+  },
+  "string": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "sugar_cane": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "sweet_berries": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "totem_of_undying": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  },
+  "trident": {
+    "buy": 1,
+    "sell": 1,
+    "price": 3000000.0
+  },
+  "tropical_fish": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.25
+  },
+  "turtle_egg": {
+    "buy": 1,
+    "sell": 1,
+    "price": 7.0
+  },
+  "warped_fungus": {
+    "buy": 16,
+    "sell": 64,
+    "price": 10.0
+  },
+  "warped_stem": {
+    "buy": 16,
+    "sell": 64,
+    "price": 15.0
+  },
+  "wheat": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.5
+  },
+  "wheat_seeds": {
+    "buy": 16,
+    "sell": 64,
+    "price": 0.5
+  },
+  "white_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 1.62
+  },
+  "wither_rose": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  },
+  "wither_skeleton_skull": {
+    "buy": 1,
+    "sell": 1,
+    "price": 300000.0
+  },
+  "yellow_dye": {
+    "buy": 16,
+    "sell": 64,
+    "price": 2.0
+  },
+  "zombie_head": {
+    "buy": 1,
+    "sell": 1,
+    "price": 100000.0
+  }
+}
