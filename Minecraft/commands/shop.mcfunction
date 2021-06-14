@@ -10,7 +10,7 @@ scoreboard objectives add Price dummy
 #@ manual
 execute at @a unless score @p[distance=0] Wallet = @p[distance=0] Wallet run scoreboard players set @p[distance=0] Wallet 0
 execute at @a unless score @p[distance=0] Transaction = @p[distance=0] Transaction run scoreboard players set @p[distance=0] Transaction 0
-title @a actionbar [{"text":"balance: ","color":"yellow"},{"text":"$","color":"red"},{"score":{"name":"*","objective":"Wallet"},"color":"red"}]
+title @a actionbar [{"text":"balance: ","color":"red"},{"text":"$","color":"yellow"},{"score":{"name":"*","objective":"Wallet"},"color":"yellow"}]
 
 # initialzie player
 
@@ -31,6 +31,36 @@ scoreboard players set @p[scores={Transaction=-1}] Transaction 0
 #@ manual
 execute unless entity @p[distance=..4,scores={Wallet=0..}] run tellraw @p[distance=..4] [{"text":"Player not initialized.","color":"red"}]
 execute if entity @p[distance=..4,scores={Wallet=0..}] run tellraw @p[distance=..4] [{"text":"Your balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+
+# buy item with price score
+
+#@ impulse
+#@ manual
+execute at @p[distance=..3] if score @p[distance=0] Wallet < apple_buy_16 Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
+execute at @p[distance=..3] unless entity @a[scores={Transaction=3}] if score @p[distance=0] Wallet >= apple_buy_16 Price run scoreboard players set @p[distance=0,scores={Transaction=0}] Transaction 3
+#@ conditional
+scoreboard players operation @p[scores={Transaction=3}] Wallet -= apple_buy_16 Price
+#@ conditional
+give @p[scores={Transaction=3}] apple 16
+#@ conditional
+tellraw @p[scores={Transaction=3}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+#@ conditional
+scoreboard players set @p[scores={Transaction=3}] Transaction 0
+
+# sell item with price score
+
+#@ impulse
+#@ manual
+execute at @p[distance=..3] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
+execute at @p[distance=..3] unless entity @a[scores={Transaction=4}] run scoreboard players set @p[distance=0,scores={Transaction=0},nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] Transaction 4
+#@ conditional
+clear @p[scores={Transaction=4}] apple 64
+#@ conditional
+scoreboard players operation @p[scores={Transaction=4}] Wallet += apple_sell_64 Price
+#@ conditional
+tellraw @p[scores={Transaction=4}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+#@ conditional
+scoreboard players set @p[scores={Transaction=4}] Transaction 0
 
 # buy item
 
