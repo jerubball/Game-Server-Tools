@@ -99,6 +99,8 @@ scoreboard players set diamond_horse_armor_buy Price 100000
 scoreboard players set diamond_horse_armor_sell Price 50000
 scoreboard players set diorite_buy_16 Price 5280
 scoreboard players set diorite_sell_64 Price 10560
+
+
 scoreboard players set dirt_buy_16 Price 320
 scoreboard players set dirt_sell_64 Price 640
 scoreboard players set dragon_breath_buy Price 200000
@@ -199,6 +201,8 @@ scoreboard players set netherrack_buy_16 Price 800
 scoreboard players set netherrack_sell_64 Price 1600
 scoreboard players set oak_log_buy_16 Price 960
 scoreboard players set oak_log_sell_64 Price 1920
+
+
 scoreboard players set orange_dye_buy_16 Price 704
 scoreboard players set orange_dye_sell_64 Price 1408
 scoreboard players set phantom_membrane_buy Price 60
