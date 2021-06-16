@@ -137,8 +137,8 @@ scoreboard players set gold_ingot_buy Price 24000
 scoreboard players set gold_ingot_sell Price 12000
 scoreboard players set golden_horse_armor_buy Price 80000
 scoreboard players set golden_horse_armor_sell Price 40000
-scoreboard players set grass_block_buy Price 100
-scoreboard players set grass_block_sell Price 50
+scoreboard players set grass_block_buy_16 Price 1600
+scoreboard players set grass_block_sell_64 Price 3200
 scoreboard players set gravel_buy_16 Price 384
 scoreboard players set gravel_sell_64 Price 768
 scoreboard players set gray_dye_buy_16 Price 736
@@ -201,6 +201,7 @@ scoreboard players set netherrack_buy_16 Price 800
 scoreboard players set netherrack_sell_64 Price 1600
 scoreboard players set oak_log_buy_16 Price 960
 scoreboard players set oak_log_sell_64 Price 1920
+
 
 scoreboard players set obsidian_buy_16 Price 305600
 scoreboard players set obsidian_sell_64 Price 611200
