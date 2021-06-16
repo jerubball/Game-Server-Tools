@@ -13,6 +13,7 @@ def parse(infile, outfile=None):
     auto = ('auto', 'manual')
     cond = ('conditional', 'unconditional')
     face = ('up', 'down', 'east', 'north', 'west', 'south')
+    skip = ('skip',)
     cmd = []
     meta = {}
     entry = {'position': 0}
@@ -31,6 +32,9 @@ def parse(infile, outfile=None):
                 meta['keep'] = param
             elif 'axis' not in meta and param in axis:
                 meta['axis'] = param
+            elif 'skip' not in meta and param in skip:
+                param = param[4:].strip()
+                meta['skip'] = int(param)
             elif param[0:7] == 'default':
                 param = param[7:].strip()
                 if 'mode' not in meta and param in mode:
@@ -62,6 +66,8 @@ def parse(infile, outfile=None):
         if horizontal:
             horizontal_dir = meta['axis'][-1] == 'x'
             horizontal_sign = 1 if meta['axis'][0] == 'p' else -1
+            if 'skip' not in meta:
+                meta['skip'] = 1
 
         # determine automatic behavior of keep
         if 'keep' not in meta:
@@ -135,9 +141,9 @@ def parse(infile, outfile=None):
                     wrapper['TileEntityData']['auto'] = '1'
                 pos = entry['position'] + 1
                 if horizontal_dir:
-                    position = str(pos * horizontal_sign) + ' ~' + str(pos) + ' ~ '
+                    position = str(pos * horizontal_sign * meta['skip']) + ' ~' + str(pos) + ' ~ '
                 else:
-                    position = ' ~' + str(pos) + ' ~' + str(pos * horizontal_sign) + ' '
+                    position = ' ~' + str(pos) + ' ~' + str(pos * horizontal_sign * meta['skip']) + ' '
                 wrapper['TileEntityData']['Command'] = '"summon falling_block ~' + position + escape(convert(data)) + '"'
                 data = wrapper
 
@@ -167,9 +173,9 @@ def parse(infile, outfile=None):
         if len(command) > 32500:
             print('Output command of ' + str(len(command)) + ' is longer than limit of 32500 characters', file=sys.stderr)
 
-        if outfile is not None:
+        if outfile:
             print(command, end='\n\n', file=outfile)
-        else:
+        elif outfile is not None:
             print(command)
         return command
     
