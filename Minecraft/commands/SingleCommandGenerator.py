@@ -175,7 +175,7 @@ def parse(infile, outfile=None):
 
         if outfile:
             print(command, end='\n\n', file=outfile)
-        elif outfile is not None:
+        elif outfile is None:
             print(command)
         return command
     
