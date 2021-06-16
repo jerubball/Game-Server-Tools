@@ -13,7 +13,6 @@ def parse(infile, outfile=None):
     auto = ('auto', 'manual')
     cond = ('conditional', 'unconditional')
     face = ('up', 'down', 'east', 'north', 'west', 'south')
-    skip = ('skip',)
     cmd = []
     meta = {}
     entry = {'position': 0}
@@ -32,7 +31,7 @@ def parse(infile, outfile=None):
                 meta['keep'] = param
             elif 'axis' not in meta and param in axis:
                 meta['axis'] = param
-            elif 'skip' not in meta and param in skip:
+            elif 'skip' not in meta and param[0:4] == 'skip':
                 param = param[4:].strip()
                 meta['skip'] = int(param)
             elif param[0:7] == 'default':
