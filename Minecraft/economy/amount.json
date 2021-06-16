@@ -340,8 +340,8 @@
     "price": 4000.0
   },
   "grass_block": {
-    "buy": 1,
-    "sell": 1,
+    "buy": 16,
+    "sell": 64,
     "price": 5.0
   },
   "gravel": {
