@@ -27,6 +27,7 @@ team join White @p[distance=..3]
 #@ default impulse
 
 #summon falling_block ~ ~2 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Black\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"black\"}"}}
+
 setblock ~ ~ ~ birch_sign{Text2:"{\"text\":\"Black\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"black\"}"}
 setblock ~ ~ ~ birch_sign{Text2:"{\"text\":\"Navy\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_blue\"}"}
 setblock ~ ~ ~ birch_sign{Text2:"{\"text\":\"Grass\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_green\"}"}
