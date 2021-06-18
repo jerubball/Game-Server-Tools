@@ -57,6 +57,10 @@ give @p[gamemode=creative,distance=..3] warped_fungus_on_a_stick{display:{Name:"
 give @p[gamemode=creative,distance=..3] warped_fungus_on_a_stick{display:{Name:"{\"text\":\"Warped Fungus on a Stick X\"}"},Enchantments:[{id:"unbreaking",lvl:10},{id:"mending",lvl:1}]}
 give @p[gamemode=creative,distance=..3] warped_fungus_on_a_stick{display:{Name:"{\"text\":\"The Warped Fungus on a Stick L\"}",Lore:["{\"text\":\"Unbreaking L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Mending\",\"color\":\"gray\",\"italic\":false}"]},Enchantments:[{id:"unbreaking",lvl:50},{id:"mending",lvl:1}],HideFlags:1}
 
+give @p[gamemode=creative,distance=..3] diamond_horse_armor{display:{Name:"{\"text\":\"Diamond Horse Armor A\"}"},Enchantments:[{id:"thorns",lvl:3},{id:"respiration",lvl:3},{id:"depth_strider",lvl:3},{id:"unbreaking",lvl:3},{id:"mending",lvl:1}]}
+give @p[gamemode=creative,distance=..3] diamond_horse_armor{display:{Name:"{\"text\":\"Diamond Horse Armor X\"}"},Enchantments:[{id:"thorns",lvl:10},{id:"respiration",lvl:10},{id:"depth_strider",lvl:10},{id:"unbreaking",lvl:10},{id:"mending",lvl:1}]}
+give @p[gamemode=creative,distance=..3] diamond_horse_armor{display:{Name:"{\"text\":\"Diamond Horse Armor L\"}",Lore:["{\"text\":\"Thorns L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Respiration L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Depth Strider L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Unbreaking L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Mending\",\"color\":\"gray\",\"italic\":false}"]},Enchantments:[{id:"thorns",lvl:50},{id:"respiration",lvl:50},{id:"depth_strider",lvl:50},{id:"unbreaking",lvl:50},{id:"mending",lvl:1}],HideFlags:1}
+
 
 
 give @p[gamemode=creative,distance=..3] diamond_pickaxe{display:{Name:"{\"text\":\"Diamond Pickaxe\"}"}}
