@@ -17,6 +17,11 @@ scoreboard players set @p[scores={warp=-1}] warp 0
 #execute at @a unless score @p[distance=0] Group = @p[distance=0] Group run scoreboard players set @p[distance=0] Group 0
 
 
+scoreboard objectives add shop trigger
+execute unless entity @a[scores={shop=-1}] run scoreboard players set @p[scores={shop=1}] shop -1
+tp @p[scores={shop=-1}] ~ ~ ~
+scoreboard players set @p[scores={shop=-1}] warp 0
+
 #@ impulse
 #@ manual
 scoreboard objectives add jerubball trigger
