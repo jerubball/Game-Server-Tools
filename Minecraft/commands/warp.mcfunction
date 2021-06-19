@@ -21,7 +21,7 @@ scoreboard objectives add shop trigger
 scoreboard players enable @a shop
 execute unless entity @a[scores={shop=-1}] run scoreboard players set @p[scores={shop=1..}] shop -1
 tp @p[scores={shop=-1}] ~ ~ ~
-scoreboard players set @p[scores={shop=-1}] warp 0
+scoreboard players set @p[scores={shop=-1}] shop 0
 
 #@ impulse
 #@ manual
