@@ -22,11 +22,32 @@ team join Magenta @p[distance=..3]
 team join Yellow @p[distance=..3]
 team join White @p[distance=..3]
 
+
+#@ auto
+
+#@ remove+
+
+summon falling_block ~1 ~1 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Black\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"black\"}"}}
+summon falling_block ~2 ~2 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Navy\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_blue\"}"}}
+summon falling_block ~3 ~3 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Grass\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_green\"}"}}
+summon falling_block ~4 ~4 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Teal\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_aqua\"}"}}
+summon falling_block ~5 ~5 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Apple\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_red\"}"}}
+summon falling_block ~6 ~6 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Purple\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_purple\"}"}}
+summon falling_block ~7 ~7 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Orange\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"gold\"}"}}
+summon falling_block ~8 ~8 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Silver\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"gray\"}"}}
+summon falling_block ~9 ~9 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Gray\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_gray\"}"}}
+summon falling_block ~10 ~10 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Blue\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"blue\"}"}}
+summon falling_block ~11 ~11 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Green\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"green\"}"}}
+summon falling_block ~12 ~12 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Cyan\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"aqua\"}"}}
+summon falling_block ~13 ~13 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Red\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"red\"}"}}
+summon falling_block ~14 ~14 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Magenta\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"light_purple\"}"}}
+summon falling_block ~15 ~15 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Yellow\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"yellow\"}"}}
+summon falling_block ~16 ~16 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"White\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"white\"}"}}
+
+
 #@ remove+
 #@ positive-x
 #@ default impulse
-
-#summon falling_block ~ ~2 ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:{Text2:"{\"text\":\"Black\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"black\"}"}}
 
 setblock ~ ~ ~ birch_sign{Text2:"{\"text\":\"Black\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"black\"}"}
 setblock ~ ~ ~ birch_sign{Text2:"{\"text\":\"Navy\"}",Text3:"{\"text\":\"||||||||||||||||||||||||||||||||||||\",\"color\":\"dark_blue\"}"}
