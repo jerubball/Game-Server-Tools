@@ -90,3 +90,8 @@ scoreboard players add @p[scores={Transaction=2}] Wallet 64
 tellraw @p[scores={Transaction=2}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ conditional
 scoreboard players set @p[scores={Transaction=2}] Transaction 0
+
+# armor stand display
+#summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b,DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"glass\"}",ArmorItems:[{},{},{},{id:glass,Count:1b}],Tags:["command_shop","test"]}
+execute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
+setblock ~ ~ ~ birch_sign{Text1:"{\"text\":\"Buy&Sell\"}",Text2:"{\"text\":\"x16\"}",Text4:"[{\"text\":\"$\"},{\"score\":{\"objective\":\"Price\",\"name\":\"buy_sell\"}}]"}
