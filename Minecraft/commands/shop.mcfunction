@@ -114,3 +114,15 @@ scoreboard players set @p[scores={Transaction=1}] Transaction 0
 
 # deposit
 
+#@ impulse
+#@ manual
+execute unless entity @p[distance=..3,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:6}]}}]}] run tellraw @p[distance=0..3] [{"text":"You do not have this item","color":"red"}]
+execute unless entity @a[scores={Transaction=2}] run scoreboard players set @p[distance=0..3,scores={Transaction=0},nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:6}]}}]}] Transaction 2
+#@ conditional
+clear @p[scores={Transaction=2}] paper{Enchantments:[{id:binding_curse,lvl:6}]} 1
+#@ conditional
+scoreboard players add @p[scores={Transaction=2}] Wallet 100
+#@ conditional
+tellraw @p[scores={Transaction=2}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+#@ conditional
+scoreboard players set @p[scores={Transaction=2}] Transaction 0
