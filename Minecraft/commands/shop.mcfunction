@@ -96,6 +96,7 @@ scoreboard players set @p[scores={Transaction=2}] Transaction 0
 execute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
 setblock ~ ~ ~ birch_sign{Text1:"{\"text\":\"Buy&Sell\"}",Text2:"{\"text\":\"x16\"}",Text4:"[{\"text\":\"$\"},{\"score\":{\"objective\":\"Price\",\"name\":\"buy_sell\"}}]"}
 
+
 # withdraw
 
 #@ impulse
