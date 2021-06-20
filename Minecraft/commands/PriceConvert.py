@@ -51,7 +51,7 @@ def readItemIndex(infilename='index.json'):
 
 # generate price scoreboard commands
 def convertScoreboard(groupindex, adjust=10.0):
-    scoreboardCommands = []
+    scoreboardCommands = ['scoreboard objectives remove Price', 'scoreboard objectives add Price dummy']
     for group, collection in groupindex.items():
         for name, entry in collection.items():
             price = round(entry['price'] * adjust)
@@ -69,6 +69,23 @@ def convertScoreboard(groupindex, adjust=10.0):
                     else:
                         scoreboardCommands.append('scoreboard players set ' + name + '_sell_' + str(sellamount) + ' Price ' + str(price * sellamount))
     return scoreboardCommands
+
+# pack scoreboard commands
+def singleScoreboard(scoreboardCommands):
+    import SingleCommandGenerator
+    scoreboardSingle = []
+    count = 0
+    commandlist = []
+    for command in scoreboardCommands:
+        commandlist.append(command)
+        count += 1
+        if count == 100:
+            scoreboardSingle.append(SingleCommandGenerator.parse(commandlist, outfile=False))
+            commandlist = []
+            count = 0
+    if count != 0:
+        scoreboardSingle.append(SingleCommandGenerator.parse(commandlist, outfile=False))
+    return scoreboardSingle
 
 # generate command text
 def createCommands(groupindex):
@@ -103,21 +120,25 @@ scoreboard players set @p[scores={Transaction=4}] Transaction 0''') # len=5
             groupCommandText[group][name] = {}
             if 'buy' in entry:
                 groupCommandText[group][name]['buy'] = []
+                groupCommandText[group][name]['buy-sign'] = []
                 for buyamount in entry['buy'] if type(entry['buy']) is list else (entry['buy'],):
-                    score_buy = name + ('_buy' if entry['buy'] == 1 else '_buy_' + str(entry['buy']))
-                    give_buy = name if entry['buy'] == 1 else name + ' ' + str(entry['buy'])
+                    score_buy = name + ('_buy' if buyamount == 1 else '_buy_' + str(buyamount))
+                    give_buy = name if buyamount == 1 else name + ' ' + str(buyamount)
                     groupCommandText[group][name]['buy'].append(spacer_buy[0] + score_buy + spacer_buy[1] + score_buy + spacer_buy[2] + score_buy + spacer_buy[3] + give_buy + spacer_buy[4])
+                    groupCommandText[group][name]['buy-sign'].append('{Text1:"{\\"text\\":\\"Buy\\"}",Text2:"{\\"text\\":\\"x' + str(buyamount) + '\\"}",Text4:"[{\\"text\\":\\"$\\"},{\\"score\\":{\\"objective\\":\\"Price\\",\\"name\\":\\"' + score_buy + '\\"}}]"}')
             if 'sell' in entry:
                 groupCommandText[group][name]['sell'] = []
+                groupCommandText[group][name]['sell-sign'] = []
                 for sellamount in entry['sell'] if type(entry['sell']) is list else (entry['sell'],):
-                    nbt_sell = 'id:"minecraft:' + name + ('"' if entry['sell'] == 1 else '",Count:' + str(entry['sell']) + 'b')
-                    clear_sell = name + ' ' + str(entry['sell'])
-                    score_sell = name + ('_sell' if entry['sell'] == 1 else '_sell_' + str(entry['sell']))
+                    nbt_sell = 'id:"minecraft:' + name + ('"' if sellamount == 1 else '",Count:' + str(sellamount) + 'b')
+                    clear_sell = name + ' ' + str(sellamount)
+                    score_sell = name + ('_sell' if sellamount == 1 else '_sell_' + str(sellamount))
                     groupCommandText[group][name]['sell'].append(spacer_sell[0] + nbt_sell + spacer_sell[1] + nbt_sell + spacer_sell[2] + clear_sell + spacer_sell[3] + score_sell + spacer_sell[4])
+                    groupCommandText[group][name]['sell-sign'].append('{Text1:"{\\"text\\":\\"Sell\\"}",Text2:"{\\"text\\":\\"x' + str(sellamount) + '\\"}",Text4:"[{\\"text\\":\\"$\\"},{\\"score\\":{\\"objective\\":\\"Price\\",\\"name\\":\\"' + score_sell + '\\"}}]"}')
     return groupCommandText
 
 # convert command text into single command
-def singleCommands(groupCommandText):
+def groupCommands(groupCommandText):
     import SingleCommandGenerator
     groupCommandSingle = {}
     for group, collection in groupCommandText.items():
@@ -125,12 +146,15 @@ def singleCommands(groupCommandText):
         for name, entry in collection.items():
             groupCommandSingle[group][name] = {}
             for key, commandText in entry.items():
-                groupCommandSingle[group][name][key] = []
-                for command in commandText:
-                    groupCommandSingle[group][name][key].append(SingleCommandGenerator.parse(command.split('\n'), outfile=False))
+                if key == 'buy' or key == 'sell':
+                    groupCommandSingle[group][name][key] = []
+                    for command in commandText:
+                        groupCommandSingle[group][name][key].append(SingleCommandGenerator.parse(command.split('\n'), outfile=False))
+                else:
+                    groupCommandSingle[group][name][key] = commandText
     return groupCommandSingle
 
-def convertCommands(groupCommandSingle, buy = True, sell = True):
+def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, spacer = False):
     import SingleCommandGenerator
     singleCommands = []
     def new_commandlist():
@@ -140,19 +164,40 @@ def convertCommands(groupCommandSingle, buy = True, sell = True):
         count = 0
         commandlist = new_commandlist()
         for name, entry in collection.items():
+            if sign:
+                signcommand = ['#@ remove+']
+                index = 0
+                present = False
+                if buy and 'buy-sign' in entry:
+                    present = True
+                    for data in entry['buy-sign']:
+                        index += 1
+                        signcommand.append('summon falling_block ~' + str(index) + ' ~' + str(index+10) + ' ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:' + data + '}')
+                if sell and 'sell-sign' in entry:
+                    present = True
+                    for data in entry['sell-sign']:
+                        index += 1
+                        signcommand.append('summon falling_block ~' + str(index) + ' ~' + str(index+10) + ' ~ {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:' + data + '}')
+                if present:
+                    commandlist.append('#@ auto')
+                    commandlist.append(SingleCommandGenerator.parse(signcommand, outfile=False))
+            present = False
             if buy and 'buy' in entry:
+                present = True
                 for command in entry['buy']:
                     commandlist.append(command)
-            commandlist.append('summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,Small:1b,DisabledSlots:16191,ArmorItems:[{},{},{},{id:' + name + ',Count:1b}]}')
-            if buy and 'sell' in entry:
+            if sell and 'sell' in entry:
+                present = True
                 for command in entry['sell']:
                     commandlist.append(command)
-            count += 1
+            if present:
+                commandlist.append('summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\\"text\\":\\"' + name + '\\"}",ArmorItems:[{},{},{},{id:' + name + ',Count:1b}],Tags:["command_shop","' + group + '"]}')
+                count += 1
             if count == 3:
                 singleCommands.append(SingleCommandGenerator.parse(commandlist, outfile=False))
                 commandlist = new_commandlist()
                 count = 0
-            else:
+            elif spacer:
                 commandlist.append('/')
         if count != 0:
             singleCommands.append(SingleCommandGenerator.parse(commandlist, outfile=False))
@@ -165,10 +210,12 @@ if __name__ == '__main__':
     #writeItemIndex(groupindex)
     groupindex = readItemIndex()
     scoreboardCommands = convertScoreboard(groupindex)
+    scoreboardSingle = singleScoreboard(scoreboardCommands)
+    #for item in scoreboardSingle: print(item);
     #print('\n'.join(scoreboardCommands))
     groupCommandText = createCommands(groupindex)
     #print(json.dumps(groupCommandText, indent=2))
-    groupCommandSingle = singleCommands(groupCommandText)
+    groupCommandSingle = groupCommands(groupCommandText)
     #print(json.dumps(groupCommandSingle, indent=2))
     singleCommands = convertCommands(groupCommandSingle)
     for item in singleCommands: print(item);
