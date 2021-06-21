@@ -7,7 +7,7 @@ execute unless entity @a[scores={Transaction=1}] run scoreboard players set @p[d
 #@ conditional
 scoreboard players remove @p[scores={Transaction=1}] Wallet 100
 #@ conditional
-give @p[scores={Transaction=1}] paper{HideFlags:1,display:{Name:"{\"text\":\"Money Note\"}",Lore:["{\"text\":\"$100 bill\"}","{\"text\":\"Value must never change\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:6}]}
+give @p[scores={Transaction=1}] paper{HideFlags:1,display:{Name:"{\"text\":\"Money Order\"}",Lore:["{\"text\":\"$100 bill\"}","{\"text\":\"Value must never change\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:6}]}
 #@ conditional
 tellraw @p[scores={Transaction=1}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ conditional
