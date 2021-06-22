@@ -97,7 +97,7 @@ title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_
 title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
 title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
 
-title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=0,Wallet_display4=1..}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=0,Wallet_display4=0..}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display4"}}]
 
 
 
