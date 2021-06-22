@@ -10,7 +10,6 @@ scoreboard objectives add Price dummy
 #@ manual
 execute at @a unless score @p[distance=0] Wallet = @p[distance=0] Wallet run scoreboard players set @p[distance=0] Wallet 0
 execute at @a unless score @p[distance=0] Transaction = @p[distance=0] Transaction run scoreboard players set @p[distance=0] Transaction 0
-title @a actionbar [{"text":"balance: ","color":"red"},{"text":"$","color":"yellow"},{"score":{"name":"*","objective":"Wallet"},"color":"yellow"}]
 #data modify block ~ ~1 ~ Text4 set value "[{\"text\":\"$\"},{\"score\":{\"name\":\"apple_buy_16\",\"objective\":\"Price\"}}]"
 
 # initialzie player
