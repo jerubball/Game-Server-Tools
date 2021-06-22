@@ -1,3 +1,106 @@
+#@ optional
+
+#@ repeat
+title @a actionbar [{"text":"balance: ","color":"red"},{"text":"$","color":"yellow"},{"score":{"name":"*","objective":"Wallet"},"color":"yellow"}]
+
+#@ impulse
+scoreboard objectives add Wallet_display1 dummy
+scoreboard objectives add Wallet_display2 dummy
+scoreboard objectives add Wallet_display3 dummy
+scoreboard objectives add Wallet_display4 dummy
+scoreboard players set comma_separator Wallet_display1 1000
+#scoreboard players set thousand_separator Wallet_display1 1000
+#scoreboard players set million_separator Wallet_display1 1000000
+#scoreboard players set billion_separator Wallet_display1 1000000000
+
+
+#@ repeat
+
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 = @p[distance=0] Wallet
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 = @p[distance=0] Wallet_display4
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 %= comma_separator Wallet_display1
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 /= comma_separator Wallet_display1
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 = @p[distance=0] Wallet_display3
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 %= comma_separator Wallet_display1
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 /= comma_separator Wallet_display1
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 = @p[distance=0] Wallet_display2
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 %= comma_separator Wallet_display1
+execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 /= comma_separator Wallet_display1
+
+# alternative1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 %= comma_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 /= thousand_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 %= comma_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 /= million_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 %= comma_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 /= billion_separator Wallet_display1
+
+# alternative2
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display4 %= thousand_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 %= million_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display3 /= thousand_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 %= billion_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display2 /= million_separator Wallet_display1
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 = @p[distance=0] Wallet
+#execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 /= billion_separator Wallet_display1
+
+# display
+
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=100..999,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=100..999,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=100..999,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=10..99,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=10..99,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=10..99,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=0..9,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=0..9,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=0..9,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=100..999,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=100..999,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=100..999,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=10..99,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=10..99,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=10..99,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=0..9,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=0..9,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=10..99,Wallet_display3=0..9,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=100..999,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=100..999,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=100..999,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=10..99,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=10..99,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=10..99,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=0..9,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=0..9,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=1..,Wallet_display2=0..9,Wallet_display3=0..9,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=100..999,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=100..999,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=100..999,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=10..99,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=10..99,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=10..99,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=0..9,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=0..9,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=1..,Wallet_display3=0..9,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_display4=10..99}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",0"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=1..,Wallet_display4=0..9}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":",00"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+title @a[scores={Wallet_display1=0,Wallet_display2=0,Wallet_display3=0,Wallet_display4=1..}] actionbar [{"text":"","color":"yellow"},{"text":"balance:","color":"red"},{"text":" $"},{"score":{"name":"*","objective":"Wallet_display4"}}]
+
+
+
 # withdraw
 
 #@ impulse
