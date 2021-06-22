@@ -13,6 +13,7 @@ def parse(infile, outfile=None):
     auto = ('auto', 'manual')
     cond = ('conditional', 'unconditional')
     face = ('up', 'down', 'east', 'north', 'west', 'south')
+    skip = ('skip',)
     cmd = []
     meta = {}
     entry = {'position': 0}
@@ -113,7 +114,7 @@ def parse(infile, outfile=None):
             if 'face' not in entry and 'face' in meta:
                 entry['face'] = meta['face']
 
-            data = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"'}, 'TileEntityData': {}}
+            data = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"'}, 'TileEntityData': {'TrackOutput': '0b'}}
             if entry['mode'] == 'impulse':
                 data['BlockState']['Name'] = '"command_block"'
             elif entry['mode'] == 'repeat':
@@ -134,7 +135,7 @@ def parse(infile, outfile=None):
             data['TileEntityData']['Command'] = '"' + entry['command'] + '"'
 
             if horizontal:
-                wrapper = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"', 'Properties': {'facing': '"down"'}}, 'TileEntityData': {}}
+                wrapper = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"', 'Properties': {'facing': '"down"'}}, 'TileEntityData': {'TrackOutput': '0b'}}
                 if entry['position'] == 0:
                     wrapper['BlockState']['Name'] = '"command_block"'
                     wrapper['TileEntityData']['auto'] = '1'
@@ -156,10 +157,10 @@ def parse(infile, outfile=None):
             if data is not None:
                 spacer['Passengers'][0]['Passengers'] = [data]
             data = spacer
-        wrapper = {'Time': '1', 'BlockState': {'Name': '"command_block"', 'Properties': {'facing': '"down"'}}, 'TileEntityData': {'auto': '1'}}
+        wrapper = {'Time': '1', 'BlockState': {'Name': '"command_block"'}, 'TileEntityData': {'auto': '1', 'TrackOutput': '0b'}}
         wrapper['TileEntityData']['Command'] = '"kill @e[type=armor_stand,tag=CMDSPACER,sort=nearest,limit=' + str(nsp) + ']"'
         if meta['keep'] != 'keep':
-            spacer = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"', 'Properties': {'facing': '"down"'}}, 'TileEntityData': {}, 'Passengers': [data]}
+            spacer = {'id': 'falling_block', 'Time': '1', 'BlockState': {'Name': '"chain_command_block"', 'Properties': {'facing': '"down"'}}, 'TileEntityData': {'TrackOutput': '0b'}, 'Passengers': [data]}
             if meta['keep'] == 'optional':
                 spacer['BlockState']['Name'] = '"command_block"'
             spacer['TileEntityData']['Command'] = '"fill ~ ~' + ('-2' if meta['keep'][-1] == '+' else '-1') + ' ~ ~ ~' + str(num) + ' ~ air"'

@@ -154,13 +154,13 @@ def groupCommands(groupCommandText):
                     groupCommandSingle[group][name][key] = commandText
     return groupCommandSingle
 
-def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, spacer = False):
+def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, spacer = False):
     import SingleCommandGenerator
     singleCommands = []
     def new_commandlist():
         return ['#@ positive-x', '#@ skip 1', '#@ default impulse']
     for group, collection in groupCommandSingle.items():
-        singleCommands.append('#@ ' + group)
+        singleCommands.append('# ' + group)
         count = 0
         commandlist = new_commandlist()
         for name, entry in collection.items():
