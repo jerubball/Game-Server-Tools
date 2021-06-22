@@ -16,7 +16,7 @@ scoreboard players set @p[scores={warp=-1}] warp 0
 execute unless entity @a[scores={warp=-1}] run scoreboard players set @p[scores={warp=1}] warp -1
 #tp @p[scores={warp=-1}] ~ ~ ~
 execute at @a[scores={warp=-1,Group=1..}] unless entity @p[distance=0,scores={Group=2}] run tp @p[distance=0] ~ ~ ~
-scoreboard players set @p[scores={warp=-1}] warp 0
+scoreboard players set @a[scores={warp=-1}] warp 0
 
 
 
