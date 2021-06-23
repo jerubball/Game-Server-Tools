@@ -17,15 +17,16 @@ execute at @e[type=armor_stand,tag=box_randomizer,limit=40] if block ~ ~ ~ comma
 # transaction
 # price same as netherite sell price.
 scoreboard players set random_box_buy Price 50000
+#@ keep
 #@ impulse
 #@ manual
 execute at @p[distance=..3] if score @p[distance=0] Wallet < random_box_buy Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ manual
 execute at @p[distance=..3] unless block ~ ~-4 ~1 redstone_block unless entity @a[scores={Transaction=151}] if score @p[distance=0] Wallet >= random_box_buy Price run scoreboard players set @p[distance=0,scores={Transaction=0}] Transaction 151
 #@ conditional
-scoreboard players operation @p[scores={Transaction=151}] Wallet -= random_box_buy Price
+execute if entity @p[scores={Transaction=151}] run setblock ~ ~-3 ~1 redstone_block
 #@ conditional
-execute if entity @p[scores={Transaction=151}] run setblock ~ ~-2 ~1 redstone_block
+scoreboard players operation @p[scores={Transaction=151}] Wallet -= random_box_buy Price
 #@ conditional
 tellraw @p[scores={Transaction=151}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 scoreboard players set @p[scores={Transaction=151}] Transaction 0
