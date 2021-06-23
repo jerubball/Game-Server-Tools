@@ -51,7 +51,6 @@ scoreboard players set random_book_buy Price 50000
 #@ impulse
 #@ manual
 execute at @p[distance=..3] if score @p[distance=0] Wallet < random_book_buy Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
-#@ manual
 execute at @p[distance=..3] unless entity @a[scores={Transaction=152}] if score @p[distance=0] Wallet >= random_book_buy Price run scoreboard players set @p[distance=0,scores={Transaction=0}] Transaction 152
 #@ conditional
 execute if entity @p[scores={Transaction=152}] run execute at @e[type=armor_stand,tag=book_randomizer,sort=random,limit=1] if block ~ ~ ~ command_block run setblock ~-1 ~ ~ redstone_block
