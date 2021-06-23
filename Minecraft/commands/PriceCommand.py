@@ -50,7 +50,7 @@ scoreboard players set @p[scores={Transaction=102}] Transaction 0''') # len=5
         for command in commands:
             commandsingle[key].append(SingleCommandGenerator.parse(command.split('\n'), outfile=False))
     def new_commandlist():
-        return ['#@ negative-x', '#@ skip 1', '#@ default impulse']
+        return ['#@ negative-z', '#@ skip 1', '#@ default impulse']
     commandfinal = []
     for key, commands in commandsingle.items():
         commandfinal.append('# ' + key)

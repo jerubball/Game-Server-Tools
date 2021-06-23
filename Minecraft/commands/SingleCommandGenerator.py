@@ -120,7 +120,7 @@ def parse(infile, outfile=None):
             elif entry['mode'] == 'repeat':
                 data['BlockState']['Name'] = '"repeating_command_block"'
             if entry['cond'] == 'conditional':
-                data['BlockState']['Properties'] = {'condiitional': '"true"'}
+                data['BlockState']['Properties'] = {'conditional': '"true"'}
             elif not horizontal or 'face' in entry:
                 data['BlockState']['Properties'] = {}
             if horizontal:
