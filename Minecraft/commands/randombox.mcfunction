@@ -22,9 +22,9 @@ scoreboard players set random_box_buy Price 50000
 #@ manual
 execute at @p[distance=..3] if score @p[distance=0] Wallet < random_box_buy Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ manual
-execute at @p[distance=..3] unless block ~ ~-4 ~1 redstone_block unless entity @a[scores={Transaction=151}] if score @p[distance=0] Wallet >= random_box_buy Price run scoreboard players set @p[distance=0,scores={Transaction=0}] Transaction 151
+execute at @p[distance=..3] unless block ~ ~-5 ~1 redstone_block unless entity @a[scores={Transaction=151}] if score @p[distance=0] Wallet >= random_box_buy Price run scoreboard players set @p[distance=0,scores={Transaction=0}] Transaction 151
 #@ conditional
-execute if entity @p[scores={Transaction=151}] run setblock ~ ~-3 ~1 redstone_block
+execute if entity @p[scores={Transaction=151}] run setblock ~ ~-4 ~1 redstone_block
 #@ conditional
 scoreboard players operation @p[scores={Transaction=151}] Wallet -= random_box_buy Price
 #@ conditional
