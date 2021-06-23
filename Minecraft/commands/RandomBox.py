@@ -114,9 +114,32 @@ def getEnchantbookCommand():
             enchantmentCommand.append('give @p[scores={Transaction=152}] enchanted_book{StoredEnchantments:[{lvl:' + str(level) + ',id:' + key + '}]}')
     return enchantmentCommand
 
+def getSingleCommand2(enchantmentCommand, size=11, direction='negative-z'):
+    #execute at @e[type=minecraft:armor_stand,tag=book_randomizer,sort=random,limit=1] if block ~ ~ ~ command_block run setblock ~1 ~ ~ redstone_block
+    import SingleCommandGenerator
+    armorStandCommand = ['#@ remove+', '#@ ' + direction, '#@ default impulse']
+    armorStand = 'summon minecraft:armor_stand ~ ~-1 ~ {Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,Tags:["command_random","book_randomizer"],DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\\"text\\":\\"book\\"}"}'
+    for i in range(size):
+        armorStandCommand.append(armorStand)
+    armorStandSingle = SingleCommandGenerator.parse(armorStandCommand, outfile=False)
+    def new_commandlist():
+        return ['#@ ' + direction, '#@ skip 1', '#@ default impulse', '#@ default manual', '#@ auto', armorStandSingle]
+    singleCommands = []
+    commandlist = new_commandlist()
+    count = 0
+    for command in enchantmentCommand:
+        commandlist.append(command)
+        count += 1
+        if count == size:
+            singleCommands.append(SingleCommandGenerator.parse(commandlist, outfile=False))
+            commandlist = new_commandlist()
+            count = 0
+    return singleCommands
+
 if __name__ == '__main__':
     lootTableCommand = getLootTableCommand()
     singleCommands = getSingleCommand(lootTableCommand)
     #for item in singleCommands: print(item);
     enchantmentCommand = getEnchantbookCommand()
-    
+    singleCommands2 = getSingleCommand2(enchantmentCommand)
+    for item in singleCommands2: print(item);
