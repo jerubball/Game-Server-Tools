@@ -60,4 +60,7 @@ scoreboard players operation @p[scores={Transaction=152}] Wallet -= random_book_
 tellraw @p[scores={Transaction=152}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ conditional
 execute if entity @p[scores={Transaction=152}] at @e[type=armor_stand,tag=book_randomizer,limit=110] if block ~ ~ ~ command_block if block ~-1 ~ ~ redstone_block run setblock ~-1 ~ ~ air
+execute if entity @p[scores={Transaction=152}] run setblock ~ ~ ~1 redstone_block
+
 scoreboard players set @p[scores={Transaction=152}] Transaction 0
+execute if block ~ ~-2 ~ redstone_block run setblock ~ ~-2 ~ air
