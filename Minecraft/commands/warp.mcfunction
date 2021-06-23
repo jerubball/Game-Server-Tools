@@ -10,7 +10,7 @@ scoreboard players enable @a warp
 #execute at @a unless score @p[distance=0] Group = @p[distance=0] Group run scoreboard players set @p[distance=0] Group 0
 
 execute unless entity @a[scores={warp=-1}] run scoreboard players set @p[scores={warp=1}] warp -1
-tellraw @p[scores={warp=-1}] [{"text":"List of warp points: "},{"text":"[1], ","underlined":true,"hoverEvent":{"action":"show_text","value":"List warps"}}]
+tellraw @p[scores={warp=-1}] [{"text":"List of warp points:\n "},{"text":"[1]","color":"yellow","hoverEvent":{"action":"show_text","value":"Click to type this warp"},"clickEvent":{"action":"suggest_command","value":"/trigger warp set 1"}},{"text":" List warps\n "}]
 scoreboard players set @p[scores={warp=-1}] warp 0
 
 execute unless entity @a[scores={warp=-1}] run scoreboard players set @p[scores={warp=1}] warp -1
