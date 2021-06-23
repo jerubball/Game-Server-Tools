@@ -9,6 +9,9 @@ execute as @e[type=armor_stand,distance=0..20] run data merge entity @s {Invulne
 data merge entity @e[type=armor_stand,distance=0..20,limit=1,sort=nearest] {HandItems:[{id:"minecraft:air",Count:1b},{}]}
 
 summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:0b,NoBasePlate:1b,DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"jerubball\",\"underlined\":true}",Tags:["jerubball"]}
+# Tags:["marker","trigger"]
+# Tags:["spawn","information"]
+
 
 summon armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:0b,NoBasePlate:1b,DisabledSlots:16191,ArmorItems:[{},{},{},{id:"minecraft:glass",Count:1b}]}
 
