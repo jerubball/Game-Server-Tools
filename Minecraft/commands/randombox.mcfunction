@@ -2,7 +2,7 @@
 # single target
 summon armor_stand ~ ~1 ~ {Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,Tags:["command_random","box_target"],DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"?\"}"}
 # many randomizer
-summon armor_stand ~ ~-1 ~ {Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,Tags:["command_random","box_randomizer"],DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\\"text\\":\\"box\\"}"}
+summon armor_stand ~ ~-1 ~ {Marker:1b,Invulnerable:1b,NoGravity:1b,Invisible:1b,Tags:["command_random","box_randomizer"],DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"box\"}"}
 # random-selector
 execute at @e[type=armor_stand,tag=box_randomizer,sort=random,limit=1] if block ~ ~ ~ command_block run setblock ~1 ~ ~ redstone_block
 # action
