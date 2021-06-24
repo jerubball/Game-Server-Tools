@@ -94,6 +94,57 @@
 "silk_touch": 1
 "luck_of_the_sea": 2,3
 "lure": 2,3
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 30b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:efficiency"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 60b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:efficiency"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 29b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:fortune"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 58b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:fortune"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 56b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:silk_touch"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 20b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:luck_of_the_sea"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 40b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:luck_of_the_sea"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 20b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:lure"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 40b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:lure"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
 
 
 
@@ -155,6 +206,285 @@
         buyB: {id: "minecraft:book", Count: 1b},
         buy: {id: "minecraft:emerald", Count: 52b},
         sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:sweeping"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
+
+
+
+## Trident & Swords
+"impaling": 4,5
+"channeling": 1
+"loyalty": 2,3
+"riptide": 2,3
+"bane_of_arthropods": 4,5
+"smite": 4,5
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 24b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:impaling"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 48b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:impaling"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 44b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:channeling"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 22b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:loyalty"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 44b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:loyalty"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 23b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:riptide"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 46b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:riptide"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 24b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:bane_of_arthropods"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 48b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:bane_of_arthropods"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 24b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:smite"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 48b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:smite"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
+
+
+
+## Bow & Crossbow
+"power": 4,5
+"punch": 1,2
+"flame": 1
+"infinity": 1
+"quick_charge": 2,3
+"piercing": 3,4
+"multishot": 1
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 28b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:power"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 56b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:power"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 22b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:punch"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 44b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:punch"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 50b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:flame"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 54b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:infinity"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 25b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:quick_charge"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 50b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:quick_charge"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:piercing"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:piercing"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 54b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:multishot"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
+
+
+
+## Armors
+"protection": 3,4
+"blast_protection": 3,4
+"fire_protection": 3,4
+"projectile_protection": 3,4,
+"thorns": 2,3
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 30b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 60b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:blast_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:blast_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:fire_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:fire_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:projectile_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:projectile_protection"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:thorns"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:thorns"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
+
+
+
+## Helmet & Boots
+"respiration": 2,3
+"aqua_affinity": 1
+"depth_strider": 2,3
+"frost_walker": 1,2
+"feather_falling": 3,4
+"soul_speed": 2,3
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 23b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:respiration"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 46b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:respiration"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 46b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:aqua_affinity"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 23b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:depth_strider"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 46b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:depth_strider"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 22b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:frost_walker"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 44b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:frost_walker"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 24b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:feather_falling"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 48b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:feather_falling"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 25b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:soul_speed"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 50b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:soul_speed"}]}},
         xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
     ]
   }
