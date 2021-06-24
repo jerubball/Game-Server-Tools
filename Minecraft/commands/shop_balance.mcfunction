@@ -115,7 +115,7 @@ execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Trans
 #@ conditional
 execute if block ~1 ~3 ~ #buttons[powered=true] run scoreboard players remove @p[scores={Transaction=103}] Wallet 100
 #@ conditional
-execute if block ~1 ~4 ~ #buttons[powered=true] run give @p[scores={Transaction=103}] paper{HideFlags:1,display:{Name:"{\"text\":\"Money Order\"}",Lore:["{\"text\":\"$100 bill\"}","{\"text\":\"Value must never change\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:6}]}
+execute if block ~1 ~4 ~ #buttons[powered=true] run give @p[scores={Transaction=103}] paper{HideFlags:1,display:{Name:"{\"text\":\"Money Order\"}",Lore:["{\"text\":\"$100\"}","{\"text\":\"Value must never change\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:6}]}
 #@ conditional
 execute if block ~1 ~5 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=103}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 #@ conditional
@@ -137,3 +137,40 @@ execute if block ~1 ~5 ~ #buttons[powered=true] run tellraw @p[scores={Transacti
 #@ conditional
 execute if block ~1 ~6 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=104}] Transaction 0
 execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_button[powered=false,face=wall,facing=east]
+
+
+
+
+# save xp
+
+#@ repeat
+#@ manual
+execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] run tellraw @p[distance=0,level=..1] [{"text":"Not enough xp. Your level is $","color":"red"},{"score":{"name":"*","objective":"Level"}}]
+execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=105}] run scoreboard players set @p[distance=0,level=2..] Transaction 105
+#@ conditional
+execute if block ~ ~3 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=105}] -16
+#@ conditional
+execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\"text\":\"EXP Receipt\"}",Lore:["{\"text\":\"16 exp\"}","{\"text\":\"Raises level from 0 to 2\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:102}]}
+#@ conditional
+execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=105}] [{"text":"Your new level is: ","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
+#@ conditional
+execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=105}] Transaction 0
+execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
+
+
+# load xp
+
+#@ repeat
+#@ manual
+execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:102}]}}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
+execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=106}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:102}]}}]}] Transaction 106
+#@ conditional
+execute if block ~ ~3 ~-1 #buttons[powered=true] run clear @p[scores={Transaction=106}] paper{Enchantments:[{id:binding_curse,lvl:102}]} 1
+#@ conditional
+execute if block ~ ~4 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=106}] 16
+#@ conditional
+execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=106}] [{"text":"Your new level is $","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
+#@ conditional
+execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=106}] Transaction 0
+execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
+
