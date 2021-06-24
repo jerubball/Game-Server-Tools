@@ -118,7 +118,6 @@ execute if block ~1 ~3 ~ #buttons[powered=true] run scoreboard players remove @p
 execute if block ~1 ~4 ~ #buttons[powered=true] run give @p[scores={Transaction=103}] paper{HideFlags:1,display:{Name:"{\"text\":\"Money Order\"}",Lore:["{\"text\":\"$100\"}","{\"text\":\"Value must never change\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:6}]}
 #@ conditional
 execute if block ~1 ~5 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=103}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-#@ conditional
 execute if block ~1 ~6 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=103}] Transaction 0
 execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_button[powered=false,face=wall,facing=east]
 
@@ -134,7 +133,6 @@ execute if block ~1 ~3 ~ #buttons[powered=true] run clear @p[scores={Transaction
 execute if block ~1 ~4 ~ #buttons[powered=true] run scoreboard players add @p[scores={Transaction=104}] Wallet 100
 #@ conditional
 execute if block ~1 ~5 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=104}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-#@ conditional
 execute if block ~1 ~6 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=104}] Transaction 0
 execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_button[powered=false,face=wall,facing=east]
 
@@ -153,7 +151,6 @@ execute if block ~ ~3 ~-1 #buttons[powered=true] run xp add @p[scores={Transacti
 execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\"text\":\"XP Receipt\"}",Lore:["{\"text\":\"16 xp points\"}","{\"text\":\"Raises level from 0 to 2\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:102}]}
 #@ conditional
 execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=105}] [{"text":"Your new level is: ","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
-#@ conditional
 execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=105}] Transaction 0
 execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
 
@@ -170,7 +167,6 @@ execute if block ~ ~3 ~-1 #buttons[powered=true] run clear @p[scores={Transactio
 execute if block ~ ~4 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=106}] 16
 #@ conditional
 execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=106}] [{"text":"Your new level is: ","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
-#@ conditional
 execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=106}] Transaction 0
 execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
 
