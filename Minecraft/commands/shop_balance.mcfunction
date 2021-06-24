@@ -108,7 +108,7 @@ execute if score Timer2 Timer matches 2 run title @a[scores={Wallet_display1=0,W
 
 # withdraw
 
-#@ impulse
+#@ repeat
 #@ manual
 execute if block ~1 ~1 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] run tellraw @p[distance=0,scores={Wallet=..99}] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
 execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=103}] run scoreboard players set @p[distance=0,scores={Wallet=100..}] Transaction 103
@@ -124,7 +124,7 @@ execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_butto
 
 # deposit
 
-#@ impulse
+#@ repeat
 #@ manual
 execute if block ~1 ~1 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:6}]}}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
 execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=104}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:6}]}}]}] Transaction 104
