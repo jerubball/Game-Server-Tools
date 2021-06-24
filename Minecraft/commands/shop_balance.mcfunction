@@ -150,7 +150,7 @@ execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Tran
 #@ conditional
 execute if block ~ ~3 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=105}] -16
 #@ conditional
-execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\"text\":\"EXP Receipt\"}",Lore:["{\"text\":\"16 exp\"}","{\"text\":\"Raises level from 0 to 2\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:102}]}
+execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\"text\":\"XP Receipt\"}",Lore:["{\"text\":\"16 xp points\"}","{\"text\":\"Raises level from 0 to 2\"}","{\"text\":\"Can be renamed\"}","{\"text\":\"Void if disenchanted\"}"]},Enchantments:[{id:binding_curse,lvl:102}]}
 #@ conditional
 execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=105}] [{"text":"Your new level is: ","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
 #@ conditional
