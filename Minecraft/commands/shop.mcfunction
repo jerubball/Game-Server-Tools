@@ -32,7 +32,48 @@ scoreboard players set @p[scores={Transaction=-1}] Transaction 0
 execute unless entity @p[distance=..4,scores={Wallet=0..}] run tellraw @p[distance=..4] [{"text":"Player not initialized.","color":"red"}]
 execute if entity @p[distance=..4,scores={Wallet=0..}] run tellraw @p[distance=..4] [{"text":"Your balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 
+
+
+
+# buy item with price score & fast button
+# Transaction 5
+
+#@ repeat
+#@ manual
+# or auto
+execute if block ~ ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] if score @p[distance=0] Wallet < apple_buy_16 Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
+execute if block ~ ~3 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=5}] if score @p[distance=0] Wallet >= apple_buy_16 Price run scoreboard players set @p[distance=0] Transaction 5
+#@ conditional
+execute if block ~ ~4 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=5}] Wallet -= apple_buy_16 Price
+#@ conditional
+execute if block ~ ~5 ~ #buttons[powered=true] run give @p[scores={Transaction=5}] apple 16
+#@ conditional
+execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=5}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=5}] Transaction 0
+execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor]
+
+# sell item with price score & fast button
+# Transaction 6
+
+#@ repeat
+#@ manual
+# or auto
+execute if block ~ ~2 ~ #buttons[powered=true] execute at @p[distance=..3] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
+execute if block ~ ~3 ~ #buttons[powered=true] execute at @p[distance=..3] unless entity @a[scores={Transaction=6}] run scoreboard players set @p[distance=0,scores={Transaction=0},nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] Transaction 6
+#@ conditional
+execute if block ~ ~4 ~ #buttons[powered=true] run clear @p[scores={Transaction=6}] apple 64
+#@ conditional
+execute if block ~ ~5 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=6}] Wallet += apple_sell_64 Price
+#@ conditional
+execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=6}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=6}] Transaction 0
+execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor]
+
+
+
+
 # buy item with price score
+# Transaction 3
 
 #@ impulse
 #@ manual
@@ -47,6 +88,7 @@ tellraw @p[scores={Transaction=3}] [{"text":"Your new balance is $","color":"yel
 scoreboard players set @p[scores={Transaction=3}] Transaction 0
 
 # sell item with price score
+# Transaction 4
 
 #@ impulse
 #@ manual
@@ -60,7 +102,11 @@ scoreboard players operation @p[scores={Transaction=4}] Wallet += apple_sell_64 
 tellraw @p[scores={Transaction=4}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 scoreboard players set @p[scores={Transaction=4}] Transaction 0
 
+
+
+
 # buy item
+# Transaction 1
 
 #@ impulse
 #@ manual
@@ -76,6 +122,7 @@ tellraw @p[scores={Transaction=1}] [{"text":"Your new balance is $","color":"yel
 scoreboard players set @p[scores={Transaction=1}] Transaction 0
 
 # sell item
+# Transaction 2
 
 #@ impulse
 #@ manual
@@ -90,7 +137,11 @@ tellraw @p[scores={Transaction=2}] [{"text":"Your new balance is $","color":"yel
 #@ conditional
 scoreboard players set @p[scores={Transaction=2}] Transaction 0
 
+
+
+
 # armor stand display
 #summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\"text\":\"glass\"}",ArmorItems:[{},{},{},{id:glass,Count:1b}],Tags:["command_shop","test"]}
+execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
 execute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
 setblock ~ ~ ~ birch_sign{Text1:"{\"text\":\"Buy&Sell\"}",Text2:"{\"text\":\"x16\"}",Text4:"[{\"text\":\"$\"},{\"score\":{\"objective\":\"Price\",\"name\":\"buy_sell\"}}]"}
