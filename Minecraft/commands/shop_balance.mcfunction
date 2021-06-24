@@ -145,7 +145,7 @@ execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_butto
 
 #@ repeat
 #@ manual
-execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] run tellraw @p[distance=0,level=..1] [{"text":"Not enough xp. Your level is $","color":"red"},{"score":{"name":"*","objective":"Level"}}]
+execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] run tellraw @p[distance=0,level=..1] [{"text":"Not enough xp. Your level is: ","color":"red"},{"score":{"name":"*","objective":"Level"}}]
 execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=105}] run scoreboard players set @p[distance=0,level=2..] Transaction 105
 #@ conditional
 execute if block ~ ~3 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=105}] -16
@@ -169,7 +169,7 @@ execute if block ~ ~3 ~-1 #buttons[powered=true] run clear @p[scores={Transactio
 #@ conditional
 execute if block ~ ~4 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=106}] 16
 #@ conditional
-execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=106}] [{"text":"Your new level is $","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
+execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=106}] [{"text":"Your new level is: ","color":"yellow"},{"score":{"name":"*","objective":"Level"}}]
 #@ conditional
 execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=106}] Transaction 0
 execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
