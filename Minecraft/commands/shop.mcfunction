@@ -58,8 +58,8 @@ execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[
 #@ repeat
 #@ manual
 # or auto
-execute if block ~ ~2 ~ #buttons[powered=true] execute at @p[distance=..3] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
-execute if block ~ ~3 ~ #buttons[powered=true] execute at @p[distance=..3] unless entity @a[scores={Transaction=6}] run scoreboard players set @p[distance=0,scores={Transaction=0},nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] Transaction 6
+execute if block ~ ~2 ~ #buttons[powered=true] execute at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
+execute if block ~ ~3 ~ #buttons[powered=true] execute at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=6}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:apple",Count:64b}]}] Transaction 6
 #@ conditional
 execute if block ~ ~4 ~ #buttons[powered=true] run clear @p[scores={Transaction=6}] apple 64
 #@ conditional
@@ -143,5 +143,6 @@ scoreboard players set @p[scores={Transaction=2}] Transaction 0
 # armor stand display
 #summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\"text\":\"glass\"}",ArmorItems:[{},{},{},{id:glass,Count:1b}],Tags:["command_shop","test"]}
 execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
-execute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
+#xecute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
+execute if entity @p[distance=..80] as @e[type=armor_stand,tag=command_shop] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ ~-3 0
 setblock ~ ~ ~ birch_sign{Text1:"{\"text\":\"Buy&Sell\"}",Text2:"{\"text\":\"x16\"}",Text4:"[{\"text\":\"$\"},{\"score\":{\"objective\":\"Price\",\"name\":\"buy_sell\"}}]"}
