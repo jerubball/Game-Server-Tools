@@ -45,8 +45,8 @@ give @p[scores={Transaction=152}] enchanted_book{StoredEnchantments:[{lvl:1,id:m
 execute at @e[type=armor_stand,tag=book_randomizer,limit=110] if block ~ ~ ~ command_block if block ~-1 ~ ~ redstone_block run setblock ~-1 ~ ~ air
 
 # transaction
-# price same as random box price?
-scoreboard players set random_book_buy Price 50000
+# price 1/5 of random box price
+scoreboard players set random_book_buy Price 10000
 #@ keep
 #@ impulse
 #@ manual
