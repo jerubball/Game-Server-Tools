@@ -1,0 +1,161 @@
+"mending": [1],                     # 8     64
+"unbreaking": [1,2,3],              # 7.5   62/31
+"efficiency": [1,2,3,4,5],          # 7     60/30
+"sharpness": [1,2,3,4,5],           # 7     60/30
+"protection": [1,2,3,4],            # 7     60/30
+"fortune": [1,2,3],                 # 6.5   58/29
+"looting": [1,2,3],                 # 6     56/28
+"power": [1,2,3,4,5],               # 6     56/28
+"silk_touch": [1],                  # 6     56/28
+"infinity": [1],                    # 5.5   54/27
+"multishot": [1],                   # 5.5   54/27
+"thorns": [1,2,3],                  # 5     52/26
+"sweeping": [1,2,3],                # 5     52/26
+"piercing": [1,2,3,4],              # 5     52/26
+"projectile_protection": [1,2,3,4], # 5     52/26
+"blast_protection": [1,2,3,4],      # 5     52/26
+"fire_protection": [1,2,3,4],       # 5     52/26
+"fire_aspect": [1,2],               # 4.5   50/25
+"flame": [1],                       # 4.5   50/25
+"quick_charge": [1,2,3],            # 4.5   50/25
+"soul_speed": [1,2,3],              # 4.5   50/25
+"feather_falling": [1,2,3,4],       # 4     48/24
+"bane_of_arthropods": [1,2,3,4,5],  # 4     48/24
+"smite": [1,2,3,4,5],               # 4     48/24
+"impaling": [1,2,3,4,5],            # 4     48/24
+"respiration": [1,2,3],             # 3.5   46/23
+"aqua_affinity": [1],               # 3.5   46/23
+"depth_strider": [1,2,3],           # 3.5   46/23
+"riptide": [1,2,3],                 # 3.5   46/23
+"frost_walker": [1,2],              # 3     44/22
+"knockback": [1,2],                 # 3     44/22
+"punch": [1,2],                     # 3     44/22
+"channeling": [1],                  # 3     44/22
+"loyalty": [1,2,3],                 # 3     44/22
+"luck_of_the_sea": [1,2,3],         # 2     40/20
+"lure": [1,2,3],                    # 2     40/20
+"binding_curse": [1],               #       16
+"vanishing_curse": [1],             #       16
+
+
+
+## Unbreaking & Mending
+"unbreaking": 2,3
+"mending": 1
+"binding_curse": 1
+"vanishing_curse": 1
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 31b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:unbreaking"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 62b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:unbreaking"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 64b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:mending"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 64b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:mending"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 64b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:mending"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 16b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:binding_curse"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 16b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:vanishing_curse"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
+
+
+
+## Tools
+"efficiency": 4,5
+"fortune": 2,3
+"silk_touch": 1
+"luck_of_the_sea": 2,3
+"lure": 2,3
+
+
+
+## Swords
+"sharpness": 4,5
+"looting": 2,3
+"fire_aspect": 1,2
+"knockback": 1,2
+"sweeping": 2,3
+{
+  Offers: {
+    Recipes: [
+      { maxUses: 12, 
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 30b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 4s, id: "minecraft:sharpness"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 60b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 5s, id: "minecraft:sharpness"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 28b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:looting"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 56b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:looting"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 25b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:fire_aspect"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 50b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:fire_aspect"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 22b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 1s, id: "minecraft:knockback"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 44b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:knockback"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 26b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 2s, id: "minecraft:sweeping"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b},
+      { maxUses: 12,
+        buyB: {id: "minecraft:book", Count: 1b},
+        buy: {id: "minecraft:emerald", Count: 52b},
+        sell: {id: "minecraft:enchanted_book", Count: 1b, tag: {StoredEnchantments: [{lvl: 3s, id: "minecraft:sweeping"}]}},
+        xp: 1, uses: 0, priceMultiplier: 0.2f, specialPrice: 0, demand: 0, rewardExp: 1b}
+    ]
+  }
+}
