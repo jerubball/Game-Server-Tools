@@ -141,7 +141,7 @@ execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_butto
 
 
 
-# save xp
+# store xp
 
 #@ repeat
 #@ manual
@@ -158,7 +158,7 @@ execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[s
 execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_button[powered=false,face=wall,facing=north]
 
 
-# load xp
+# recall xp
 
 #@ repeat
 #@ manual
