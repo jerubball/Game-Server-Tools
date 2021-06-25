@@ -162,7 +162,7 @@ def groupCommands(groupCommandText):
                     groupCommandSingle[group][name][key] = commandText
     return groupCommandSingle
 
-def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, spacer = False, direction = 'positive-x'):
+def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, spacer = False, direction = 'positive-x', collect = [1,2,3,3]):
     import SingleCommandGenerator
     singleCommands = []
     def new_commandlist():
@@ -170,7 +170,7 @@ def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, s
     dir_sign = 1 if direction[0:8] == 'positive' else -1
     get_signcommand = (lambda index: 'summon falling_block ~' + str(index*dir_sign) + ' ~' + str(index+10) + ' ~') if direction[9] == 'x' else (lambda index: 'summon falling_block ~ ~' + str(index+10) + ' ~' + str(index*dir_sign))
     for group, collection in groupCommandSingle.items():
-        if group != 'block':
+        if group != 'ore':
             continue
         singleCommands.append('# ' + group)
         count = 0
@@ -205,10 +205,11 @@ def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, s
             if present:
                 commandlist.append('summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\\"text\\":\\"' + name + '\\"}",ArmorItems:[{},{},{},{id:' + name + ',Count:1b}],Tags:["command_shop","' + group + '"]}')
                 count += 1
-            if count == 3:
+            if count == collect[0]:
                 singleCommands.append(SingleCommandGenerator.parse(commandlist, outfile=False))
                 commandlist = new_commandlist()
                 count = 0
+                collect.append(collect.pop(0))
             elif spacer:
                 commandlist.append('/')
         if count != 0:
