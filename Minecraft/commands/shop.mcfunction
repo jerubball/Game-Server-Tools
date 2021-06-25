@@ -142,6 +142,7 @@ scoreboard players set @p[scores={Transaction=2}] Transaction 0
 
 # armor stand display
 #summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\"text\":\"glass\"}",ArmorItems:[{},{},{},{id:glass,Count:1b}],Tags:["command_shop","test"]}
+#execute at @e[type=minecraft:armor_stand,tag=command_shop] run setblock ~ ~ ~ sea_lantern
 execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
 #xecute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
 execute if entity @p[distance=..80] as @e[type=armor_stand,tag=command_shop] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ ~-3 0
