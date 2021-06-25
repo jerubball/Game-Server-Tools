@@ -143,6 +143,7 @@ execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[
                     price_sell = scoreboardNames[score_sell]
                     groupCommandText[group][name]['sell'].append(spacer_sell[0] + nbt_sell + spacer_sell[1] + nbt_sell + spacer_sell[2] + clear_sell + spacer_sell[3] + score_sell + spacer_sell[4])
                     groupCommandText[group][name]['sell-sign'].append('{Text1:"{\\"text\\":\\"Sell\\"}",Text2:"{\\"text\\":\\"x' + str(sellamount) + '\\"}",Text4:"{\\"text\\":\\"$' + f'{price_sell:,}' + '\\"}"}')
+            groupCommandText[group][name]['sign'] = '{Text2:"{\\"text\\":\\"' + name + '\\"}"}'
     return groupCommandText
 
 # convert command text into single command
@@ -162,15 +163,14 @@ def groupCommands(groupCommandText):
                     groupCommandSingle[group][name][key] = commandText
     return groupCommandSingle
 
-def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, spacer = False, direction = 'positive-x', collect = [1,2,3,3]):
+def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, override = False, spacer = False, direction = 'positive-x', collect = [3]):
     import SingleCommandGenerator
     singleCommands = []
-    def new_commandlist():
-        return ['#@ ' + direction, '#@ skip 1', '#@ default impulse']
+    new_commandlist = lambda: ['#@ ' + direction, '#@ skip 1', '#@ default impulse']
     dir_sign = 1 if direction[0:8] == 'positive' else -1
     get_signcommand = (lambda index: 'summon falling_block ~' + str(index*dir_sign) + ' ~' + str(index+10) + ' ~') if direction[9] == 'x' else (lambda index: 'summon falling_block ~ ~' + str(index+10) + ' ~' + str(index*dir_sign))
     for group, collection in groupCommandSingle.items():
-        if group != 'ore':
+        if group != 'log':
             continue
         singleCommands.append('# ' + group)
         count = 0
@@ -179,7 +179,7 @@ def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, s
             if sign:
                 signcommand = ['#@ remove+']
                 index = 0
-                present = False
+                present = override
                 if buy and 'buy-sign' in entry:
                     present = True
                     for data in entry['buy-sign']:
@@ -191,9 +191,11 @@ def convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, s
                         index += 1
                         signcommand.append(get_signcommand(index) + ' {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:' + data + '}')
                 if present:
-                    #commandlist.append('#@ auto')
+                    if 'sign' in entry:
+                        index += 1
+                        signcommand.append(get_signcommand(index) + ' {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:' + entry['sign'] + '}')
                     commandlist.append(SingleCommandGenerator.parse(signcommand, outfile=False))
-            present = False
+            present = override
             if buy and 'buy' in entry:
                 present = True
                 for command in entry['buy']:
@@ -235,12 +237,13 @@ if __name__ == '__main__':
     scoreboardCommands, scoreboardNames = convertScoreboard(groupindex)
     scoreboardSingle = singleScoreboard(scoreboardCommands)
     #for item in scoreboardSingle: print(item);
-    print('\n'.join(scoreboardCommands))
-    groupCommandText = createCommands(groupindex, scoreboardNames)
+    #print('\n'.join(scoreboardCommands))
+    command_block_direction = 'positive-z'
+    groupCommandText = createCommands(groupindex, scoreboardNames, button_dir = command_block_direction)
     #print(json.dumps(groupCommandText, indent=2))
     groupCommandSingle = groupCommands(groupCommandText)
     #print(json.dumps(groupCommandSingle, indent=2))
-    singleCommands = convertCommands(groupCommandSingle)
+    singleCommands = convertCommands(groupCommandSingle, buy = False, sell = True, collect = [3,1], direction = command_block_direction)
     for item in singleCommands: print(item);
     countshops(groupindex)
     

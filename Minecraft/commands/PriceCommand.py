@@ -49,8 +49,7 @@ execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_butto
         commandsingle[key] = []
         for command in commands:
             commandsingle[key].append(SingleCommandGenerator.parse(command.split('\n'), outfile=False))
-    def new_commandlist():
-        return ['#@ negative-z', '#@ skip 1', '#@ default impulse']
+    new_commandlist = lambda: ['#@ negative-z', '#@ skip 1', '#@ default impulse']
     commandfinal = []
     for key, commands in commandsingle.items():
         commandfinal.append('# ' + key)
@@ -106,8 +105,7 @@ execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_but
         commandsingle[key] = []
         for command in commands:
             commandsingle[key].append(SingleCommandGenerator.parse(command.split('\n'), outfile=False))
-    def new_commandlist():
-        return ['#@ negative-x', '#@ skip 1', '#@ default impulse']
+    new_commandlist = lambda: ['#@ negative-x', '#@ skip 1', '#@ default impulse']
     xpcommandfinal = []
     for key, commands in commandsingle.items():
         xpcommandfinal.append('# ' + key)
@@ -115,8 +113,6 @@ execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_but
         commandlist.extend(commands)
         xpcommandfinal.append(SingleCommandGenerator.parse(commandlist, outfile=False))
     return xpcommandfinal
-
-
 
 
 if __name__ == '__main__':
