@@ -10,6 +10,7 @@ data merge entity @e[type=armor_stand,distance=0..20,limit=1,sort=nearest] {Hand
 
 summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,ShowArms:0b,NoBasePlate:1b,DisabledSlots:16191,CustomNameVisible:1b,CustomName:"{\"text\":\"jerubball\",\"underlined\":true}",Tags:["jerubball"]}
 # Tags:["marker","trigger"]
+# Tags:["shop","group"]
 # Tags:["spawn","information"]
 
 
