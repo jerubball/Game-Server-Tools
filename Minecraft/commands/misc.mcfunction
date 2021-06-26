@@ -7,3 +7,6 @@ execute at @a[nbt={SleepTimer:20s}] run tellraw @a [{"text":""},{"selector":"@p[
 
 execute if entity @a[distance=..75,gamemode=survival] run gamemode adventure @a[distance=..75,gamemode=survival]
 execute if entity @p[distance=76..,gamemode=adventure] run gamemode survival @a[distance=76..,gamemode=adventure]
+
+fill ~ ~ ~ ^ ^1 ^8 air
+
