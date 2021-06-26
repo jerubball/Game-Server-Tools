@@ -143,7 +143,10 @@ scoreboard players set @p[scores={Transaction=2}] Transaction 0
 # armor stand display
 #summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\"text\":\"glass\"}",ArmorItems:[{},{},{},{id:glass,Count:1b}],Tags:["command_shop","test"]}
 #execute at @e[type=armor_stand,tag=command_shop] run setblock ~ ~ ~ sea_lantern
-execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
+execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s CustomNameVisible set value 0b
+execute as @e[type=armor_stand,tag=shop_adjust] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
+execute as @e[type=armor_stand,tag=shop_adjust] at @s run tp @s ~ 64.25 ~
+execute as @e[type=armor_stand,tag=ore] run data modify entity @s Tags append value "shop_adjust"
 #xecute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
 execute if entity @p[distance=..80] as @e[type=armor_stand,tag=command_shop] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ ~-3 0
 setblock ~ ~ ~ birch_sign{Text1:"{\"text\":\"Buy&Sell\"}",Text2:"{\"text\":\"x16\"}",Text4:"[{\"text\":\"$\"},{\"score\":{\"objective\":\"Price\",\"name\":\"buy_sell\"}}]"}
