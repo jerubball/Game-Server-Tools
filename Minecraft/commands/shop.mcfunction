@@ -146,6 +146,7 @@ scoreboard players set @p[scores={Transaction=2}] Transaction 0
 execute as @e[type=armor_stand,tag=command_shop] run data modify entity @s CustomNameVisible set value 0b
 execute as @e[type=armor_stand,tag=shop_adjust] run data modify entity @s Pose set value {Head:[20.0f, 0.0f, 0.0f]}
 execute as @e[type=armor_stand,tag=shop_adjust] at @s run tp @s ~ 64.25 ~
+execute as @e[type=armor_stand,sort=nearest,limit=1] run data modify entity @s Pose merge value {Head:[-150.0f,0.0f,-30.0f]}
 execute as @e[type=armor_stand,tag=ore] run data modify entity @s Tags append value "shop_adjust"
 #xecute at @a[distance=..60] run execute as @e[type=armor_stand,distance=..6,tag=command_shop] at @s run tp @s ~ ~ ~ ~-3 0
 execute if entity @p[distance=..80] as @e[type=armor_stand,tag=command_shop] at @s if entity @p[distance=..5] run tp @s ~ ~ ~ ~-3 0
