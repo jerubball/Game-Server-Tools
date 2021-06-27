@@ -16,7 +16,7 @@ def getItemName(infilename='baseworth.yml'):
 
 # group item into category
 def groupItems(rawindex):
-    groupindex = {'block': {}, 'dye': {}, 'food': {}, 'item': {}, 'log': {}, 'ore': {}, 'misc': {}}
+    groupindex = {'block': {}, 'dye': {}, 'food': {}, 'item': {}, 'log': {}, 'ore': {}, 'potion': {}, 'tool': {}, 'weapon': {}, 'armor': {}, 'misc': {}, 'custom': {}}
     for name, entry in rawindex.items():
         if '_dye' in name:
             groupindex['dye'][name] = entry
@@ -80,7 +80,7 @@ def singleScoreboard(scoreboardCommands):
     for command in scoreboardCommands:
         commandlist.append(command)
         count += 1
-        if count == 80:
+        if count == 70:
             scoreboardSingle.append(SingleCommandGenerator.parse(commandlist, outfile=False))
             commandlist = []
             count = 0
@@ -92,33 +92,45 @@ def singleScoreboard(scoreboardCommands):
 def createCommands(groupindex, scoreboardNames, button_dir = 'positive-x'):
     groupCommandText = {}
     button_dir = ',facing=west' if button_dir[9] == 'z' else ''
-    spacer_buy = ('''#@ keep
+    spacer_tid_buy = ('''#@ keep
 #@ repeat
 #@ manual
 execute if block ~ ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] if score @p[distance=0] Wallet < ''', ''' Price run tellraw @p[distance=0] [{"text":"Not enough money. Your balance is $","color":"red"},{"score":{"name":"*","objective":"Wallet"}}]
-execute if block ~ ~3 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=5}] if score @p[distance=0] Wallet >= ''', ''' Price run scoreboard players set @p[distance=0] Transaction 5
+execute if block ~ ~3 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=''', '''}] if score @p[distance=0] Wallet >= ''', ''' Price run scoreboard players set @p[distance=0] Transaction ''', '''
 #@ conditional
-execute if block ~ ~4 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=5}] Wallet -= ''', ''' Price
+execute if block ~ ~4 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=''', '''}] Wallet -= ''', ''' Price
 #@ conditional
-execute if block ~ ~5 ~ #buttons[powered=true] run give @p[scores={Transaction=5}] ''', '''
+execute if block ~ ~5 ~ #buttons[powered=true] run give @p[scores={Transaction=''', '''}] ''', '''
 #@ conditional
-execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=5}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=5}] Transaction 0
-execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor''' + button_dir + ''']''') # len=5
-    spacer_sell = ('''#@ keep
+execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=''', '''}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=''', '''}] Transaction 0
+execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor''' + button_dir + ''']''') # len=11
+    spacer_tid_sell = ('''#@ keep
 #@ repeat
 #@ manual
 execute if block ~ ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{''','''}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
-execute if block ~ ~3 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=6}] run scoreboard players set @p[distance=0,nbt={Inventory:[{''','''}]}] Transaction 6
+execute if block ~ ~3 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=''', '''}] run scoreboard players set @p[distance=0,nbt={Inventory:[{''','''}]}] Transaction ''', '''
 #@ conditional
-execute if block ~ ~4 ~ #buttons[powered=true] run clear @p[scores={Transaction=6}] ''', '''
+execute if block ~ ~4 ~ #buttons[powered=true] run clear @p[scores={Transaction=''', '''}] ''', '''
 #@ conditional
-execute if block ~ ~5 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=6}] Wallet += ''',''' Price
+execute if block ~ ~5 ~ #buttons[powered=true] run scoreboard players operation @p[scores={Transaction=''', '''}] Wallet += ''',''' Price
 #@ conditional
-execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=6}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
-execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=6}] Transaction 0
-execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor''' + button_dir + ''']''') # len=5
+execute if block ~ ~6 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=''', '''}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
+execute if block ~ ~7 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=''', '''}] Transaction 0
+execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[powered=false,face=floor''' + button_dir + ''']''') # len=11
+    tid_lookup = {'block': (11,12), 'dye': (13,14), 'food': (15,16), 'item': (17,18), 'log': (19,20), 'ore': (21,22), 'potion': (23,24), 'tool': (25,26), 'weapon': (27,28), 'armor': (29,30), 'misc': (31,32), 'custom': (33,34)}
     for group, collection in groupindex.items():
+        tid_buy, tid_sell = tid_lookup[group]
+        spacer_buy = (spacer_tid_buy[0],
+                      spacer_tid_buy[1] + str(tid_buy) + spacer_tid_buy[2],
+                      spacer_tid_buy[3] + str(tid_buy) + spacer_tid_buy[4] + str(tid_buy) + spacer_tid_buy[5],
+                      spacer_tid_buy[6] + str(tid_buy) + spacer_tid_buy[7],
+                      spacer_tid_buy[8] + str(tid_buy) + spacer_tid_buy[9] + str(tid_buy) + spacer_tid_buy[10]) # len=5
+        spacer_sell = (spacer_tid_sell[0],
+                       spacer_tid_sell[1] + str(tid_sell) + spacer_tid_sell[2],
+                       spacer_tid_sell[3] + str(tid_sell) + spacer_tid_sell[4] + str(tid_sell) + spacer_tid_sell[5],
+                       spacer_tid_sell[6] + str(tid_sell) + spacer_tid_sell[7],
+                       spacer_tid_sell[8] + str(tid_sell) + spacer_tid_sell[9] + str(tid_sell) + spacer_tid_sell[10]) # len=5
         groupCommandText[group] = {}
         for name, entry in collection.items():
             groupCommandText[group][name] = {}
@@ -143,7 +155,7 @@ execute if block ~ ~8 ~ #buttons[powered=true] run setblock ~ ~8 ~ stone_button[
                     price_sell = scoreboardNames[score_sell]
                     groupCommandText[group][name]['sell'].append(spacer_sell[0] + nbt_sell + spacer_sell[1] + nbt_sell + spacer_sell[2] + clear_sell + spacer_sell[3] + score_sell + spacer_sell[4])
                     groupCommandText[group][name]['sell-sign'].append('{Text1:"{\\"text\\":\\"Sell\\"}",Text2:"{\\"text\\":\\"x' + str(sellamount) + '\\"}",Text4:"{\\"text\\":\\"$' + f'{price_sell:,}' + '\\"}"}')
-            groupCommandText[group][name]['sign'] = '{Text2:"{\\"text\\":\\"' + name + '\\"}"}'
+            groupCommandText[group][name]['sign'] = '{Text1:"{\\"text\\":\\"' + name.replace('_',  ' ').title() + '\\",\\"color\\":\\"white\\"}"}'
     return groupCommandText
 
 # convert command text into single command
@@ -163,23 +175,23 @@ def groupCommands(groupCommandText):
                     groupCommandSingle[group][name][key] = commandText
     return groupCommandSingle
 
-def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, override = False, spacer = False, direction = 'positive-x', collect = [3]):
+def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, override = False, spacer = False, direction = 'positive-x', collect = [3], filterGroup = lambda x: True):
     import SingleCommandGenerator
     singleCommands = []
     new_commandlist = lambda: ['#@ ' + direction, '#@ skip 1', '#@ default impulse']
     dir_sign = 1 if direction[0:8] == 'positive' else -1
     get_signcommand = (lambda index: 'summon falling_block ~' + str(index*dir_sign) + ' ~' + str(index+10) + ' ~') if direction[9] == 'x' else (lambda index: 'summon falling_block ~ ~' + str(index+10) + ' ~' + str(index*dir_sign))
     for group, collection in groupCommandSingle.items():
-        if group != 'log':
+        if not filterGroup(group):
             continue
-        singleCommands.append('# ' + group)
+        singleCommands.append('# ' + group + (' buy,' if buy else '') + (' sell,' if sell else '') + ' | ' + direction)
         count = 0
         commandlist = new_commandlist()
         for name, entry in collection.items():
             if sign:
                 signcommand = ['#@ remove+']
                 index = 0
-                present = override
+                present = override or (not buy and not sell)
                 if buy and 'buy-sign' in entry:
                     present = True
                     for data in entry['buy-sign']:
@@ -193,7 +205,7 @@ def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, ov
                 if present:
                     if 'sign' in entry:
                         index += 1
-                        signcommand.append(get_signcommand(index) + ' {Time:1,BlockState:{Name:"birch_sign"},TileEntityData:' + entry['sign'] + '}')
+                        signcommand.append(get_signcommand(index) + ' {Time:1,BlockState:{Name:"warped_sign"},TileEntityData:' + entry['sign'] + '}')
                     commandlist.append(SingleCommandGenerator.parse(signcommand, outfile=False))
             present = override
             if buy and 'buy' in entry:
@@ -207,6 +219,8 @@ def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, ov
             if present:
                 commandlist.append('summon armor_stand ~ ~ ~ {Invisible:1,Invulnerable:1,NoGravity:1,Small:1,DisabledSlots:16191,CustomNameVisible:1,CustomName:"{\\"text\\":\\"' + name + '\\"}",ArmorItems:[{},{},{},{id:' + name + ',Count:1b}],Tags:["command_shop","' + group + '"]}')
                 count += 1
+            elif sign and index > 0:
+                count += 1
             if count == collect[0]:
                 singleCommands.append(SingleCommandGenerator.parse(commandlist, outfile=False))
                 commandlist = new_commandlist()
@@ -219,14 +233,26 @@ def convertCommands(groupCommandSingle, sign = True, buy = True, sell = True, ov
     return singleCommands
 
 def countshops(groupindex):
+    count = 0
     for group, entry in groupindex.items():
-        count = 0
+        buy, sell = 0, 0
         for key, value in entry.items():
             if 'buy' in value:
-                count += 1
+                buy += 1
             if 'sell' in value:
-                count += 1
-        print(group, count)
+                sell += 1
+        total = buy + sell
+        count += total
+        print(group, buy, sell, total)
+    return count
+
+#block 15 28 43     [2,2,2,2,3,2,  2,  3,2,2,2,2,2]
+#item 32 32 64      [2,2,2,2,2,3,  1,2,2,2,2,2,2,1,2,1,1,1]
+#food 29 39 68      [3,2,2,2,2,2,  1,2,2,2,2,2,2,1,1,1,  3,2,3,2]
+#log 8 8 16         [3,1]
+#ore 10 10 20       [1,2,1,2,3,1]
+#misc 10 13 23      [2,2,2,2,2,1,1,1]
+#total 234
 
 
 if __name__ == '__main__':
@@ -235,15 +261,15 @@ if __name__ == '__main__':
     #writeItemIndex(groupindex)
     groupindex = readItemIndex()
     scoreboardCommands, scoreboardNames = convertScoreboard(groupindex)
+    #print('\n'.join(scoreboardCommands))
     scoreboardSingle = singleScoreboard(scoreboardCommands)
     #for item in scoreboardSingle: print(item);
-    #print('\n'.join(scoreboardCommands))
-    command_block_direction = 'positive-z'
+    command_block_direction, group_collect, filterGroup = 'negative-z', [2,2,2,2,3,2,  2,  3,2,2,2,2,2], lambda x: x == 'block'
     groupCommandText = createCommands(groupindex, scoreboardNames, button_dir = command_block_direction)
     #print(json.dumps(groupCommandText, indent=2))
     groupCommandSingle = groupCommands(groupCommandText)
     #print(json.dumps(groupCommandSingle, indent=2))
-    singleCommands = convertCommands(groupCommandSingle, buy = False, sell = True, collect = [3,1], direction = command_block_direction)
+    singleCommands = convertCommands(groupCommandSingle, sign = True, buy = False, sell = True, override = False, direction = command_block_direction, collect = group_collect, filterGroup = filterGroup)
     for item in singleCommands: print(item);
-    countshops(groupindex)
+    #print('total', countshops(groupindex))
     
