@@ -15,7 +15,7 @@ execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Trans
 #@ conditional
 execute if block ~1 ~3 ~ #buttons[powered=true] run scoreboard players remove @p[scores={Transaction=103}] Wallet ''', '''
 #@ conditional
-execute if block ~1 ~4 ~ #buttons[powered=true] run give @p[scores={Transaction=103}] paper{HideFlags:1,display:{Name:"{\\"text\\":\\"Money Order\\"}",Lore:["{\\"text\\":\\"$''', '''\\"}","{\\"text\\":\\"Value must never change\\"}","{\\"text\\":\\"Can be renamed\\"}","{\\"text\\":\\"Void if disenchanted\\"}"]},Enchantments:[{id:binding_curse,lvl:''', '''}]}
+execute if block ~1 ~4 ~ #buttons[powered=true] run give @p[scores={Transaction=103}] paper{HideFlags:1,display:{Name:"{\\"text\\":\\"Money Order\\"}",Lore:["{\\"text\\":\\"$''', '''\\"}","{\\"text\\":\\"Value must never change\\"}","{\\"text\\":\\"Can be renamed\\"}","{\\"text\\":\\"Void if disenchanted\\"}"]},Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}
 #@ conditional
 execute if block ~1 ~5 ~ #buttons[powered=true] run tellraw @p[scores={Transaction=103}] [{"text":"Your new balance is $","color":"yellow"},{"score":{"name":"*","objective":"Wallet"}}]
 execute if block ~1 ~6 ~ #buttons[powered=true] run scoreboard players set @p[scores={Transaction=103}] Transaction 0
@@ -23,10 +23,10 @@ execute if block ~1 ~7 ~ #buttons[powered=true] run setblock ~1 ~7 ~ stone_butto
     spacer_deposit = ('''#@ keep
 #@ repeat
 #@ manual
-execute if block ~1 ~1 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:''', '''}]}}]}] run tellraw @p[distance=0..3] [{"text":"You do not have this item","color":"red"}]
-execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=104}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:''', '''}]}}]}] Transaction 104
+execute if block ~1 ~1 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}}]}] run tellraw @p[distance=0..3] [{"text":"You do not have this item","color":"red"}]
+execute if block ~1 ~2 ~ #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=104}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}}]}] Transaction 104
 #@ conditional
-execute if block ~1 ~3 ~ #buttons[powered=true] run clear @p[scores={Transaction=104}] paper{Enchantments:[{id:binding_curse,lvl:''', '''}]} 1
+execute if block ~1 ~3 ~ #buttons[powered=true] run clear @p[scores={Transaction=104}] paper{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]} 1
 #@ conditional
 execute if block ~1 ~4 ~ #buttons[powered=true] run scoreboard players add @p[scores={Transaction=104}] Wallet ''', '''
 #@ conditional
@@ -77,7 +77,7 @@ execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Tran
 #@ conditional
 execute if block ~ ~3 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=105}] ''', '''
 #@ conditional
-execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\\"text\\":\\"XP Receipt\\"}",Lore:["{\\"text\\":\\"''', ''' xp points\\"}","{\\"text\\":\\"Raises level from 0 to ''', '''\\"}","{\\"text\\":\\"Can be renamed\\"}","{\\"text\\":\\"Void if disenchanted\\"}"]},Enchantments:[{id:binding_curse,lvl:''', '''}]}
+execute if block ~ ~4 ~-1 #buttons[powered=true] run give @p[scores={Transaction=105}] paper{HideFlags:1,display:{Name:"{\\"text\\":\\"XP Receipt\\"}",Lore:["{\\"text\\":\\"''', ''' xp points\\"}","{\\"text\\":\\"Raises level from 0 to ''', '''\\"}","{\\"text\\":\\"Can be renamed\\"}","{\\"text\\":\\"Void if disenchanted\\"}"]},Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}
 #@ conditional
 execute if block ~ ~5 ~-1 #buttons[powered=true] run tellraw @p[scores={Transaction=105}] [{"text":"Your new level is: ","color":"yellow"},{"entity":"@p[scores={Transaction=105}]","nbt":"XpLevel"}]
 execute if block ~ ~6 ~-1 #buttons[powered=true] run scoreboard players set @p[scores={Transaction=105}] Transaction 0
@@ -85,10 +85,10 @@ execute if block ~ ~7 ~-1 #buttons[powered=true] run setblock ~ ~7 ~-1 stone_but
     spacer_recall = ('''#@ keep
 #@ repeat
 #@ manual
-execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:''', '''}]}}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
-execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=106}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:binding_curse,lvl:''', '''}]}}]}] Transaction 106
+execute if block ~ ~1 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}}]}] run tellraw @p[distance=0] [{"text":"You do not have this item","color":"red"}]
+execute if block ~ ~2 ~-1 #buttons[powered=true] at @p[distance=..3,scores={Transaction=0}] unless entity @a[scores={Transaction=106}] run scoreboard players set @p[distance=0,nbt={Inventory:[{id:"minecraft:paper",tag:{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]}}]}] Transaction 106
 #@ conditional
-execute if block ~ ~3 ~-1 #buttons[powered=true] run clear @p[scores={Transaction=106}] paper{Enchantments:[{id:binding_curse,lvl:''', '''}]} 1
+execute if block ~ ~3 ~-1 #buttons[powered=true] run clear @p[scores={Transaction=106}] paper{Enchantments:[{id:"minecraft:binding_curse",lvl:''', '''s}]} 1
 #@ conditional
 execute if block ~ ~4 ~-1 #buttons[powered=true] run xp add @p[scores={Transaction=106}] ''', '''
 #@ conditional
