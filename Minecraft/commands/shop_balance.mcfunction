@@ -63,6 +63,16 @@ execute if score Timer2 Timer matches 0 as @a run scoreboard players operation @
 #execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 = @p[distance=0] Wallet
 #execute at @a run scoreboard players operation @p[distance=0] Wallet_display1 /= billion_separator Wallet_display1
 
+#@ remove+
+#@ positive-z
+#@ default south
+#@ chain
+
+#@ remove+
+#@ negative-z
+#@ default n
+#@ chain
+
 # display
 
 execute if score Timer2 Timer matches 2 run title @a[scores={Wallet_display0=1,Wallet_display1=1..,Wallet_display2=100..999,Wallet_display3=100..999,Wallet_display4=100..999}] actionbar [{"text":"","color":"yellow"},{"text":"balance: ","color":"red"},{"text":"$"},{"score":{"name":"*","objective":"Wallet_display1"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display2"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display3"}},{"text":","},{"score":{"name":"*","objective":"Wallet_display4"}}]
