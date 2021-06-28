@@ -1,6 +1,6 @@
 #@ keep
 bossbar add announcement "Announcement"
-bossbar set announcement name [{"text":"Announcement"}
+bossbar set announcement name [{"text":"Announcement"}]
 #@ repeat
 bossbar set announcement players @a
 #@ impulse
