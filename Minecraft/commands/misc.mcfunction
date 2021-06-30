@@ -2,7 +2,8 @@
 
 #@ repeat
 effect give @a[distance=..80,gamemode=!spectator] minecraft:speed 1 1 true
-execute at @a unless entity @p[distance=0,nbt={SleepTimer:0s}] run time add 10
+#execute at @a unless entity @p[distance=0,nbt={SleepTimer:0s}] run time add 10
+execute as @a unless entity @s[nbt={SleepTimer:0s}] run time add 3t
 execute at @a[nbt={SleepTimer:20s}] run tellraw @a [{"text":""},{"selector":"@p[distance=0]"},{"text":" is using bed","color":"gray"}]
 
 execute if entity @a[distance=..75,gamemode=survival] run gamemode adventure @a[distance=..75,gamemode=survival]
