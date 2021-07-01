@@ -24,7 +24,7 @@ scoreboard players enable @a effect
 execute as @a[gamemode=!spectator,scores={effect=1..},level=10..29] run effect give @s speed 2 0 true
 execute as @a[gamemode=!spectator,scores={effect=1..},level=15..34] run effect give @s luck 2 0 true
 execute as @a[gamemode=!spectator,scores={effect=1..},level=20..39] run effect give @s haste 2 0 true
-execute as @a[gamemode=!spectator,scores={effect=1..},level=25..] run effect give @s night_vision 2 0 true
+execute as @a[gamemode=!spectator,scores={effect=1..},level=25..] run effect give @s night_vision 11 0 true
 execute as @a[gamemode=!spectator,scores={effect=1..},level=30..54] run effect give @s speed 2 1 true
 execute as @a[gamemode=!spectator,scores={effect=1..},level=35..64] run effect give @s luck 2 1 true
 execute as @a[gamemode=!spectator,scores={effect=1..},level=40..74] run effect give @s haste 2 1 true
