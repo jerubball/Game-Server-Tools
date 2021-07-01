@@ -199,24 +199,3 @@ give @p[gamemode=creative] netherite_boots{display:{Name:"{\"text\":\"Netherite 
 give @p[gamemode=creative] netherite_boots{display:{Name:"{\"text\":\"Netherite Boots X\"}"},Enchantments:[{id:"protection",lvl:10},{id:"thorns",lvl:10},{id:"feather_falling",lvl:10},{id:"soul_speed",lvl:3},{id:"depth_strider",lvl:3},{id:"unbreaking",lvl:10},{id:"mending",lvl:1}]}
 give @p[gamemode=creative] netherite_boots{display:{Name:"{\"text\":\"Netherite Boots Y\"}"},Enchantments:[{id:"protection",lvl:10},{id:"thorns",lvl:10},{id:"feather_falling",lvl:10},{id:"soul_speed",lvl:3},{id:"frost_walker",lvl:2},{id:"unbreaking",lvl:10},{id:"mending",lvl:1}]}
 give @p[gamemode=creative] netherite_boots{display:{Name:"{\"text\":\"The Netherite Boots L\"}",Lore:["{\"text\":\"Protection L\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Fire Protection XXX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Blast Protection XXX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Projectile Protection XXX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Unbreaking XX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Soul Speed XX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Depth Strider XX\",\"color\":\"gray\",\"italic\":false}","{\"text\":\"Mending\",\"color\":\"gray\",\"italic\":false}"]},Enchantments:[{id:"protection",lvl:50},{id:"fire_protection",lvl:30},{id:"blast_protection",lvl:30},{id:"projectile_protection",lvl:30},{id:"unbreaking",lvl:20},{id:"soul_speed",lvl:20},{id:"depth_strider",lvl:20},{id:"mending",lvl:1}],HideFlags:1}
-
-give @p[distance=..3] netherite_sword{HideFlags:2,AttributeModifiers:[
-  {AttributeName:"generic.attack_damage", Amount:20.0, Operation:0,
-  UUID:[I;-298042005,4343673,-2030547417,966705427]},
-  {AttributeName:"generic.attack_speed", Amount:10.0, Operation:0,
-  UUID:[I;-1534384289,-1320991083,-1192518053,857037942]},
-  {AttributeName:"generic.movement_speed", Amount:0.25, Operation:0,
-  UUID:[I;-682439068,-195803618,-1824202784,-184840400]},
-  {AttributeName:"generic.max_health", Amount:10.0, Operation:0,
-  UUID:[I;1801375936,-2064235302,-1306571196,-249979753]},
-  {AttributeName:"generic.armor", Amount:3.0, Operation:0,
-  UUID:[I;-676090405,-1734718415,-1987817354,-1502886267]},
-  {AttributeName:"generic.armor_toughness", Amount:2.0, Operation:0,
-  UUID:[I;1259374512,748896356,-1807713499,-1695074909]},
-  {AttributeName:"generic.knockback_resistance", Amount:0.75, Operation:0,
-  UUID:[I;1679113487,2123909525,-1566302273,1647478748]},
-  {AttributeName:"generic.luck", Amount:10.0, Operation:0,
-  UUID:[I;-684069384,281038407,-2124556954,169164667]}
-]}
-
-#Slot:"mainhand",Slot:"offhand",Slot:"head",Slot:"chest",Slot:"legs",Slot:"feet",
