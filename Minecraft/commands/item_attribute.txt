@@ -1,0 +1,20 @@
+give @p[distance=..3] netherite_sword{HideFlags:2,AttributeModifiers:[
+  {AttributeName:"generic.attack_damage", Amount:20.0, Operation:0,
+  UUID:[I;-298042005,4343673,-2030547417,966705427]},
+  {AttributeName:"generic.attack_speed", Amount:10.0, Operation:0,
+  UUID:[I;-1534384289,-1320991083,-1192518053,857037942]},
+  {AttributeName:"generic.movement_speed", Amount:0.25, Operation:0,
+  UUID:[I;-682439068,-195803618,-1824202784,-184840400]},
+  {AttributeName:"generic.max_health", Amount:10.0, Operation:0,
+  UUID:[I;1801375936,-2064235302,-1306571196,-249979753]},
+  {AttributeName:"generic.armor", Amount:3.0, Operation:0,
+  UUID:[I;-676090405,-1734718415,-1987817354,-1502886267]},
+  {AttributeName:"generic.armor_toughness", Amount:2.0, Operation:0,
+  UUID:[I;1259374512,748896356,-1807713499,-1695074909]},
+  {AttributeName:"generic.knockback_resistance", Amount:0.75, Operation:0,
+  UUID:[I;1679113487,2123909525,-1566302273,1647478748]},
+  {AttributeName:"generic.luck", Amount:10.0, Operation:0,
+  UUID:[I;-684069384,281038407,-2124556954,169164667]}
+]}
+
+#Slot:"mainhand",Slot:"offhand",Slot:"head",Slot:"chest",Slot:"legs",Slot:"feet",
