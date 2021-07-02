@@ -13,8 +13,8 @@ execute as @a if score @s Job1_1 matches 3.. at @s run summon experience_orb ~ ~
 execute as @a if score @s Job1_1 matches 3.. run scoreboard players set @s Job1_1 0
 execute as @a if score @s Job1_2 matches 3.. at @s run summon experience_orb ~ ~ ~ {Value:1s}
 execute as @a if score @s Job1_2 matches 3.. run scoreboard players set @s Job1_2 0
-execute as @a if score @s Job1_3 matches 3.. at @s run summon experience_orb ~ ~ ~ {Value:1s}
-execute as @a if score @s Job1_3 matches 3.. run scoreboard players set @s Job1_3 0
+execute as @a if score @s Job1_3 matches 1.. at @s run summon experience_orb ~ ~ ~ {Value:1s}
+execute as @a if score @s Job1_3 matches 1.. run scoreboard players set @s Job1_3 0
 
 scoreboard objectives add Job2_1 minecraft.mined:minecraft.dirt
 scoreboard objectives add Job2_2 minecraft.mined:minecraft.grass_block
