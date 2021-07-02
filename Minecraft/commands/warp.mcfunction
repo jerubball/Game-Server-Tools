@@ -15,7 +15,8 @@ scoreboard players set @p[scores={warp=-1}] warp 0
 
 execute unless entity @a[scores={warp=-1}] run scoreboard players set @p[scores={warp=1}] warp -1
 #tp @p[scores={warp=-1}] ~ ~ ~
-execute at @a[scores={warp=-1,Group=1..}] unless entity @p[distance=0,scores={Group=2}] run tp @p[distance=0] ~ ~ ~
+#execute at @a[scores={warp=-1,Group=1..}] unless entity @p[distance=0,scores={Group=2}] run tp @p[distance=0] ~ ~ ~
+execute as @a[scores={warp=-1,Group=1..}] unless entity @s[scores={Group=2}] run tp @s ~ ~ ~
 scoreboard players set @a[scores={warp=-1}] warp 0
 
 
@@ -51,11 +52,11 @@ execute unless entity jerubball run scoreboard players reset @a jerubball
 scoreboard objectives add randomtp trigger
 scoreboard players enable @a randomtp
 execute unless entity @a[scores={randomtp=-1}] run scoreboard players set @p[scores={randomtp=1..}] randomtp -1
-spreadplayers ~ ~ 1000 10000 under 250 false @p[scores={randomtp=-1}]
+spreadplayers ~ ~ 1000 10000 under 250 false @p[distance=0..,scores={randomtp=-1}]
 scoreboard players set @p[scores={randomtp=-1}] randomtp 0
 
 scoreboard objectives add unstuck trigger
 scoreboard players enable @a unstuck
 execute unless entity @a[scores={unstuck=-1}] run scoreboard players set @p[scores={unstuck=1..}] unstuck -1
-execute as @p[scores={unstuck=-1}] at @s run spreadplayers ~ ~ 1 1 under 250 false @s
+execute as @p[distance=0..,scores={unstuck=-1}] at @s run spreadplayers ~ ~ 1 1 under 250 false @s
 scoreboard players set @p[scores={unstuck=-1}] unstuck 0
