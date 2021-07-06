@@ -21,6 +21,7 @@ execute unless entity @a[scores={warp=-1}] run scoreboard players set @p[scores=
 execute as @a[scores={warp=-1,Group=1..}] unless entity @s[scores={Group=2}] run tp @s ~ ~ ~
 scoreboard players set @a[scores={warp=-1}] warp 0
 
+execute as @a[distance=..100] unless score @s Group matches 9.. run trigger spawn
 
 
 scoreboard objectives add shop trigger
