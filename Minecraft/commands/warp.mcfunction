@@ -62,3 +62,33 @@ scoreboard players enable @a unstuck
 execute unless entity @a[scores={unstuck=-1}] run scoreboard players set @p[scores={unstuck=1..}] unstuck -1
 execute as @p[distance=0..,scores={unstuck=-1}] at @s run spreadplayers ~ ~ 1 1 under 250 false @s
 scoreboard players set @p[scores={unstuck=-1}] unstuck 0
+
+
+
+
+
+
+
+# teleport with accept and deny
+
+execute if entity @a[scores={jerubball=..-1}] run scoreboard players set @p[scores={jerubball=1}] jerubball 12
+execute if entity @a[scores={jerubball=12}] run tellraw @a[scores={jerubball=12}] [{"selector":"jerubball"},{"text":" has pending request from other players","color":"red"}]
+
+execute if entity @a[scores={jerubball=..-57}] run scoreboard players set @p[scores={jerubball=..-57}] jerubball -57
+execute unless entity @a[scores={jerubball=..-1}] run scoreboard players set @p[scores={jerubball=1}] jerubball -57
+tellraw @a[scores={jerubball=-57}] [{"text":"Teleport request sent to ","color":"gray"},{"selector":"jerubball"}]
+execute if entity @a[scores={jerubball=-57}] run tellraw jerubball [{"text":"Teleport requested from ","color":"yellow"},{"selector":"@a[scores={jerubball=-57}]"},{"text":"\n  "},{"text":"[Click to Accept]","color":"green","hoverEvent":{"action":"show_text","value":{"text":"/trigger jerubball set 13","color":"dark_gray"}},"clickEvent":{"action":"run_command","value":"/trigger jerubball set 13"}},{"text":" "},{"text":"[Click to Deny]","color":"red","hoverEvent":{"action":"show_text","value":{"text":"/trigger jerubball set 11","color":"dark_gray"}},"clickEvent":{"action":"run_command","value":"/trigger jerubball set 11"}}]
+
+execute if score jerubball jerubball matches 11 run tellraw @a[scores={jerubball=..-1}] [{"selector":"jerubball"},{"text":" denied teleport request","color":"gray"}]
+execute if score jerubball jerubball matches 11 run scoreboard players reset @a[scores={jerubball=..-1}] jerubball
+
+execute if score jerubball jerubball matches 13 run tellraw @a[scores={jerubball=..-1}] [{"selector":"jerubball"},{"text":" accepted teleport request","color":"gray"}]
+execute if score jerubball jerubball matches 13 run tp @a[scores={jerubball=..-1}] jerubball
+execute if score jerubball jerubball matches 13 run scoreboard players reset @a[scores={jerubball=..-1}] jerubball
+
+tellraw @a[scores={jerubball=-1}] [{"text":"Teleport request to ","color":"gray"},{"selector":"jerubball"},{"text":" expired","color":"gray"}]
+execute if entity @a[scores={jerubball=-1}] run tellraw jerubball [{"text":"Teleport request from ","color":"gray"},{"selector":"@a[scores={jerubball=-1}]"},{"text":" expired","color":"gray"}]
+scoreboard players add @a[scores={jerubball=..-1}] jerubball 1
+
+scoreboard players reset @a[scores={jerubball=1..}] jerubball
+scoreboard players enable @a jerubball
