@@ -12,6 +12,6 @@ execute if entity @p[scores={bed=-1}] as @e[type=armor_stand,tag=function_bed,so
 execute store result entity @s Pos[0] double 1 run data get entity @p[scores={bed=-1}] SpawnX
 execute store result entity @s Pos[1] double 1 run data get entity @p[scores={bed=-1}] SpawnY
 execute store result entity @s Pos[2] double 1 run data get entity @p[scores={bed=-1}] SpawnZ
-tp @p[scores={bed=-1}] @s
+execute at @s run tp @p[scores={bed=-1}] ~.5 ~ ~.5
 kill @s[type=armor_stand]
 scoreboard players reset @p[scores={bed=-1}] bed
