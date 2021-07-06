@@ -43,7 +43,8 @@ scoreboard players set @p[scores={jerubball=-1}] jerubball 0
 
 #scoreboard players enable @a[scores={Group=1..}] jerubball
 #execute if entity jerubball run scoreboard players enable @a[scores={Group=1..}] jerubball
-execute if entity jerubball at @a[scores={Group=1..}] unless entity @p[distance=0,scores={Group=2}] run scoreboard players enable @p[distance=0] jerubball
+#execute if entity jerubball at @a[scores={Group=1..}] unless entity @p[distance=0,scores={Group=2}] run scoreboard players enable @p[distance=0] jerubball
+execute if entity jerubball as @a[scores={Group=20..}] unless entity @s[scores={Group=30..95}] run scoreboard players enable @s jerubball
 tp @a[scores={jerubball=1..}] jerubball
 scoreboard players reset @a[scores={jerubball=1..}] jerubball
 execute unless entity jerubball run scoreboard players reset @a jerubball
