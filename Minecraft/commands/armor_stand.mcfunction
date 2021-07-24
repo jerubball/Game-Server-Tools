@@ -27,4 +27,3 @@ data modify block ~ ~ ~ TrackOutput set value 0b
 summon minecraft:armor_stand ~ ~1 ~ {Invulnerable:1b,NoGravity:1b,Small:1b,Tags:["pointer"],DisabledSlots:16191,Pose:{Head:[180.0f,45.0f,0.0f]},ActiveEffects:[{Ambient:0b,ShowIcon:0b,ShowParticles:0b,Duration:20000000,Id:24b,Amplifier:0b}]}
 execute as jerubball anchored eyes at @s run tp @e[type=minecraft:armor_stand,tag=pointer,sort=nearest] ^ ^ ^2
 execute at @e[type=armor_stand,tag=pointer,sort=nearest] if block ~ ~ ~ #command_blocks run data modify block ~ ~ ~ TrackOutput set value 0b
-execute at @e[type=armor_stand,tag=pointer,sort=nearest] if block ~ ~ ~ #command_blocks run data modify block ~ ~ ~ Command set value 'function jerubball:shop/'
