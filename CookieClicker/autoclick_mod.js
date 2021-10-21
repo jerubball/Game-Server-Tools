@@ -1,5 +1,5 @@
 AutoclickMod = {
-	id: 'autoclick mod',
+	id: 'autoclick_mod',
 	name: 'Autoclick mod',
 	modVersion: 7,
 	author: 'jerubball',
@@ -45,7 +45,7 @@ AutoclickMod = {
 		{buy: 15.0, sell: 100.0}, // 15: SBD/Subsidiaries, Idleverse
 	],
 	grimoireTime: 60000,
-	grimoireTarget: 1, // 
+	grimoireTarget: 1, // Index of spell to cast when magic is full. 0 to 8.
 	
 	// --------------------------------------------------
 	// END of SETTINGS
