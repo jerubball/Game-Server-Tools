@@ -1,0 +1,11 @@
+{
+	"Name": "Autoclick Mod",
+	"ID": "autoclick mod",
+	"Author": "jerubball",
+	"Description": "Enable autoclick menu.",
+	"ModVersion": 7,
+	"GameVersion": 2.042,
+	"Date": "20/10/2021",
+	"Dependencies": [],
+	"Disabled": 1,
+}
