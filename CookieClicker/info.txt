@@ -1,6 +1,6 @@
 {
 	"Name": "Autoclick Mod",
-	"ID": "autoclick mod",
+	"ID": "autoclick_mod",
 	"Author": "jerubball",
 	"Description": "Enable autoclick menu.",
 	"ModVersion": 7,
